@@ -1,0 +1,36 @@
+<Configuration>
+    <ViewDefinitions>
+        <View>
+            <Name>CustomFileView</Name>
+            <ViewSelectedBy>
+                <TypeName>System.IO.FileInfo</TypeName>
+                <TypeName>System.IO.DirectoryInfo</TypeName>
+            </ViewSelectedBy>
+            <TableControl>
+                <TableHeaders>
+                    <!-- Define headers for the table -->
+                    <TableColumnHeader>
+                        <Label>Name</Label>
+                        <Width>50</Width> <!-- Increase width for more content -->
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Label>FullName</Label>
+                        <Width>120</Width> <!-- Wider column for full path -->
+                    </TableColumnHeader>
+                </TableHeaders>
+                <TableRowEntries>
+                    <TableRowEntry>
+                        <TableColumnItems>
+                            <TableColumnItem>
+                                <PropertyName>Name</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>FullName</PropertyName>
+                            </TableColumnItem>
+                        </TableColumnItems>
+                    </TableRowEntry>
+                </TableRowEntries>
+            </TableControl>
+        </View>
+    </ViewDefinitions>
+</Configuration>

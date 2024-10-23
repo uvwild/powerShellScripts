@@ -1,0 +1,1 @@
+cmd /c powershell -command "Import-Module PSScriptAnalyzer; $script = Get-Content -Path \"$(FULL_CURRENT_PATH)\" -Raw; Invoke-Formatter -ScriptDefinition $script -Settings \"/path/to/settings.psd1\" | Out-File -FilePath \"$(FULL_CURRENT_PATH)\""
