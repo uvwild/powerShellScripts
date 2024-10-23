@@ -28,9 +28,7 @@ $packages = @(
 	
 	# audio
     "Audacity.Audacity",
-	
-    "Bostrot.WSLManager",
-	
+		
 	# the chats
     "WhatsApp",
     "Telegram.TelegramDesktop",
@@ -58,12 +56,14 @@ $packages = @(
     "Notepad\+\+.Notepad\+\+",
     "CodeSector.TeraCopy",
     "ScooterSoftware.BeyondCompare.5",
-	""
+	"" # to keep the last comma
 )
 
 $remove = @(
     "Xbox",
-    "Microsoft.DevHome"
+    "Microsoft.DevHome",
+    "Bostrot.WSLManager",
+	"" # to keep the last comma
 )
 # to disable install steps
 function Test-CommandLineOption {
