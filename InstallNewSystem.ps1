@@ -6,6 +6,7 @@ $packages = @(
     "Microsoft.PowerToys",
     "Microsoft.Sysinternals",
     "CodeSector.TeraCopy",
+    "HermannSchinagl.LinkShellExtension",
 	
 	# dev
     "Git.Git",
@@ -23,11 +24,15 @@ $packages = @(
     "REALiX.HWiNFO",
     "CPUID.HWMonitor",
     "Sony.XperiaCompanion",
+    "Canonical.Ubuntu.2404",
     "Genymobile.scrcpy",
     "Frontesque.scrcpy+",
 	
 	# audio
     "Audacity.Audacity",
+    "MusicBee.MusicBee",
+    "SonicVisualiser.SonicVisualiser",
+    "AsaphaHalifa.AudioRelay",
 		
 	# the chats
     "WhatsApp",
@@ -42,7 +47,6 @@ $packages = @(
     "OBSProject.OBSStudio",
     "Gyan.FFmpeg", 
     "Videolan.vlc",
-    "MusicBee.MusicBee",
     "GianlucaPernigotto.Videomass",
 
 	# browser mail
@@ -53,10 +57,13 @@ $packages = @(
 	
 	# util
     "7zip.7zip",
+    "JAMSoftware.TreeSize.Free",
     "Notepad\+\+.Notepad\+\+",
+    "IrfanSkiljan.IrfanView",
+    "IrfanSkiljan.IrfanView.PlugIns",
     "CodeSector.TeraCopy",
     "ScooterSoftware.BeyondCompare.5",
-	"" # to keep the last comma
+    "TheDocumentFoundation.LibreOffice"
 )
 
 $remove = @(
@@ -155,7 +162,7 @@ function Add-PathIfNotExist {
 
 
 # Function to check if winget is installed
-function Check-WingetInstalled {
+function Test-WingetInstalled {
     $wingetPath = (Get-Command winget -ErrorAction SilentlyContinue).Source
     winget --version
     return [bool]$wingetPath
@@ -177,13 +184,7 @@ function Get-WingetInstalledPackages {
 # Get the list of installed packages
 $installedPackages = Get-WingetInstalledPackages
 
-function Test-WingetPackageInstalled {
-    param (
-        [Parameter(Mandatory = $true)]
-        [string]$PackageId,
-        [Parameter(Mandatory = $true)]
-        [array]$InstalledPackages
-    )
+function Test-WingetPackageInstalled($PackageId,$InstalledPackages) {
     if ($InstalledPackages | Where-Object { $_ -match $PackageId } ) {
         return $true
     }
@@ -216,9 +217,9 @@ $silentInstall = $true
 function Install-Package($packageName) {
     $installCommand = "winget install $packageName"
     
-    if ($silentInstall) {
-        $installCommand += " --silent"
-    }
+    $installCommand += " --silent"
+    $installCommand += " --nowarn"
+    $installCommand += " --accept-source-agreements"
   
     Write-Host "Installing $packageName..." -ForegroundColor Green
     Write-Host "$installCommand"   -ForegroundColor Blue
@@ -239,17 +240,28 @@ function Install-Package($packageName) {
     }    
 }
 function Remove-Package($packageName) {
-    $installCommand = "winget remove $packageName"
+    if (-not ($packageName)) { return }
+    $uninstallCommand = "winget uninstall $packageName"
+    $uninstallCommand += " --nowarn"
     Write-Host "Removing $packageName..." -ForegroundColor Red
-    Write-Host "$installCommand"   -ForegroundColor Blue
-    Invoke-Expression $installCommand
+    Write-Host "$uninstallCommand"   -ForegroundColor yellow
+    Invoke-Expression $uninstallCommand
 }
 
 # Main script execution
-if (!(Check-WingetInstalled)) {
+if (!(Test-WingetInstalled)) {
     Write-Host "Winget is not installed. Please install winget and try again."
     exit
 }
+# Check for admin rights
+$isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+
+# Display result
+if (!($isAdmin)) {
+    Write-Host "Please run this script as Administrator."
+    exit
+}
+
 #########################################################################################
 #########################################################################################
 # 
@@ -263,6 +275,19 @@ foreach ($package in $remove) {
         Write-Host "$package is not installed"
     }
 }
+function Disable-CapsLock {
+    $registryPath = "HKLM:\SYSTEM\CurrentControlSet\Control\Keyboard Layout"
+    $valueName = "Scancode Map"
+    $scancodeData = ([byte[]](0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x02,0x00,0x00,0x00,0x00,0x00,0x3A,0x00,0x00,0x00,0x00,0x00))
+
+    # Set the Scancode Map registry value
+    New-ItemProperty -Path $registryPath -Name $valueName -PropertyType Binary -Value $scancodeData -Force
+
+    Write-Output "Caps Lock key has been disabled. Please restart your computer for changes to take effect."
+}
+
+# Usage
+Disable-CapsLock
 
 #########################################################################################
 # skip with -s
@@ -278,7 +303,7 @@ if (-not (Test-CommandLineOption "s")) {
     }
 }
 
-$scriptPath = "C:\Users\uv\OneDrive\OneDriveDocuments\PowerShell"
+$scriptPath = "C:\Users\uv\OneDrive\PowerShell"
 Add-PathIfNotExist $scriptPath
 Add-PathIfNotExist .
 # Call the function after modifying PATH
@@ -290,3 +315,6 @@ $env:Path
 CheckTeraCopy
 CreateAppVolumeLink
 TurnOffDisplay
+
+# fix powershell config
+CreatePowerShellLink

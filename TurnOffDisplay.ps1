@@ -9,8 +9,8 @@ function Write-ColorOutput {
     Write-Output $Text
     $host.UI.RawUI.ForegroundColor = $originalColor
 }
-
-$shortcutPath = "$env:USERPROFILE\Desktop\TurnOffDisplay.lnk"
+$Desktop = [Environment]::GetFolderPath("Desktop")
+$shortcutPath = "$Desktop\TurnOffDisplay.lnk"
 $targetPath = "powershell.exe"
 $arguments = '-WindowStyle Hidden -Command "(Add-Type ''[DllImport(\"user32.dll\")]public static extern int SendMessage(int hWnd, int hMsg, int wParam, int lParam);'' -Name a -Pas)::SendMessage(-1,0x0112,0xF170,2)"'
 
