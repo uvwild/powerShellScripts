@@ -21,7 +21,7 @@ function grep {
 
 # shitty powershell cannot do proper aliases, so we need functions
 function gs { git status }
-function gps { git push }
+function gip { git push }
 # gc is builtin so we have to use gic
 function gic {
     param(
@@ -29,6 +29,13 @@ function gic {
         [string[]]$args
     )
     git commit @args
+}
+function ga {
+    param(
+        [Parameter(ValueFromRemainingArguments = $true)]
+        [string[]]$args
+    )
+    git add @args
 }
 
 function gd { git diff }
