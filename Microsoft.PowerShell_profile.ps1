@@ -21,6 +21,17 @@ function grep {
 
 # shitty powershell cannot do proper aliases, so we need functions
 function gs { git status }
+function gps { git push }
+# gc is builtin so we have to use gic
+function gic {
+    param(
+        [Parameter(ValueFromRemainingArguments = $true)]
+        [string[]]$args
+    )
+    git commit @args
+}
+
+function gd { git diff }
 function Show-Env { Get-ChildItem Env: }
 function Show-Path { $env:PATH -split ';' }
 
