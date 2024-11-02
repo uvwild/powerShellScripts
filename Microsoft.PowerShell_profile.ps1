@@ -7,18 +7,33 @@ $modules = @(
   "oh-my-posh"
 )
 
+function grep {
+    param(
+        [string]$Pattern,
+        [string[]]$Paths
+    )
+    if ($Paths) {
+        Get-Content -Path $Paths | Select-String -Pattern $Pattern
+    } else {
+        $input | Select-String -Pattern $Pattern
+    }
+}
+
 # shitty powershell cannot do proper aliases, so we need functions
 function gs { git status }
 function Show-Env { Get-ChildItem Env: }
-function Show-Path { Get-ChildItem Env:Path }
+function Show-Path { $env:PATH -split ';' }
 
 # the aliases
 Set-Alias env Show-Env
-Set-Alias grep Select-String
 Set-Alias ls Get-ChildItem
 Set-Alias cat Get-Content
 
 Set-Alias path Show-Path
+Set-Alias np notepad++.exe
+
+Set-Alias reboot Restart-Computer
+
 
 # Import the Chocolatey Profile that contains the necessary code to enable
 # tab-completions to function for `choco`.
@@ -37,8 +52,9 @@ foreach ($module in $modules) {
   # Check if the module is already installed
   if (!(Get-Module -ListAvailable -Name $module)) {
       try {
+          $installCommand = "Install-Module -Name $module $DefaultInstallModuleOptions"
           Write-Output "Installing $module..."
-          Install-Module -Name $module -Force -Confirm:$false -ErrorAction Stop
+          Invoke-Expression $installCommand
           Write-Output "$module installed successfully."
       } catch {
           Write-Output "Failed to install ${module}: $_"
