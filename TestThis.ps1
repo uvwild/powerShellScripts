@@ -37,4 +37,37 @@ Enum-Array $argArray
 
 #Test-CommandLineOption "v"
 
-Write-Output "Shortcut created on desktop: $shortcutPath" -ForegroundColor Green
+
+function Get-WingetInstalledPackages {
+    param (
+        [string]$RegistryPath = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*"
+    )
+
+    $installedPackages = winget list
+
+    $packageList = $installedPackages | Out-String -Stream | Where-Object { $_.Trim() -ne "" }
+    $packageList = $packageList | Select-Object -Skip 2
+
+    $packageDetails = foreach ($package in $packageList) {
+        $packageName = $package -split '\s{2,}' | Select-Object -First 1
+        $registryEntries = Get-ItemProperty -Path $RegistryPath -ErrorAction SilentlyContinue | Where-Object {
+            $_.DisplayName -eq $packageName
+        }
+
+        foreach ($entry in $registryEntries) {
+            [PSCustomObject]@{
+                Name             = $entry.DisplayName
+                Version          = $entry.DisplayVersion
+                InstallLocation  = $entry.InstallLocation
+                Publisher        = $entry.Publisher
+            }
+        }
+    }
+
+    return $packageDetails
+}
+$packages = Get-WingetInstalledPackages
+$packages | Format-Table -AutoSize
+
+
+#Write-Output "Shortcut created on desktop: $shortcutPath" -ForegroundColor Green
