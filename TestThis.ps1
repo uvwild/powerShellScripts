@@ -1,4 +1,5 @@
-
+# scratchpad for powershell code
+#$PSVersionTable.PSVersion
 
 function Enum-Dict {
     param ([System.Collections.Generic.Dictionary[string, object]]$dict)
@@ -12,7 +13,6 @@ function Enum-Array {
         Write-Host "$item"
     }
 }
-$PSVersionTable.PSVersion
 function Test-CommandLineOption {
     param (
         [string]$Option
@@ -40,7 +40,16 @@ Enum-Array $argArray
 
 function Get-WingetInstalledPackages {
     param (
-        [string]$RegistryPath = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*"
+        [string[]]$RegistryPaths = @(
+            "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*",
+            "HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*",
+            "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*"
+        ),
+        [string[]]$PortablePaths = @(
+            "$env:LOCALAPPDATA\Microsoft\WinGet\Packages\",
+            "C:\Program Files\WinGet\Packages\",
+            "C:\Program Files (x86)\WinGet\Packages\"
+        )
     )
 
     $installedPackages = winget list
@@ -50,22 +59,55 @@ function Get-WingetInstalledPackages {
 
     $packageDetails = foreach ($package in $packageList) {
         $packageName = $package -split '\s{2,}' | Select-Object -First 1
-        $registryEntries = Get-ItemProperty -Path $RegistryPath -ErrorAction SilentlyContinue | Where-Object {
-            $_.DisplayName -eq $packageName
+        $found = $false
+
+        foreach ($path in $RegistryPaths) {
+            $registryEntries = Get-ItemProperty -Path $path -ErrorAction SilentlyContinue | Where-Object {
+                $_.DisplayName -eq $packageName
+            }
+
+            foreach ($entry in $registryEntries) {
+                [PSCustomObject]@{
+                    Name             = $entry.DisplayName
+                    Version          = $entry.DisplayVersion
+                    InstallLocation  = $entry.InstallLocation
+                    Publisher        = $entry.Publisher
+                }
+                $found = $true
+            }
+
+            if ($found) { break }
         }
 
-        foreach ($entry in $registryEntries) {
+        if (-not $found) {
+            foreach ($portablePath in $PortablePaths) {
+                $portableAppPath = Join-Path -Path $portablePath -ChildPath $packageName
+                if (Test-Path $portableAppPath) {
+                    [PSCustomObject]@{
+                        Name             = $packageName
+                        Version          = "Unknown"
+                        InstallLocation  = $portableAppPath
+                        Publisher        = "Unknown"
+                    }
+                    $found = $true
+                    break
+                }
+            }
+        }
+
+        if (-not $found) {
             [PSCustomObject]@{
-                Name             = $entry.DisplayName
-                Version          = $entry.DisplayVersion
-                InstallLocation  = $entry.InstallLocation
-                Publisher        = $entry.Publisher
+                Name             = $packageName
+                Version          = "Unknown"
+                InstallLocation  = "Not Found"
+                Publisher        = "Unknown"
             }
         }
     }
 
     return $packageDetails
 }
+
 $packages = Get-WingetInstalledPackages
 $packages | Format-Table -AutoSize
 
