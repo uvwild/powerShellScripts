@@ -317,5 +317,6 @@ CheckTeraCopy
 CreateAppVolumeLink
 TurnOffDisplay
 
+EnableNetworkDiscovery
 # fix powershell config
 CreatePowerShellLink
