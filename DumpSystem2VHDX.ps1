@@ -39,7 +39,7 @@ try {
 $drivesToInclude = "C:"
 
 # Define additional options for Disk2VHD command
-$disk2vhdOptions = "-o", "-w", "-v"  # Add any additional options here
+$disk2vhdOptions = "-h" # , "-w", "-v"  # Add any additional options here
 
 # Construct the full command line string for logging or troubleshooting purposes
 $disk2vhdCommand = "`"$disk2vhdPath`" $drivesToInclude `"$outputVHDXPath`" $($disk2vhdOptions -join ' ')"
@@ -75,4 +75,10 @@ try {
     # Using .NET's ZipFile class for compression
     Add-Type -AssemblyName System.IO.Compression.FileSystem
     [System.IO.Compression.ZipFile]::CreateFromDirectory((Split-Path $outputVHDXPath), $compressedPath)
-    Write-Output "Comp
+    Write-Output "Compression completed. Compressed file saved at $compressedPath"
+} catch {
+    Write-Output "Error: Compression failed. Possible causes:"
+    Write-Output "- Insufficient permissions or lack of write access to the output directory."
+    Write-Output "- Ensure .NET's System.IO.Compression is available."
+    Write-Output "- Check disk space and try again."
+}
