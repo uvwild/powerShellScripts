@@ -3,7 +3,7 @@ $disk2vhdPath = Get-Command disk2vhd64.exe -ErrorAction SilentlyContinue | Selec
 
 # If the executable is not found, prompt an error and exit
 if (-not $disk2vhdPath) {
-    Write-Output "Disk2VHD executable not found. Ensure it is installed via winget or specify the full path manually."
+    Write-Output "Error: Disk2VHD executable not found. Ensure it is installed via winget and available in the system PATH, or specify the full path manually."
     exit
 } else {
     Write-Output "Found Disk2VHD at: $disk2vhdPath"
@@ -11,7 +11,7 @@ if (-not $disk2vhdPath) {
 
 # Confirming 64-bit PowerShell session to avoid file redirection issues
 if ($env:PROCESSOR_ARCHITECTURE -ne "AMD64") {
-    Write-Output "Please run this script in 64-bit PowerShell to avoid architecture conflicts."
+    Write-Output "Error: Please run this script in 64-bit PowerShell to avoid architecture conflicts."
     exit
 }
 
@@ -23,7 +23,7 @@ $outputVHDXPath = Join-Path -Path $outputFolder -ChildPath $outputVHDXName
 
 # Verify that the output folder exists and is writable
 if (-Not (Test-Path $outputFolder)) {
-    Write-Output "Error: The specified output folder '$outputFolder' does not exist."
+    Write-Output "Error: The specified output folder '$outputFolder' does not exist. Please create the folder or check the path."
     exit
 }
 try {
@@ -31,7 +31,7 @@ try {
     Remove-Item "$outputFolder\test_write.txt" -Force
     Write-Output "Output folder '$outputFolder' is accessible and writable."
 } catch {
-    Write-Output "Error: Unable to write to the output folder '$outputFolder'. Check permissions."
+    Write-Output "Error: Unable to write to the output folder '$outputFolder'. Check permissions or run the script as Administrator."
     exit
 }
 
@@ -51,7 +51,11 @@ try {
     Start-Process -FilePath $disk2vhdPath -ArgumentList $drivesToInclude, $outputVHDXPath + $disk2vhdOptions -Wait
     Write-Output "VHDX creation completed successfully. VHDX saved at $outputVHDXPath"
 } catch {
-    Write-Output "Error: Failed to create VHDX. Check Disk2VHD execution and parameters."
+    Write-Output "Error: Failed to create VHDX. Possible causes:"
+    Write-Output "- Disk2VHD may require Administrator privileges to access the specified drives."
+    Write-Output "- Check if the drive is available and accessible."
+    Write-Output "- Ensure there is sufficient space in the output directory."
+    Write-Output "- Confirm that Disk2VHD parameters are valid and supported."
     exit
 }
 
@@ -59,7 +63,7 @@ try {
 if (Test-Path $outputVHDXPath) {
     Write-Output "VHDX file created successfully at $outputVHDXPath"
 } else {
-    Write-Output "Error: VHDX file was not created. Please check Disk2VHD output for issues."
+    Write-Output "Error: VHDX file was not created. Check Disk2VHD output and parameters for potential issues."
     exit
 }
 
@@ -71,7 +75,4 @@ try {
     # Using .NET's ZipFile class for compression
     Add-Type -AssemblyName System.IO.Compression.FileSystem
     [System.IO.Compression.ZipFile]::CreateFromDirectory((Split-Path $outputVHDXPath), $compressedPath)
-    Write-Output "Compression completed. Compressed file saved at $compressedPath"
-} catch {
-    Write-Output "Error: Compression failed. Check if .NET's System.IO.Compression is available."
-}
+    Write-Output "Comp
