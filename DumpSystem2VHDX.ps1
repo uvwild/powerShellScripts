@@ -1,5 +1,13 @@
-# Explicitly define the 64-bit Disk2VHD path to avoid architecture conflicts
-$disk2vhdPath = "C:\Program Files\SysinternalsSuite\disk2vhd64.exe"
+# Attempt to locate Disk2VHD executable dynamically
+$disk2vhdPath = Get-Command disk2vhd64.exe -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source
+
+# If the executable is not found, prompt an error and exit
+if (-not $disk2vhdPath) {
+    Write-Output "Disk2VHD executable not found. Ensure it is installed via winget or specify the full path manually."
+    exit
+} else {
+    Write-Output "Found Disk2VHD at: $disk2vhdPath"
+}
 
 # Confirming 64-bit PowerShell session to avoid file redirection issues
 if ($env:PROCESSOR_ARCHITECTURE -ne "AMD64") {
@@ -30,14 +38,17 @@ try {
 # Define drives to include in the VHD (usually C: for the main OS)
 $drivesToInclude = "C:"
 
-# Construct the full command line for logging or troubleshooting purposes
-$disk2vhdCommand = "$disk2vhdPath $drivesToInclude $outputVHDXPath -o -w -v"
+# Define additional options for Disk2VHD command
+$disk2vhdOptions = "-o", "-w", "-v"  # Add any additional options here
+
+# Construct the full command line string for logging or troubleshooting purposes
+$disk2vhdCommand = "`"$disk2vhdPath`" $drivesToInclude `"$outputVHDXPath`" $($disk2vhdOptions -join ' ')"
 Write-Output "Disk2VHD command line: $disk2vhdCommand"
 
-# Run Disk2VHD with corrected parameters for a basic setup
+# Run Disk2VHD with specified parameters using Start-Process and separate arguments
 try {
     Write-Output "Running Disk2VHD to create VHDX image of the current system..."
-    Start-Process -FilePath $disk2vhdPath -ArgumentList "$drivesToInclude", "$outputVHDXPath", "-o", "-w", "-v" -Wait
+    Start-Process -FilePath $disk2vhdPath -ArgumentList $drivesToInclude, $outputVHDXPath + $disk2vhdOptions -Wait
     Write-Output "VHDX creation completed successfully. VHDX saved at $outputVHDXPath"
 } catch {
     Write-Output "Error: Failed to create VHDX. Check Disk2VHD execution and parameters."
