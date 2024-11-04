@@ -33,6 +33,7 @@ $drivesToInclude = "C:"
 # Run Disk2VHD with corrected parameters for a basic setup
 try {
     Write-Output "Running Disk2VHD to create VHDX image of the current system..."
+    Write-Output  "FilePath: $disk2vhdPath, ArgumentList:  $drivesToInclude, outputVHDXPath: $outputVHDXPath, Options: '"-o", "-w", "-v" -Wait'"
     Start-Process -FilePath $disk2vhdPath -ArgumentList "$drivesToInclude", "$outputVHDXPath", "-o", "-w", "-v" -Wait
     Write-Output "VHDX creation completed successfully. VHDX saved at $outputVHDXPath"
 } catch {
