@@ -1,3 +1,4 @@
+# this does not seem to be working
 Configuration InstallNewSystemDSC {
     Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
 
