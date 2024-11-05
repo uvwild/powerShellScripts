@@ -1,9 +1,10 @@
 # EnableNetworkDiscovery
 Write-Output "Enabling Network Discovery..."
 Set-NetFirewallRule -DisplayGroup "Network Discovery" -Enabled True
-(Get-Service -Name "FDResPub").Start()
-(Get-Service -Name "SSDPSRV").Start()
-(Get-Service -Name "upnphost").Start()
+Start-Service -Name "FDResPub"
+Start-Service -Name "SSDPSRV"
+Start-Service -Name "upnphost"
+
 
 # Enable File and Printer Sharing
 Write-Output "Enabling File and Printer Sharing..."

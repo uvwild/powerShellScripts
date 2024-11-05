@@ -27,7 +27,7 @@ $packages = @(
     "Canonical.Ubuntu.2404",
     "Genymobile.scrcpy",
     "Frontesque.scrcpy+",
-    "GlavSoft.TightVNC 2.8.85",
+#    "GlavSoft.TightVNC 2.8.85",
 	
 	# audio
     "Audacity.Audacity",
