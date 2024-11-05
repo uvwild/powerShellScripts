@@ -1,9 +1,10 @@
 # EnableNetworkDiscovery
 Write-Output "Enabling Network Discovery..."
 Set-NetFirewallRule -DisplayGroup "Network Discovery" -Enabled True
-Start-Service -Name "FDResPub"
-Start-Service -Name "SSDPSRV"
-Start-Service -Name "upnphost"
+Try { Start-Service -Name "FDResPub" } Catch { Write-Output "Error starting FDResPub: $_" }
+Try { Start-Service -Name "SSDPSRV" } Catch { Write-Output "Error starting SSDPSRV: $_" }
+Try { Start-Service -Name "upnphost" } Catch { Write-Output "Error starting upnphost: $_" }
+
 
 
 # Enable File and Printer Sharing
