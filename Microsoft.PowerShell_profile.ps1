@@ -7,6 +7,7 @@ $modules = @(
   "oh-my-posh"
 )
 
+
 function grep {
     param(
         [string]$Pattern,
@@ -37,7 +38,30 @@ function ga {
     )
     git add @args
 }
-
+# Wrapper function for easier use
+function raa {
+    param (
+        [string]$ScriptToRun,
+        [string[]]$ScriptArgs = @()
+    )
+    RunAsAdmin -ScriptToRun $ScriptToRun -ScriptArgs $ScriptArgs
+}
+function reload {
+    . $PROFILE
+    Write-Host "Profile reloaded."
+}
+function which {
+    param (
+        [string]$Command
+    )
+    # Check if the command exists in the current session
+    $result = Get-Command -Name $Command -ErrorAction SilentlyContinue
+    if ($result) {
+        $result.Source # Returns the path or source of the command
+    } else {
+        Write-Output "Command '$Command' not found"
+    }
+}
 function gd { git diff }
 function Show-Env { Get-ChildItem Env: }
 function Show-Path { $env:PATH -split ';' }
@@ -52,6 +76,19 @@ Set-Alias np notepad++.exe
 
 Set-Alias reboot Restart-Computer
 
+# Create an alias 'll' for listing the current folder and its children as JSON
+function ListAsJson {
+    Get-ChildItem -Path "." -Recurse
+}
+
+# Check if alias 'll' exists and remove it if it does
+if (Test-Path Alias:\ll) {
+    Write-Host "Removing existing alias 'll'..." -ForegroundColor Yellow
+    Remove-Item Alias:\ll
+}
+
+# Set the alias
+Set-Alias -Name ll -Value ListAsJson
 
 # Import the Chocolatey Profile that contains the necessary code to enable
 # tab-completions to function for `choco`.
@@ -64,7 +101,7 @@ if (Test-Path($ChocolateyProfile)) {
 }
 
 $DefaultInstallModuleOptions = " -Scope AllUsers -Force -Confirm:$false -ErrorAction Stop"
-# install usefule modules
+# install useful modules
 
 foreach ($module in $modules) {
   # Check if the module is already installed

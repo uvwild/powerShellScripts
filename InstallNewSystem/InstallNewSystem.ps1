@@ -7,6 +7,7 @@ $packages = @(
     "Microsoft.Sysinternals",
     "CodeSector.TeraCopy",
     "HermannSchinagl.LinkShellExtension",
+    "Microsoft.WindowsSDK.10.0.26100", 
 	
 	# dev
     "Git.Git",
@@ -57,6 +58,7 @@ $packages = @(
     "Mailbird.Mailbird",
 	
 	# util
+    "Governikus.AusweisApp",
     "7zip.7zip",
     "JAMSoftware.TreeSize.Free",
     "Notepad\+\+.Notepad\+\+",
@@ -65,10 +67,27 @@ $packages = @(
     "CodeSector.TeraCopy",
     "ScooterSoftware.BeyondCompare.5",
     "TheDocumentFoundation.LibreOffice"
+    "CrystalDewWorld.CrystalDiskInfo"
 )
 
 $remove = @(
-    "Xbox",
+    "Xbox tcui",
+    "Xbox Identity Provider",
+    "Xbox Game Speech Window",
+    "Native Instruments Traktor Audio 10",
+    "Native Instruments Traktor Audio 2",
+    "Native Instruments Traktor Audio 6",
+    "Native Instruments Traktor Kontrol D2",
+    "Native Instruments Traktor Kontrol F1",
+    "Native Instruments Traktor Kontrol S2",
+    "Native Instruments Traktor Kontrol S4",
+    "Native Instruments Traktor Kontrol S8",
+    "",
+    "",
+    "",
+    "Microsoft Tips",    
+    "Solitaire & Casual Games",
+    "Microsoft Journalx",
     "Microsoft.DevHome",
     "Bostrot.WSLManager",
 	"" # to keep the last comma
@@ -242,7 +261,8 @@ function Install-Package($packageName) {
 }
 function Remove-Package($packageName) {
     if (-not ($packageName)) { return }
-    $uninstallCommand = "winget uninstall $packageName"
+    $uninstallCommand = "winget uninstall `"$packageName`""
+
     $uninstallCommand += " --nowarn"
     Write-Host "Removing $packageName..." -ForegroundColor Red
     Write-Host "$uninstallCommand"   -ForegroundColor yellow
@@ -304,7 +324,8 @@ if (-not (Test-CommandLineOption "s")) {
     }
 }
 
-$scriptPath = "C:\Users\uv\OneDrive\PowerShell"
+#$scriptPath = "C:\Users\uv\OneDrive\PowerShell"
+$scriptPath = Split-Path -Path $PSCommandPath
 Add-PathIfNotExist $scriptPath
 Add-PathIfNotExist .
 # Call the function after modifying PATH
@@ -320,3 +341,5 @@ TurnOffDisplay
 EnableNetworkDiscovery
 # fix powershell config
 CreatePowerShellLink
+# wsl and virtualization
+EnableExtraFeatures
