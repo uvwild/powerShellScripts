@@ -67,7 +67,8 @@ $packages = @(
     "CodeSector.TeraCopy",
     "ScooterSoftware.BeyondCompare.5",
     "TheDocumentFoundation.LibreOffice"
-    "CrystalDewWorld.CrystalDiskInfo"
+    "CrystalDewWorld.CrystalDiskInfo",
+    "UweSieber.UsbTreeView"
 )
 
 $remove = @(
@@ -82,7 +83,6 @@ $remove = @(
     "Native Instruments Traktor Kontrol S2",
     "Native Instruments Traktor Kontrol S4",
     "Native Instruments Traktor Kontrol S8",
-    "",
     "",
     "",
     "Microsoft Tips",    
