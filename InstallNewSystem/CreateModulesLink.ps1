@@ -29,3 +29,6 @@ if (Test-Path $linkPath) {
 # Create the symbolic link
 Write-Output "Creating symbolic link from $linkPath to $targetPath."
 New-Item -ItemType SymbolicLink -Path $linkPath -Target $targetPath
+
+# install additional Modules
+InstallModules

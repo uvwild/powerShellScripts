@@ -7,6 +7,14 @@ $modules = @(
   "oh-my-posh"
 )
 
+function lnk {
+    param ([string]$MyPath)
+    if ($MyPath -like "*.lnk") {
+        (New-Object -ComObject WScript.Shell).CreateShortcut($MyPath).TargetPath
+    } else {
+        (Get-Item -Path $MyPath).Target
+    }
+}
 
 function grep {
     param(
@@ -46,9 +54,12 @@ function raa {
     )
     RunAsAdmin -ScriptToRun $ScriptToRun -ScriptArgs $ScriptArgs
 }
+function show-aliases {
+    $al=$(Get-Alias).Count
+    Write-Host "Profile reloaded. $al Aliases"
+}
 function reload {
     . $PROFILE
-    Write-Host "Profile reloaded."
 }
 function which {
     param (
@@ -82,9 +93,9 @@ function ListAsJson {
 }
 
 # Check if alias 'll' exists and remove it if it does
-if (Test-Path Alias:\ll) {
+if (Test-Path Alias:ll) {
     Write-Host "Removing existing alias 'll'..." -ForegroundColor Yellow
-    Remove-Item Alias:\ll
+    Remove-Item Alias:ll
 }
 
 # Set the alias
@@ -118,4 +129,4 @@ foreach ($module in $modules) {
       Write-Output "$module is already installed."
   }
 }
-Write-Host "UV Profile loaded"
+show-aliases

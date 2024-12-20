@@ -26,9 +26,9 @@ $packages = @(
     "CPUID.HWMonitor",
     "Sony.XperiaCompanion",
     "Canonical.Ubuntu.2404",
-    "Genymobile.scrcpy",
-    "Frontesque.scrcpy+",
-#    "GlavSoft.TightVNC 2.8.85",
+    "Genymobile.scrcpy",        # TODO seems to be old
+    "Frontesque.scrcpy+",       # TODO does not seem to work?
+#    "GlavSoft.TightVNC 2.8.85",   # use realvnc find the really hidden 
 	
 	# audio
     "Audacity.Audacity",
@@ -92,6 +92,15 @@ $remove = @(
     "Bostrot.WSLManager",
 	"" # to keep the last comma
 )
+# ensure admin level
+if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
+    $1
+Start-Sleep -Seconds 3
+    Start-Process -FilePath "powershell.exe" -ArgumentList "-ExecutionPolicy Bypass -NoProfile -File `"$PSCommandPath`"" -Verb RunAs
+    exit
+}
+Write-Host "Script is running with administrative privileges." -ForegroundColor Green
+
 # to disable install steps
 function Test-CommandLineOption {
     param (
