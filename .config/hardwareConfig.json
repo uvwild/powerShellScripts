@@ -1,9 +1,0 @@
-{
-  "ComputerSystem": "Win32_ComputerSystem: UVMINIAX (Name = \"UVMINIAX\")",
-  "BIOS": "Win32_BIOS: 0.45 (Name = \"0.45\", SoftwareElementID = \"0.45\", SoftwareElementState = 3, TargetOperatingSystem = 0, Version = \"ALASKA - 1072009\")",
-  "CPU": "Win32_Processor: AMD64 Family 25 Model 117 Stepping 2 (DeviceID = \"CPU0\")",
-  "BaseBoard": "Win32_BaseBoard: Base Board (Tag = \"Base Board\")",
-  "VideoController": "Win32_VideoController: AMD Radeon 780M Graphics (DeviceID = \"VideoController1\")",
-  "PhysicalMemory": "Win32_PhysicalMemory: Physical Memory (Tag = \"Physical Memory 0\") Win32_PhysicalMemory: Physical Memory (Tag = \"Physical Memory 1\")",
-  "DiskDrives": "Win32_DiskDrive: Viper VP 4300L 2TB   SN08 SCSI Disk Device (DeviceID = \"\\\\.\\PHYSICALDRIVE4\") Win32_DiskDrive: Generic STORAGE DEVICE USB Device (DeviceID = \"\\\\.\\PHYSICALDRIVE1\") Win32_DiskDrive: SanDisk SDSSDH31024G SCSI Disk Device (DeviceID = \"\\\\.\\PHYSICALDRIVE8\") Win32_DiskDrive: CT1000MX 500SSD4 SCSI Disk Device (DeviceID = \"\\\\.\\PHYSICALDRIVE9\") Win32_DiskDrive: Samsung PSSD T7 Shield SCSI Disk Device (DeviceID = \"\\\\.\\PHYSICALDRIVE6\") Win32_DiskDrive: CT4000P3 SSD8 USB Device (DeviceID = \"\\\\.\\PHYSICALDRIVE5\") Win32_DiskDrive: CT2000P3PSSD8 (DeviceID = \"\\\\.\\PHYSICALDRIVE0\") Win32_DiskDrive: Generic STORAGE DEVICE USB Device (DeviceID = \"\\\\.\\PHYSICALDRIVE2\") Win32_DiskDrive: JMICRON JMS576 USB Device (DeviceID = \"\\\\.\\PHYSICALDRIVE7\") Win32_DiskDrive: WD My Passport 261B SCSI Disk Device (DeviceID = \"\\\\.\\PHYSICALDRIVE3\")"
-}

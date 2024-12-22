@@ -48,50 +48,87 @@
 #>
 
 param (
-    [switch]$NoGit,
+    [switch]$Git = $false,
     [switch]$NoHW,
     [switch]$NoCD,
     [switch]$NoSW,
     [switch]$NoWinget,
     [switch]$NoChoco,
-    [int]$JsonDepth
+    [int]$JsonDepth = 10
+    
 )
+###############################################################################################################    
+# preconditions
+###############################################################################################################    
+function CheckPreconditions {
+    param (
+        [String]$MyConfigFolder
+    )
 
-function Ensure-YamlModule {
-    if (-not (Get-Module -ListAvailable -Name 'powershell-yaml')) {
-        Write-Host "powershell-yaml module not found. Installing..." -ForegroundColor Yellow
-        Install-Module -Name powershell-yaml -Force -Scope CurrentUser
-    } else {
-        Write-Host "powershell-yaml module is already installed." -ForegroundColor Green
+    function CheckFolder {
+        param(
+            [string]$folderPath = "C:\Path\To\Folder"
+        )
+
+        # Check and create folder if necessary
+        if (-not (Test-Path -Path $folderPath -PathType Container)) {
+            New-Item -ItemType Directory -Path $folderPath | Out-Null
+            Write-Output "The folder has been created: $folderPath"
+        }
+        else {
+            Write-Output "The folder already exists: $folderPath"
+        }
     }
-    Import-Module powershell-yaml
+    function Install-YamlModule {
+        if (-not (Get-Module -ListAvailable -Name 'powershell-yaml')) {
+            Write-Host "powershell-yaml module not found. Installing..." -ForegroundColor Yellow
+            Install-Module -Name powershell-yaml -Force -Scope CurrentUser
+        }
+        else {
+            Write-Host "powershell-yaml module is already installed." -ForegroundColor Green
+        }
+        Import-Module powershell-yaml
+    }
+    # function Install-PackageProviderChocolatey {
+    #     if (-not (Get-Package | Where-Object { $_.ProviderName -eq 'Chocolatey' })) {
+    #         Write-Host "Chocolatey provider package not found. Installing..." -ForegroundColor Yellow
+    #         Get-PackageProvider -Name Chocolatey
+    #     }
+    #     else {
+    #         Write-Host "Chocolatey package is already installed." -ForegroundColor Green
+    #     }
+    #     Install-PackageProvider -Name Chocolatey -Force -Scope CurrentUser
+    # }
+
+    function CheckPSVerion {    
+        # Ensure the script is running in PS7
+        if ($PSVersionTable.PSVersion.Major -lt 7) {
+            Write-Error "This script requires PowerShell 7 or higher."
+            return
+        }
+    }
+    CheckPSVerion
+    CheckFolder -folderPath $MyConfigFolder
+    Install-YamlModule
+#    Install-PackageProviderChocolatey
 }
 
-function Ensure-ChocoPackageProvider  {
-    if (-not (Get-Package | Where-Object { $_.ProviderName -eq 'Chocolatey' })) {
-        Write-Host "Chocolatey provider package not found. Installing..." -ForegroundColor Yellow
-        Get-PackageProvider -Name Chocolatey
-    } else {
-        Write-Host "Chocolatey package is already installed." -ForegroundColor Green
-    }
-    Install-PackageProvider -Name Chocolatey -Force -Scope CurrentUser
-}
+###############################################################################################################    
+# config collection
+###############################################################################################################    
 
 function Update-SystemConfiguration {
     param (
-        [string]$yamlFilePath = "sysconfig.yaml",
-        [string]$GitRepositoryPath = "C:\Users\uv\OneDrive\PowerShell",
-        [string]$configFolder = ".config",
-        [int]$JsonDepth = 5
+        [int]$JsonDepth,
+        [string]$YamlConfig,
+        [string]$GitRepositoryPath 
     )
-
-    # Check if the config folder exists, create if needed
-    if (-Not (Test-Path -Path (Join-Path -Path $GitRepositoryPath -ChildPath $configFolder))) {
-        New-Item -ItemType Directory -Path (Join-Path -Path $GitRepositoryPath -ChildPath $configFolder) | Out-Null
-    }
-
+    $MyConfigFolder = (Join-Path -Path $GitRepositoryPath -ChildPath ".myconfig")
+    CheckPreconditions -MyConfigFolder  $MyConfigFolder
+    # Collect installed software
     # Function to retrieve registry software configuration
     function Get-RegistrySoftwareConfig {
+        Write-Host "Collecting registry software configuration..." -ForegroundColor Cyan
         # Placeholder for actual implementation
         $registryPath = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall"
         $softwareConfigs = Get-ChildItem -Path $registryPath | ForEach-Object {
@@ -107,26 +144,12 @@ function Update-SystemConfiguration {
         return $softwareConfigs
     }
 
-    # Function to retrieve winget packages configuration
-    function Get-WingetPackagesConfig {
-        # Placeholder for actual implementation
-        $wingetList = winget list
-        $parsedPackages = $wingetList | Select-Object -Skip 2 | ForEach-Object {
-            $fields = $_ -split '\s{2,}'
-            [PSCustomObject]@{
-                Name    = $fields[0]
-                Id      = $fields[1]
-                Version = $fields[2]
-            }
-        }
-        return $parsedPackages
-    }
-
     # Function to retrieve choco packages configuration
     function Get-ChocoPackagesConfig {
         param (
             [string]$OutputFile = $null
         )
+        Write-Host "Collecting Chocolatey packages configuration..." -ForegroundColor Cyan
     
         # Check if Chocolatey is installed
         if (-not (Get-Command choco -ErrorAction SilentlyContinue)) {
@@ -136,129 +159,167 @@ function Update-SystemConfiguration {
         # Retrieve installed Chocolatey packages
         $chocoList = choco list
     
-        $parsedPackages = $chocoList | ForEach-Object {
+        $parsedChocoPackages = $chocoList | ForEach-Object {
             $fields = $_ -split '\|' # Split by the '|' delimiter used by choco
             [PSCustomObject]@{
                 Name    = $fields[0]
                 Version = $fields[1]
             }
         }
-    
-        # Convert to JSON
-        $jsonObject = $parsedPackages | ConvertTo-Json -Depth 1
-    
-        # If an output file is provided, save the JSON to the file
-        if ($OutputFile) {
-            try {
-                $jsonObject | Set-Content -Path $OutputFile -Encoding UTF8
-                Write-Host "Configuration saved to $OutputFile"
-            } catch {
-                Write-Error "Failed to save JSON to file: $_"
+        return $parsedChocoPackages
+    }
+
+    # Function to retrieve winget packages configuration
+    function Get-WingetPackagesConfig {
+        Write-Host "Collecting winget packages configuration..." -ForegroundColor Cyan
+        # Placeholder for actual implementation
+        $wingetList = winget list
+        $parsedWingetPackages = $wingetList | Select-Object -Skip 2 | ForEach-Object {
+            $fields = $_ -split '\s{2,}'
+            [PSCustomObject]@{
+                Name    = $fields[0]
+                Id      = $fields[1]
+                Version = $fields[2]
             }
         }
-    
-        # Return the parsed object
-        return $parsedPackages
+        return $parsedWingetPackages
     }
 
     # Function to retrieve hardware configuration
     function Get-HardwareConfig {
-        $system    = Get-CimInstance -ClassName Win32_ComputerSystem
-        $bios      = Get-CimInstance -ClassName Win32_BIOS
-        $cpu       = Get-CimInstance -ClassName Win32_Processor
-        $baseBoard = Get-CimInstance -ClassName Win32_BaseBoard
-        $gpu       = Get-CimInstance -ClassName Win32_VideoController
-        $memory    = Get-CimInstance -ClassName Win32_PhysicalMemory
-        $disks     = Get-CimInstance -ClassName Win32_DiskDrive
+        Write-Host "Collecting hardware configuration..." -ForegroundColor Cyan
 
-        [PSCustomObject]@{
-            ComputerSystem = $system
-            BIOS           = $bios
-            CPU            = $cpu
-            BaseBoard      = $baseBoard
-            VideoController= $gpu
-            PhysicalMemory = $memory
-            DiskDrives     = $disks
+        $system = Get-CimInstance -ClassName Win32_ComputerSystem
+        $bios = Get-CimInstance -ClassName Win32_BIOS
+        $cpu = Get-CimInstance -ClassName Win32_Processor
+        $baseBoard = Get-CimInstance -ClassName Win32_BaseBoard
+        $gpu = Get-CimInstance -ClassName Win32_VideoController
+        $memory = Get-CimInstance -ClassName Win32_PhysicalMemory
+        $disks = Get-CimInstance -ClassName Win32_DiskDrive
+
+        return [PSCustomObject]@{
+            ComputerSystem  = $system
+            BIOS            = $bios
+            CPU             = $cpu
+            BaseBoard       = $baseBoard
+            VideoController = $gpu
+            PhysicalMemory  = $memory
+            DiskDrives      = $disks
         }
     }
 
     # Function to retrieve connected hardware devices
-function Get-ConnectedDevices {
-    $usbDevices = Get-CimInstance -ClassName Win32_USBControllerDevice | 
-                  ForEach-Object {
-                      [PSCustomObject]@{
-                          DeviceName = ($_.Dependent -replace '^.*?DeviceID="', '').Split(',')[0]
-                          Controller = $_.Antecedent -replace '^.*?DeviceID="', ''
-                      }
-                  }
+    function Get-ConnectedDevices {
+        Write-Host "Collecting connected devices configuration..." -ForegroundColor Cyan
+        $usbDevices = Get-CimInstance -ClassName Win32_USBControllerDevice | 
+        ForEach-Object {
+            [PSCustomObject]@{
+                DeviceName = ($_.Dependent -replace '^.*?DeviceID="', '').Split(',')[0]
+                Controller = $_.Antecedent -replace '^.*?DeviceID="', ''
+            }
+        }
 
-    $monitors = Get-CimInstance -ClassName Win32_DesktopMonitor | 
-                Select-Object Name, DeviceID, ScreenHeight, ScreenWidth
+        $monitors = Get-CimInstance -ClassName Win32_DesktopMonitor | 
+        Select-Object Name, DeviceID, ScreenHeight, ScreenWidth
 
-    $networkAdapters = Get-CimInstance -ClassName Win32_NetworkAdapter | 
-                       Where-Object { $_.NetConnectionStatus -eq 2 } | # Only active adapters
-                       Select-Object Name, MACAddress, NetConnectionID
+        $networkAdapters = Get-CimInstance -ClassName Win32_NetworkAdapter | 
+        Where-Object { $_.NetConnectionStatus -eq 2 } | # Only active adapters
+        Select-Object Name, MACAddress, NetConnectionID
 
-    $audioDevices = Get-CimInstance -ClassName Win32_SoundDevice | 
-                    Select-Object Name, Status
+        $audioDevices = Get-CimInstance -ClassName Win32_SoundDevice | 
+        Select-Object Name, Status
 
-    $storageDevices = Get-CimInstance -ClassName Win32_DiskDrive | 
-                      Select-Object Model, Size, MediaType, InterfaceType
+        $storageDevices = Get-CimInstance -ClassName Win32_DiskDrive | 
+        Select-Object Model, Size, MediaType, InterfaceType
 
-    [PSCustomObject]@{
-        USBDevices       = $usbDevices
-        Monitors         = $monitors
-        NetworkAdapters  = $networkAdapters
-        AudioDevices     = $audioDevices
-        StorageDevices   = $storageDevices
+        return [PSCustomObject]@{
+            USBDevices       = $usbDevices
+            Monitors         = $monitors
+            NetworkAdapters  = $networkAdapters
+            AudioDevices     = $audioDevices
+            StorageDevices   = $storageDevices
+            connectedDevices = $connectedDevices        
+        }
+    }
+
+     #####################################################################################################################
+
+    $systemConfiguration = [PSCustomObject]@{
+        Timestamp              = (Get-Date).ToString("yyyy-MM-ddTHH:mm:ss")
+        RegistrySoftware       = Get-RegistrySoftwareConfig
+        WingetPackages         = Get-WingetPackagesConfig
+        HardwareInformation    = Get-HardwareConfig
+        ChocoPackages          = Get-ChocoPackagesConfig
+        PythonPackages         = $pythonPackages
+        ConnectedDevicesConfig = Get-ConnectedDevices
+    }
+
+    function Canonical-Json {
+        param (
+            [Parameter(Mandatory = $true)]
+            [PSObject]$InputObject,
+            $JsonDepth = 10
+        )
+    
+        # Convert to JSON with sorted keys and no whitespace
+        $json = $InputObject | 
+            ConvertTo-Json -Depth 10 -Compress | 
+            ConvertFrom-Json | 
+            Sort-Object | 
+            ConvertTo-Json -Depth 10 -Compress
+    
+        return $json
+    }
+    # Convert to JSON (full object)
+    Write-host $systemConfiguration -ForegroundColor Gray
+    foreach ($property in $systemConfiguration.PSObject.Properties) {
+        Write-Host "Property: $($property.Name)" -ForegroundColor Magenta
+        if ($null -eq $property.Value ) {
+            Write-Warning "No data found for '$($property.Name)'." 
+            continue
+        } else {
+            Write-Host "Property: $($property.Value).Substring(0, $MaxLength - 3)" -ForegroundColor Cyan
+        }
+        $jsonChunk = Canonical-Json -InputObject $property.Value -JsonDepth $JsonDepth
+        if ($jsonChunk -like "*...*") {
+            Write-Warning "Data for '$($property.Name)' might be truncated at depth $JsonDepth. Use a higher depth if needed."
+        }
+        $filePath = Join-Path -Path $MyConfigFolder -ChildPath ("{0}.json" -f $property.Name)
+        Write-Host "Writing to file: $filePath" -ForegroundColor Green 
+        $MaxLength = 80
+        $truncated = $jsonChunk.Substring(0, $MaxLength - 3) + '...'    
+        Write-Host $truncated -ForegroundColor Gray
+        Set-Content -Path $filePath -Value $jsonChunk -Encoding UTF8
     }
 }
-    # Collect configurations
-    $configs = @{}
-    if (-Not $NoSW) {
-        $configs.registrySoftware = Get-RegistrySoftwareConfig
-        $configs.registrySoftware | ConvertTo-Json -Depth $JsonDepth | Set-Content -Path (Join-Path -Path $GitRepositoryPath -ChildPath "$configFolder\registrySoftware.json")
-    }
-    if (-Not $NoWinget) {
-        $configs.wingetPackages = Get-WingetPackagesConfig
-        $configs.wingetPackages | ConvertTo-Json -Depth $JsonDepth | Set-Content -Path (Join-Path -Path $GitRepositoryPath -ChildPath "$configFolder\wingetPackages.json")
-    }
-    if (-Not $NoChoco) {
-        $configs.chocoPackages = Get-ChocoPackagesConfig
-        $configs.chocoPackages | ConvertTo-Json -Depth $JsonDepth | Set-Content -Path (Join-Path -Path $GitRepositoryPath -ChildPath "$configFolder\chocoPackages.json")
-    }
-    if (-Not $NoHW) {
-        $configs.hardwareConfig = Get-HardwareConfig
-        $configs.hardwareConfig | ConvertTo-Json -Depth $JsonDepth | Set-Content -Path (Join-Path -Path $GitRepositoryPath -ChildPath "$configFolder\hardwareConfig.json")
-    }
-    if (-Not $NoCD) {
-        $configs.connectedDevicesConfig = Get-ConnectedDevices
-        $configs.connectedDevicesConfig | ConvertTo-Json -Depth $JsonDepth | Set-Content -Path (Join-Path -Path $GitRepositoryPath -ChildPath "$configFolder\connectedDevicesConfig.json")
-    }
 
+function CommitChanges {
+    
     # Check if something has changed using git
-    if (-Not $NoGit) {
-        Set-Location -Path $GitRepositoryPath
-        $gitStatus = git status --porcelain
+    Set-Location -Path $GitRepositoryPath
+    $gitStatus = git status --porcelain
 
-        if ($gitStatus) {
-            # Create or update the yaml file with the complete config
-            $configs | ConvertTo-Yaml | Set-Content -Path (Join-Path -Path $GitRepositoryPath -ChildPath $yamlFilePath)
-            Write-Host "Configuration has changed. Updating YAML file and committing changes..." -ForegroundColor Cyan
+    if ($gitStatus) {
+        # foreach ($item in $systemConfiguration.GetEnumerator()) {
+        #     # Create or update the yaml file with the complete config
+        # $configs | ConvertTo-Yaml | Set-Content -Path (Join-Path -Path $GitRepositoryPath -ChildPath $yamlFilePath)
+        Write-Host "Configuration has changed. Updating YAML file and committing changes..." -ForegroundColor Cyan
 
-            # Log the changes in red
-            $gitStatus | ForEach-Object { Write-Host $_ -ForegroundColor Red }
+        # Log the changes in red
+        $gitStatus | ForEach-Object { Write-Host $_ -ForegroundColor Red }
 
-            # Commit the changes
-            git add .
-            git commit -m "New config in $($gitStatus | ForEach-Object { $_ -replace '^\s*\S+\s+', '' } | Select-Object -First 1) found"
-            Write-Host "Changes committed to the repository." -ForegroundColor Green
-        } else {
+        # Commit the changes
+        #     git add .
+        #     git commit -m "New config in $($gitStatus | ForEach-Object { $_ -replace '^\s*\S+\s+', '' } | Select-Object -First 1) found"
+        #     Write-Host "Changes committed to the repository." -ForegroundColor Green
+        # }
+        else {
             Write-Host "No changes detected in the configuration." -ForegroundColor Yellow
         }
     }
 }
 
 # Main logic
-Ensure-YamlModule
-Update-SystemConfiguration -JsonDepth $JsonDepth
+# pass on parms from commandline
+Update-SystemConfiguration -JsonDepth $JsonDepth -YamlConfig "system_configuration.yaml" -GitRepositoryPath  "C:\Users\uv\OneDrive\PowerShell"
+if ( $Git ) { CommitChanges }

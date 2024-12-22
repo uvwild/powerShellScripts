@@ -1,7 +1,0 @@
-{
-  "USBDevices": "                                                                                     ",
-  "Monitors": "@{Name=Generic PnP Monitor; DeviceID=DesktopMonitor1; ScreenHeight=; ScreenWidth=}",
-  "NetworkAdapters": "@{Name=Realtek Gaming 2.5GbE Family Controller #2; MACAddress=38:F7:CD:C8:87:AD; NetConnectionID=Ethernet 2}",
-  "AudioDevices": "         ",
-  "StorageDevices": "         "
-}
