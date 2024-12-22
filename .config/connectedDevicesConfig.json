@@ -1,0 +1,463 @@
+{
+  "USBDevices": [
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\ROOT_HUB30\\5&1FEB54E4&0&0\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15C0&SUBSYS_15C01022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_05E3&PID_0626\\6&343B380F&0&2\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15C0&SUBSYS_15C01022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_05E3&PID_0626\\7&2F3BFA9D&0&1\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15C0&SUBSYS_15C01022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_05E3&PID_0749\\000000001532\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15C0&SUBSYS_15C01022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USBSTOR\\DISK&VEN_GENERIC&PROD_STORAGE_D...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15C0&SUBSYS_15C01022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USBSTOR\\DISK&VEN_GENERIC&PROD_STORAGE_D...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15C0&SUBSYS_15C01022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_05E3&PID_0610\\6&343B380F&0&1\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15C0&SUBSYS_15C01022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_05E3&PID_0610\\7&3B61B034&0&1\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15C0&SUBSYS_15C01022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_0A05&PID_7211\\7&3B61B034&0&4\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15C0&SUBSYS_15C01022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_0A05&PID_7211\\8&3AAE359&0&1\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15C0&SUBSYS_15C01022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\ROOT_HUB30\\5&19C782B&0&0\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_05E3&PID_0625\\6&3878EF1F&0&6\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_05E3&PID_0626\\6&3878EF1F&0&7\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_05E3&PID_0610\\6&3878EF1F&0&1\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_0A12&PID_4010\\7&36EEB143&0&1\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_041E&PID_3130\\D97E0B7F89763BC32...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_041E&PID_3130&MI_00\\9&31763C1E&...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"HID\\VID_041E&PID_3130&MI_00&COL01\\A&D73...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"HID\\VID_041E&PID_3130&MI_00&COL02\\A&D73...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"HID\\VID_041E&PID_3130&MI_00&COL03\\A&D73...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_041E&PID_3130&MI_01\\9&31763C1E&...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"HID\\VID_041E&PID_3130&MI_01&COL01\\A&314...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"HID\\VID_041E&PID_3130&MI_01&COL02\\A&314...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_041E&PID_3130&MI_02\\9&31763C1E&...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"SWD\\DRIVERENUM\\{1BBB99B1-03DF-4468-81DC...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"SWD\\MMDEVAPI\\{0.0.0.00000000}.{A5306583...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"SWD\\MMDEVAPI\\{0.0.1.00000000}.{DEE7D339...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_0A12&PID_4010\\7&36EEB143&0&2\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_041E&PID_3132\\3C8D59DCDFB89BC32...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_041E&PID_3132&MI_00\\9&2E688E62&...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"HID\\VID_041E&PID_3132&MI_00&COL01\\A&DF9...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"HID\\VID_041E&PID_3132&MI_00&COL02\\A&DF9...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"HID\\VID_041E&PID_3132&MI_00&COL03\\A&DF9...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_041E&PID_3132&MI_01\\9&2E688E62&...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"HID\\VID_041E&PID_3132&MI_01&COL01\\A&25B...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"HID\\VID_041E&PID_3132&MI_01&COL02\\A&25B...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"HID\\VID_041E&PID_3132&MI_01&COL03\\A&25B...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_041E&PID_3132&MI_02\\9&2E688E62&...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"SWD\\DRIVERENUM\\{1BBB99B1-03DF-4468-81DC...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"SWD\\MMDEVAPI\\{0.0.0.00000000}.{269A2F99...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"SWD\\MMDEVAPI\\{0.0.1.00000000}.{74E51686...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_194F&PID_0109\\SC1E19070607\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_194F&PID_0109&MI_00\\7&160A7CFF&...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"SWD\\MMDEVAPI\\{0.0.0.00000000}.{5046D604...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"SWD\\MMDEVAPI\\{0.0.1.00000000}.{05B35281...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_194F&PID_0109&MI_03\\7&160A7CFF&...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"SWD\\MMDEVAPI\\MIDII_B2BCB8E9.P_0000\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"SWD\\MMDEVAPI\\MIDII_B2BCB8E9.P_0001\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_194F&PID_0109&MI_05\\7&160A7CFF&...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_05E3&PID_0610\\6&3878EF1F&0&2\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_046A&PID_0115\\7&E0D97E1&0&2\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_046A&PID_0115&MI_00\\8&265803A6&...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"HID\\VID_046A&PID_0115&MI_00\\9&10F70481&...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_046A&PID_0115&MI_01\\8&265803A6&...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"HID\\VID_046A&PID_0115&MI_01&COL01\\9&28B...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"HID\\VID_046A&PID_0115&MI_01&COL02\\9&28B...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_046A&PID_0115&MI_02\\8&265803A6&...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"HID\\VID_046A&PID_0115&MI_02\\9&4E35304&0...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15B9&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB4\\VIRTUAL_POWER_PDO\\5&2F549F58&0&0\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_1668&SUBSYS_16681022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB4\\ROOT_DEVICE_ROUTER&VID_1022&PID_16...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_1668&SUBSYS_16681022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\ROOT_HUB30\\5&284CF363&0&0\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15C1&SUBSYS_15C11022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_05E3&PID_0625\\6&4F32310&0&2\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15C1&SUBSYS_15C11022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_05E3&PID_0610\\6&4F32310&0&1\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15C1&SUBSYS_15C11022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_2109&PID_2822\\7&3A8E8806&0&2\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15C1&SUBSYS_15C11022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_0BDA&PID_9220\\0132680004C0\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15C1&SUBSYS_15C11022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USBSTOR\\DISK&VEN_CT4000P3&PROD_SSD8&REV...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15C1&SUBSYS_15C11022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_0BDA&PID_5411\\8&5AA029F&0&4\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15C1&SUBSYS_15C11022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_04E8&PID_61FB\\MSFT30S6YMNS0T202...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15C1&SUBSYS_15C11022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"SCSI\\DISK&VEN_SAMSUNG&PROD_PSSD_T7_SHIE...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15C1&SUBSYS_15C11022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_152D&PID_0576\\152D00576000\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15C1&SUBSYS_15C11022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USBSTOR\\DISK&VEN_JMICRON&PROD_JMS576&RE...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15C1&SUBSYS_15C11022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_152D&PID_0578\\MSFT3000000000498...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15C1&SUBSYS_15C11022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"SCSI\\DISK&VEN_SANDISK&PROD_SDSSDH31024G...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15C1&SUBSYS_15C11022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_1058&PID_261B\\MSFT3031393132313...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15C1&SUBSYS_15C11022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"SCSI\\DISK&VEN_WD&PROD_MY_PASSPORT_261B\\...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15C1&SUBSYS_15C11022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"SCSI\\ENCLOSURE&VEN_WD&PROD_SES_DEVICE\\8...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15C1&SUBSYS_15C11022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_152D&PID_0581\\MSFT30DB2408000B7...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15C1&SUBSYS_15C11022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"SCSI\\DISK&VEN_VIPER_VP&PROD_4300L_2TB__...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15C1&SUBSYS_15C11022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"SCSI\\DISK&VEN_CT1000MX&PROD_500SSD4\\8&1...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15C1&SUBSYS_15C11022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\ROOT_HUB30\\5&38F471A6&0&0\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15BA&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_13D3&PID_3585\\000000000\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15BA&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"USB\\VID_13D3&PID_3585&MI_00\\7&3721923B&...)",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15BA&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"BTH\\MS_RFCOMM\\8&3AA40090&0&0\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15BA&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"BTH\\MS_BTHBRB\\8&3AA40090&0&1\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15BA&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"BTH\\MS_BTHPAN\\8&3AA40090&0&2\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15BA&SUBSYS_15B91022&R...)"
+    },
+    {
+      "DeviceName": "Win32_PnPEntity (DeviceID = \"BTH\\MS_BTHLE\\8&3AA40090&0&3\")",
+      "Controller": "Win32_USBController (DeviceID = \"PCI\\VEN_1022&DEV_15BA&SUBSYS_15B91022&R...)"
+    }
+  ],
+  "Monitors": {
+    "Name": "Generic PnP Monitor",
+    "DeviceID": "DesktopMonitor1",
+    "ScreenHeight": null,
+    "ScreenWidth": null
+  },
+  "NetworkAdapters": {
+    "Name": "Realtek Gaming 2.5GbE Family Controller #2",
+    "MACAddress": "38:F7:CD:C8:87:AD",
+    "NetConnectionID": "Ethernet 2"
+  },
+  "AudioDevices": [
+    {
+      "Name": "AMD High Definition Audio Device",
+      "Status": "OK"
+    },
+    {
+      "Name": "USB Audio Device",
+      "Status": "OK"
+    },
+    {
+      "Name": "Creative BT-W5",
+      "Status": "OK"
+    },
+    {
+      "Name": "AMD Streaming Audio Device",
+      "Status": "OK"
+    },
+    {
+      "Name": "Creative BT-W6",
+      "Status": "OK"
+    },
+    {
+      "Name": "USB Audio 2.0",
+      "Status": "OK"
+    },
+    {
+      "Name": "Virtual Mic for AudioRelay",
+      "Status": "OK"
+    },
+    {
+      "Name": "Virtual Speakers for AudioRelay",
+      "Status": "OK"
+    },
+    {
+      "Name": "VB-Audio Matrix VAIO",
+      "Status": "OK"
+    },
+    {
+      "Name": "Realtek High Definition Audio",
+      "Status": "OK"
+    }
+  ],
+  "StorageDevices": [
+    {
+      "Model": "Viper VP 4300L 2TB   SN08 SCSI Disk Device",
+      "Size": 2000396321280,
+      "MediaType": "External hard disk media",
+      "InterfaceType": "SCSI"
+    },
+    {
+      "Model": "Generic STORAGE DEVICE USB Device",
+      "Size": null,
+      "MediaType": null,
+      "InterfaceType": "USB"
+    },
+    {
+      "Model": "SanDisk SDSSDH31024G SCSI Disk Device",
+      "Size": 1024203640320,
+      "MediaType": "External hard disk media",
+      "InterfaceType": "SCSI"
+    },
+    {
+      "Model": "CT1000MX 500SSD4 SCSI Disk Device",
+      "Size": 1000202273280,
+      "MediaType": "External hard disk media",
+      "InterfaceType": "SCSI"
+    },
+    {
+      "Model": "Samsung PSSD T7 Shield SCSI Disk Device",
+      "Size": 2000396321280,
+      "MediaType": "External hard disk media",
+      "InterfaceType": "SCSI"
+    },
+    {
+      "Model": "CT4000P3 SSD8 USB Device",
+      "Size": 4000784417280,
+      "MediaType": "External hard disk media",
+      "InterfaceType": "USB"
+    },
+    {
+      "Model": "CT2000P3PSSD8",
+      "Size": 2000396321280,
+      "MediaType": "Fixed hard disk media",
+      "InterfaceType": "SCSI"
+    },
+    {
+      "Model": "Generic STORAGE DEVICE USB Device",
+      "Size": null,
+      "MediaType": null,
+      "InterfaceType": "USB"
+    },
+    {
+      "Model": "JMICRON JMS576 USB Device",
+      "Size": 0,
+      "MediaType": "External hard disk media",
+      "InterfaceType": "USB"
+    },
+    {
+      "Model": "WD My Passport 261B SCSI Disk Device",
+      "Size": 1000202273280,
+      "MediaType": "External hard disk media",
+      "InterfaceType": "SCSI"
+    }
+  ]
+}
