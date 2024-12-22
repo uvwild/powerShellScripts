@@ -63,7 +63,7 @@ param (
     [switch]$NoSW,
     [switch]$NoWinget,
     [switch]$NoChoco,
-    [int]$JsonDepth = 8
+    [int]$JsonDepth
 )
 
 function Ensure-YamlModule {
@@ -143,7 +143,7 @@ function Update-SystemConfiguration {
         }
     
         # Retrieve installed Chocolatey packages
-        $chocoList = choco list -l
+        $chocoList = choco list
     
         $parsedPackages = $chocoList | ForEach-Object {
             $fields = $_ -split '\|' # Split by the '|' delimiter used by choco
@@ -226,7 +226,7 @@ function Get-ConnectedDevices {
     $configs = @{}
     if (-Not $NoSW) {
         $configs.registrySoftware = Get-RegistrySoftwareConfig
-        $configs.registrySoftware | ConvertTo-Json -Depth $JsonDepth | Set-Content -Path (Join-Path -Path $GitRepositoryPath -ChildPath "$configFolder\registrySoftware.json")
+        $configs.registrySoftware | ConvertTo-Json -Depth $JsonDepth | Set-Content -Path (Join-Path -Path $GitRepositoryPathca -ChildPath "$configFolder\registrySoftware.json")
     }
     if (-Not $NoWinget) {
         $configs.wingetPackages = Get-WingetPackagesConfig

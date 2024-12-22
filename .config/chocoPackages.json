@@ -4,7 +4,39 @@
     "Version": null
   },
   {
-    "Name": "Invalid argument -l. This argument has been removed from the list command and cannot be used.",
+    "Name": "chocolatey 2.3.0",
+    "Version": null
+  },
+  {
+    "Name": "eartrumpet 2.3.0",
+    "Version": null
+  },
+  {
+    "Name": "tigervnc 1.14.1",
+    "Version": null
+  },
+  {
+    "Name": "yt-dlp 2024.12.13",
+    "Version": null
+  },
+  {
+    "Name": "4 packages installed.",
+    "Version": null
+  },
+  {
+    "Name": "",
+    "Version": null
+  },
+  {
+    "Name": "Did you know Pro / Business automatically syncs with Programs and",
+    "Version": null
+  },
+  {
+    "Name": " Features? Learn more about Package Synchronizer at",
+    "Version": null
+  },
+  {
+    "Name": " https://chocolatey.org/compare",
     "Version": null
   }
 ]
