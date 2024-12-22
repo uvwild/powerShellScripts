@@ -6,7 +6,7 @@ param (
     [switch]$NoSW,
     [switch]$NoWinget,
     [switch]$NoChoco,
-    [int]$JsonDepth = 5
+    [int]$JsonDepth = 8
 )
 
 function Ensure-YamlModule {
