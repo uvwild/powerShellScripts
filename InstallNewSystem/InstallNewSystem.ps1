@@ -65,8 +65,14 @@ $packages = @(
     "IrfanSkiljan.IrfanView",
     "IrfanSkiljan.IrfanView.PlugIns",
     "CodeSector.TeraCopy",
+
+    # office
+    "geeksoftwareGmbH.PDF24Creator",
+    "TrackerSoftware.PDF-XChangeEditor",
+    "TheDocumentFoundation.LibreOffice",
+    
+    # system
     "ScooterSoftware.BeyondCompare.5",
-    "TheDocumentFoundation.LibreOffice"
     "CrystalDewWorld.CrystalDiskInfo",
     "UweSieber.UsbTreeView"
 )
@@ -83,6 +89,7 @@ $remove = @(
     "Native Instruments Traktor Kontrol S2",
     "Native Instruments Traktor Kontrol S4",
     "Native Instruments Traktor Kontrol S8",
+    "Native Instruments Traktor Kontrol S10",
     "",
     "",
     "Microsoft Tips",    

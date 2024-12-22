@@ -1,3 +1,4 @@
 {
-    "chat.editing.alwaysSaveWithGeneratedChanges": true
+    "chat.editing.alwaysSaveWithGeneratedChanges": true,
+    "terminal.integrated.enableMultiLinePasteWarning": false
 }

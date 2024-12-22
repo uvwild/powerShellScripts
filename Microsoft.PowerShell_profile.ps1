@@ -87,6 +87,15 @@ Set-Alias np notepad++.exe
 
 Set-Alias reboot Restart-Computer
 
+# Function to wrap VLC command
+function vlc {
+    param (
+        [Parameter(Mandatory=$false)]
+        [string[]]$Args
+    )
+    & "C:\Program Files\VideoLAN\VLC\vlc.exe" @Args
+}
+
 # Create an alias 'll' for listing the current folder and its children as JSON
 function ListAsJson {
     Get-ChildItem -Path "." -Recurse
