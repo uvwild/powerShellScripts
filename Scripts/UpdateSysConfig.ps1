@@ -5,24 +5,26 @@ param (
     [switch]$NoHW,
     [switch]$NoSW,
     [switch]$NoWinget,
-    [switch]$NoChoco
+    [switch]$NoChoco,
+    [int]$JsonDepth = 5
 )
 
 function Ensure-YamlModule {
-    if (-not (Get-Module -ListAvailable -Name 'YAML')) {
-        Write-Host "YAML module not found. Installing..." -ForegroundColor Yellow
+    if (-not (Get-Module -ListAvailable -Name 'powershell-yaml')) {
+        Write-Host "powershell-yaml module not found. Installing..." -ForegroundColor Yellow
         Install-Module -Name powershell-yaml -Force -Scope CurrentUser
     } else {
-        Write-Host "YAML module is already installed." -ForegroundColor Green
+        Write-Host "powershell-yaml module is already installed." -ForegroundColor Green
     }
     Import-Module powershell-yaml
 }
 
 function Update-SystemConfiguration {
     param (
-        [string]$yamlFilePath = "sysconfig.json",
+        [string]$yamlFilePath = "sysconfig.yaml",
         [string]$GitRepositoryPath = "C:\Users\uv\OneDrive\PowerShell",
-        [string]$configFolder = ".config"
+        [string]$configFolder = ".config",
+        [int]$JsonDepth = 5
     )
 
     # Check if the config folder exists, create if needed
@@ -101,19 +103,19 @@ function Update-SystemConfiguration {
     $configs = @{}
     if (-Not $NoSW) {
         $configs.registrySoftware = Get-RegistrySoftwareConfig
-        $configs.registrySoftware | ConvertTo-Json | Set-Content -Path (Join-Path -Path $GitRepositoryPath -ChildPath "$configFolder\registrySoftware.json")
+        $configs.registrySoftware | ConvertTo-Json -Depth $JsonDepth | Set-Content -Path (Join-Path -Path $GitRepositoryPath -ChildPath "$configFolder\registrySoftware.json")
     }
     if (-Not $NoWinget) {
         $configs.wingetPackages = Get-WingetPackagesConfig
-        $configs.wingetPackages | ConvertTo-Json | Set-Content -Path (Join-Path -Path $GitRepositoryPath -ChildPath "$configFolder\wingetPackages.json")
+        $configs.wingetPackages | ConvertTo-Json -Depth $JsonDepth | Set-Content -Path (Join-Path -Path $GitRepositoryPath -ChildPath "$configFolder\wingetPackages.json")
     }
     if (-Not $NoChoco) {
         $configs.chocoPackages = Get-ChocoPackagesConfig
-        $configs.chocoPackages | ConvertTo-Json | Set-Content -Path (Join-Path -Path $GitRepositoryPath -ChildPath "$configFolder\chocoPackages.json")
+        $configs.chocoPackages | ConvertTo-Json -Depth $JsonDepth | Set-Content -Path (Join-Path -Path $GitRepositoryPath -ChildPath "$configFolder\chocoPackages.json")
     }
     if (-Not $NoHW) {
         $configs.hardwareConfig = Get-HardwareConfig
-        $configs.hardwareConfig | ConvertTo-Json | Set-Content -Path (Join-Path -Path $GitRepositoryPath -ChildPath "$configFolder\hardwareConfig.json")
+        $configs.hardwareConfig | ConvertTo-Json -Depth $JsonDepth | Set-Content -Path (Join-Path -Path $GitRepositoryPath -ChildPath "$configFolder\hardwareConfig.json")
     }
 
     # Check if something has changed using git
@@ -125,6 +127,9 @@ function Update-SystemConfiguration {
             # Create or update the yaml file with the complete config
             $configs | ConvertTo-Yaml | Set-Content -Path (Join-Path -Path $GitRepositoryPath -ChildPath $yamlFilePath)
             Write-Host "Configuration has changed. Updating YAML file and committing changes..." -ForegroundColor Cyan
+
+            # Log the changes in red
+            $gitStatus | ForEach-Object { Write-Host $_ -ForegroundColor Red }
 
             # Commit the changes
             git add .
@@ -138,4 +143,4 @@ function Update-SystemConfiguration {
 
 # Main logic
 Ensure-YamlModule
-Update-SystemConfiguration
+Update-SystemConfiguration -JsonDepth $JsonDepth
