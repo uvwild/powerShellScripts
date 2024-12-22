@@ -19,6 +19,16 @@ function Ensure-YamlModule {
     Import-Module powershell-yaml
 }
 
+function Ensure-ChocoPackageProvider  {
+    if (-not (Get-Package | Where-Object { $_.ProviderName -eq 'Chocolatey' })) {
+        Write-Host "Chocolatey provider package not found. Installing..." -ForegroundColor Yellow
+        Get-PackageProvider -Name Chocolatey
+    } else {
+        Write-Host "Chocolatey package is already installed." -ForegroundColor Green
+    }
+    Install-PackageProvider -Name Chocolatey -Force -Scope CurrentUser
+}
+
 function Update-SystemConfiguration {
     param (
         [string]$yamlFilePath = "sysconfig.yaml",

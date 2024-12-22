@@ -6672,7 +6672,7 @@ hardwareConfig:
       Flags: Property, ReadOnly, NotModified
       IsValueModified: false
     - Name: LoadPercentage
-      Value: 9
+      Value: 12
       CimType: UInt16
       Flags: Property, ReadOnly, NotModified
       IsValueModified: false

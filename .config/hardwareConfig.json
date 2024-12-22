@@ -8973,7 +8973,7 @@
       },
       {
         "Name": "LoadPercentage",
-        "Value": 9,
+        "Value": 12,
         "CimType": 4,
         "Flags": "Property, ReadOnly, NotModified",
         "IsValueModified": false
@@ -9239,7 +9239,7 @@
     "CurrentClockSpeed": 4001,
     "DataWidth": 64,
     "Family": 107,
-    "LoadPercentage": 9,
+    "LoadPercentage": 12,
     "MaxClockSpeed": 4001,
     "OtherFamilyDescription": null,
     "Role": "CPU",
