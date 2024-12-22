@@ -1,6 +1,8 @@
 chocoPackages:
-  Name: Invalid
-  Version: argument --localonly. This argument has been removed from the list command and cannot be used.
+- Name: Chocolatey v2.3.0
+  Version: 
+- Name: Invalid argument -l. This argument has been removed from the list command and cannot be used.
+  Version: 
 hardwareConfig:
   ComputerSystem:
     CimClass:
@@ -6670,7 +6672,7 @@ hardwareConfig:
       Flags: Property, ReadOnly, NotModified
       IsValueModified: false
     - Name: LoadPercentage
-      Value: 1
+      Value: 9
       CimType: UInt16
       Flags: Property, ReadOnly, NotModified
       IsValueModified: false

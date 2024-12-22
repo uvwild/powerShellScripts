@@ -1,4 +1,10 @@
-{
-  "Name": "Invalid",
-  "Version": "argument --localonly. This argument has been removed from the list command and cannot be used."
-}
+[
+  {
+    "Name": "Chocolatey v2.3.0",
+    "Version": null
+  },
+  {
+    "Name": "Invalid argument -l. This argument has been removed from the list command and cannot be used.",
+    "Version": null
+  }
+]

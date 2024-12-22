@@ -66,16 +66,41 @@ function Update-SystemConfiguration {
 
     # Function to retrieve choco packages configuration
     function Get-ChocoPackagesConfig {
-        # Placeholder for actual implementation
-        $chocoOutput = choco list --localonly
-        $parsedChocoPackages = $chocoOutput | Select-Object -Skip 1 | ForEach-Object {
-            $fields = $_ -split '\s+', 2
+        param (
+            [string]$OutputFile = $null
+        )
+    
+        # Check if Chocolatey is installed
+        if (-not (Get-Command choco -ErrorAction SilentlyContinue)) {
+            throw "Chocolatey is not installed on this system."
+        }
+    
+        # Retrieve installed Chocolatey packages
+        $chocoList = choco list -l
+    
+        $parsedPackages = $chocoList | ForEach-Object {
+            $fields = $_ -split '\|' # Split by the '|' delimiter used by choco
             [PSCustomObject]@{
                 Name    = $fields[0]
                 Version = $fields[1]
             }
         }
-        return $parsedChocoPackages 
+    
+        # Convert to JSON
+        $jsonObject = $parsedPackages | ConvertTo-Json -Depth 1
+    
+        # If an output file is provided, save the JSON to the file
+        if ($OutputFile) {
+            try {
+                $jsonObject | Set-Content -Path $OutputFile -Encoding UTF8
+                Write-Host "Configuration saved to $OutputFile"
+            } catch {
+                Write-Error "Failed to save JSON to file: $_"
+            }
+        }
+    
+        # Return the parsed object
+        return $parsedPackages
     }
 
     # Function to retrieve hardware configuration
