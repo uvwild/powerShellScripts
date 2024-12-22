@@ -1,4 +1,5 @@
 {
     "chat.editing.alwaysSaveWithGeneratedChanges": true,
-    "terminal.integrated.enableMultiLinePasteWarning": false
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "terminal.integrated.enablePersistentSessions": false
 }
