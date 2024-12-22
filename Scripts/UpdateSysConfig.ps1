@@ -8,6 +8,15 @@ param (
     [switch]$NoChoco
 )
 
+function Ensure-YamlModule {
+    if (-not (Get-Module -ListAvailable -Name 'YAML')) {
+        Write-Host "YAML module not found. Installing..."
+        Install-Module -Name YAML -Force -Scope CurrentUser
+    } else {
+        Write-Host "YAML module is already installed."
+    }
+}
+
 function Update-SystemConfiguration {
     param (
         [string]$yamlFilePath = "sysconfig.json",
