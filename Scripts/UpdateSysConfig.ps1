@@ -10,11 +10,12 @@ param (
 
 function Ensure-YamlModule {
     if (-not (Get-Module -ListAvailable -Name 'YAML')) {
-        Write-Host "YAML module not found. Installing..."
-        Install-Module -Name YAML -Force -Scope CurrentUser
+        Write-Host "YAML module not found. Installing..." -ForegroundColor Yellow
+        Install-Module -Name powershell-yaml -Force -Scope CurrentUser
     } else {
-        Write-Host "YAML module is already installed."
+        Write-Host "YAML module is already installed." -ForegroundColor Green
     }
+    Import-Module powershell-yaml
 }
 
 function Update-SystemConfiguration {
@@ -123,13 +124,18 @@ function Update-SystemConfiguration {
         if ($gitStatus) {
             # Create or update the yaml file with the complete config
             $configs | ConvertTo-Yaml | Set-Content -Path (Join-Path -Path $GitRepositoryPath -ChildPath $yamlFilePath)
+            Write-Host "Configuration has changed. Updating YAML file and committing changes..." -ForegroundColor Cyan
 
             # Commit the changes
             git add .
             git commit -m "New config in $($gitStatus | ForEach-Object { $_ -replace '^\s*\S+\s+', '' } | Select-Object -First 1) found"
+            Write-Host "Changes committed to the repository." -ForegroundColor Green
+        } else {
+            Write-Host "No changes detected in the configuration." -ForegroundColor Yellow
         }
     }
 }
 
 # Main logic
+Ensure-YamlModule
 Update-SystemConfiguration
