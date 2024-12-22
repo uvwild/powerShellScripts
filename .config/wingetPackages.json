@@ -1,1322 +1,266 @@
 [
-  {
-    "Name": "",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "",
-    "Id": null,
-    "Version": null
-  },
-  {
-    "Name": "",
-    "Id": "- ",
-    "Version": null
-  },
-  {
-    "Name": "",
-    "Id": "\\ ",
-    "Version": null
-  },
-  {
-    "Name": "",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "Name",
-    "Id": "Id",
-    "Version": "Version"
-  },
-  {
-    "Name": "-----------------------------------------------------------------------------------------------------------------------",
-    "Id": null,
-    "Version": null
-  },
-  {
-    "Name": "Steinberg SpectraLayers 11",
-    "Id": "ARP\\Machine\\X64\\424abc11-aca9-452f-8b47-ΓÇª 11.0.40.395",
-    "Version": ""
-  },
-  {
-    "Name": "Steinberg SpectraLayers 10",
-    "Id": "ARP\\Machine\\X64\\424abc1e-aca9-452c-8b47-ΓÇª 10.0.50.343",
-    "Version": ""
-  },
-  {
-    "Name": "7-Zip 24.08 (x64)",
-    "Id": "7zip.7zip",
-    "Version": "24.08"
-  },
-  {
-    "Name": "Windows Driver Package - Sony Mobile ComΓÇª ARP\\Machine\\X64\\7AA77B236196DB9A6C042570ΓÇª 12/06/2017 3.2.0.0",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "AMD Software",
-    "Id": "ARP\\Machine\\X64\\AMD Catalyst Install ManΓÇª 24.2.1",
-    "Version": ""
-  },
-  {
-    "Name": "Android Studio",
-    "Id": "Google.AndroidStudio",
-    "Version": "2024.2.1.10"
-  },
-  {
-    "Name": "Audacity 3.6.4",
-    "Id": "Audacity.Audacity",
-    "Version": "3.6.4"
-  },
-  {
-    "Name": "Bome Virtual MIDI 2.1.0.44",
-    "Id": "ARP\\Machine\\X64\\BMIDI_Driver1.0.0.11_is1",
-    "Version": "Unknown"
-  },
-  {
-    "Name": "Beyond Compare 4.4.7",
-    "Id": "ScooterSoftware.BeyondCompare.4",
-    "Version": "4.4.7.28397"
-  },
-  {
-    "Name": "CPUID HWMonitor 1.55",
-    "Id": "CPUID.HWMonitor",
-    "Version": "1.55"
-  },
-  {
-    "Name": "CrystalDiskInfo 9.5.0",
-    "Id": "CrystalDewWorld.CrystalDiskInfo",
-    "Version": "9.5.0"
-  },
-  {
-    "Name": "Git",
-    "Id": "Git.Git",
-    "Version": "2.47.0"
-  },
-  {
-    "Name": "HWiNFO┬« 64",
-    "Id": "REALiX.HWiNFO",
-    "Version": "8.12"
-  },
-  {
-    "Name": "Link Shell Extension",
-    "Id": "HermannSchinagl.LinkShellExtension",
-    "Version": "3.9.3.5"
-  },
-  {
-    "Name": "Icaros",
-    "Id": "Xanashi.Icaros",
-    "Version": "3.3.3.0"
-  },
-  {
-    "Name": "IrfanView",
-    "Id": "IrfanSkiljan.IrfanView",
-    "Version": "4.70"
-  },
-  {
-    "Name": "IrfanView 4.67 (64-bit)",
-    "Id": "IrfanSkiljan.IrfanView",
-    "Version": "4.67"
-  },
-  {
-    "Name": "Mozilla Firefox (x64 en-US)",
-    "Id": "Mozilla.Firefox",
-    "Version": "133.0.3"
-  },
-  {
-    "Name": "Mozilla Thunderbird (x64 en-US)",
-    "Id": "Mozilla.Thunderbird",
-    "Version": "128.5.2"
-  },
-  {
-    "Name": "Mozilla Maintenance Service",
-    "Id": "ARP\\Machine\\X64\\MozillaMaintenanceService 128.3.2",
-    "Version": ""
-  },
-  {
-    "Name": "NAPS2",
-    "Id": "ARP\\Machine\\X64\\NAPS2 - Not Another PDF ΓÇª 7.5.2",
-    "Version": ""
-  },
-  {
-    "Name": "Notepad++ (64-bit x64)",
-    "Id": "Notepad++.Notepad++",
-    "Version": "8.7.1"
-  },
-  {
-    "Name": "RegCool",
-    "Id": "KurtZimmermann.RegCool",
-    "Version": "2.019"
-  },
-  {
-    "Name": "TigerVNC 1.14.1 ()",
-    "Id": "TigerVNC.TigerVNC",
-    "Version": "1.14.1"
-  },
-  {
-    "Name": "TigerVNC 1.14.1 ()",
-    "Id": "TigerVNC.TigerVNC",
-    "Version": "1.14.1"
-  },
-  {
-    "Name": "TreeSize Free V4.7.3 (64 bit)",
-    "Id": "JAMSoftware.TreeSize.Free",
-    "Version": "4.7.3"
-  },
-  {
-    "Name": "VLC media player",
-    "Id": "VideoLAN.VLC",
-    "Version": "3.0.21"
-  },
-  {
-    "Name": "XLN Online Installer",
-    "Id": "ARP\\Machine\\X64\\XLN Online Installer InnΓÇª Unknown",
-    "Version": ""
-  },
-  {
-    "Name": "YTDownloader 3.18.5",
-    "Id": "aandrew-me.ytDownloader",
-    "Version": "3.18.5"
-  },
-  {
-    "Name": "Quick Share from Google",
-    "Id": "Google.QuickShare",
-    "Version": "1.0.2034.4"
-  },
-  {
-    "Name": "Steinberg Activation Manager",
-    "Id": "ARP\\Machine\\X64\\{0224CA8C-FD43-4397-94CEΓÇª 1.5.1",
-    "Version": ""
-  },
-  {
-    "Name": "Steinberg WaveLab Pro 12",
-    "Id": "ARP\\Machine\\X64\\{1685B043-789D-4F0D-A570ΓÇª 12.0.40",
-    "Version": ""
-  },
-  {
-    "Name": "Steinberg Generic Lower Latency ASIO DriΓÇª ARP\\Machine\\X64\\{16D5A798-10BE-4FF3-BB71ΓÇª 1.0.30",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "Sonic Visualiser",
-    "Id": "SonicVisualiser.SonicVisualiser",
-    "Version": "5.0.1"
-  },
-  {
-    "Name": "Steinberg Backbone",
-    "Id": "ARP\\Machine\\X64\\{29E7BC5B-ABBC-4899-B6D1ΓÇª 1.6.0",
-    "Version": ""
-  },
-  {
-    "Name": "LibreOffice 24.8.2.1",
-    "Id": "TheDocumentFoundation.LibreOffice",
-    "Version": "24.8.2.1"
-  },
-  {
-    "Name": "Steinberg Cubase 13",
-    "Id": "ARP\\Machine\\X64\\{2B68F691-AC02-46E5-B548ΓÇª 13.0.50",
-    "Version": ""
-  },
-  {
-    "Name": "Steinberg Install Assistant",
-    "Id": "ARP\\Machine\\X64\\{2E7DF371-6034-4FC7-AE30ΓÇª 1.2.2",
-    "Version": ""
-  },
-  {
-    "Name": "RealVNC Server 7.12.1",
-    "Id": "RealVNC.VNCServer",
-    "Version": "7.12.1.21"
-  },
-  {
-    "Name": "Steinberg Groove Agent 5",
-    "Id": "ARP\\Machine\\X64\\{3A97C8A6-8CC0-4AF2-B32BΓÇª 5.2.10",
-    "Version": ""
-  },
-  {
-    "Name": "Sony Mobile Software Update Drivers",
-    "Id": "ARP\\Machine\\X64\\{4872001F-F67C-4C54-BC92ΓÇª 3.2.0.3",
-    "Version": ""
-  },
-  {
-    "Name": "Steinberg Retrologue 64bit",
-    "Id": "ARP\\Machine\\X64\\{4D65ECE6-131D-4B5F-8470ΓÇª 2.4.0",
-    "Version": ""
-  },
-  {
-    "Name": "Google Chrome",
-    "Id": "Google.Chrome",
-    "Version": "131.0.6778.205"
-  },
-  {
-    "Name": "ChatGPT",
-    "Id": "lencx.ChatGPT",
-    "Version": "1.1.0"
-  },
-  {
-    "Name": "Steinberg HALion 7",
-    "Id": "ARP\\Machine\\X64\\{68F66E62-34D9-4148-A3E9ΓÇª 7.1.0",
-    "Version": ""
-  },
-  {
-    "Name": "Steinberg HALion Sonic 7",
-    "Id": "ARP\\Machine\\X64\\{69043884-EB60-4C9A-9C41ΓÇª 7.1.0",
-    "Version": ""
-  },
-  {
-    "Name": "Friture",
-    "Id": "ARP\\Machine\\X64\\{6B05049F-7B7D-464C-8B7EΓÇª 0.51",
-    "Version": ""
-  },
-  {
-    "Name": "Google Drive",
-    "Id": "Google.GoogleDrive",
-    "Version": "101.0.3.0"
-  },
-  {
-    "Name": "Steinberg Padshop 2",
-    "Id": "ARP\\Machine\\X64\\{6FBAF5EF-816E-4D80-BFBEΓÇª 2.2.0",
-    "Version": ""
-  },
-  {
-    "Name": "AusweisApp",
-    "Id": "Governikus.AusweisApp",
-    "Version": "2.2.2"
-  },
-  {
-    "Name": "Node.js",
-    "Id": "OpenJS.NodeJS",
-    "Version": "23.1.0"
-  },
-  {
-    "Name": "PDF24 Creator 11.20.1",
-    "Id": "geeksoftwareGmbH.PDF24Creator",
-    "Version": "11.20.1"
-  },
-  {
-    "Name": "Steinberg MediaBay",
-    "Id": "ARP\\Machine\\X64\\{9529D195-8127-42F5-BA54ΓÇª 1.1.90",
-    "Version": ""
-  },
-  {
-    "Name": "Steinberg Groove Agent SE 5",
-    "Id": "ARP\\Machine\\X64\\{A5AB0D21-21BD-4DB8-F097ΓÇª 5.2.10",
-    "Version": ""
-  },
-  {
-    "Name": "Steinberg Library Manager",
-    "Id": "ARP\\Machine\\X64\\{AA78592A-F13C-4C8E-B849ΓÇª 3.2.50",
-    "Version": ""
-  },
-  {
-    "Name": "PDF-XChange Editor",
-    "Id": "TrackerSoftware.PDF-XChangeEditor",
-    "Version": "10.4.4.392"
-  },
-  {
-    "Name": "Ableton Live 10 Suite",
-    "Id": "ARP\\Machine\\X64\\{AEDE212A-D79B-4E41-947CΓÇª 10.0.0.0",
-    "Version": ""
-  },
-  {
-    "Name": "Mailbird",
-    "Id": "Mailbird.Mailbird",
-    "Version": "3.0.23"
-  },
-  {
-    "Name": "Microsoft Update Health Tools",
-    "Id": "ARP\\Machine\\X64\\{C6FD611E-7EFE-488C-A0E0ΓÇª 5.72.0.0",
-    "Version": ""
-  },
-  {
-    "Name": "Steinberg built-in ASIO Driver 64bit",
-    "Id": "ARP\\Machine\\X64\\{DE26CB00-5D4F-40B4-BEF5ΓÇª 1.0.8",
-    "Version": ""
-  },
-  {
-    "Name": "TeraCopy",
-    "Id": "CodeSector.TeraCopy",
-    "Version": "3.17"
-  },
-  {
-    "Name": "RaiDrive",
-    "Id": "OpenBoxLab.RaiDrive",
-    "Version": "2023.9.256"
-  },
-  {
-    "Name": "Windows Subsystem for Linux Update",
-    "Id": "ARP\\Machine\\X64\\{F8474A47-8B5D-4466-ACE3ΓÇª 5.10.102.1",
-    "Version": ""
-  },
-  {
-    "Name": "Steinberg The Grand 3 64bit",
-    "Id": "ARP\\Machine\\X64\\{FEDB3D64-DF6D-4478-A3DCΓÇª 3.3.0",
-    "Version": ""
-  },
-  {
-    "Name": "AMD Chipset Software",
-    "Id": "ARP\\Machine\\X86\\AMD_Chipset_IODrivers",
-    "Version": "6.02.07.2300"
-  },
-  {
-    "Name": "Creative Sound Blaster (CT)USB Audio DriΓÇª ARP\\Machine\\X86\\CTUSBAudio_is1",
-    "Id": "3.05.00.00",
-    "Version": ""
-  },
-  {
-    "Name": "Creative App version 1.18.11.00",
-    "Id": "CreativeTechnology.CreativeApp",
-    "Version": "1.18.11.00"
-  },
-  {
-    "Name": "Dolby Digital Live Pack version 5.02.01",
-    "Id": "ARP\\Machine\\X86\\DDLMaster_is1",
-    "Version": "5.02.01"
-  },
-  {
-    "Name": "DTS Connect Pack version 3.02.01",
-    "Id": "ARP\\Machine\\X86\\DTSMaster_is1",
-    "Version": "3.02.01"
-  },
-  {
-    "Name": "DownloadHelper CoApp",
-    "Id": "ACLAP.DownloadHelperCoApp",
-    "Version": "2.0.19.0"
-  },
-  {
-    "Name": "Geekbench 6",
-    "Id": "PrimateLabs.Geekbench.6",
-    "Version": "Unknown"
-  },
-  {
-    "Name": "Microsoft Edge",
-    "Id": "Microsoft.Edge",
-    "Version": "131.0.2903.112"
-  },
-  {
-    "Name": "MusicBee 3.5.8698",
-    "Id": "ARP\\Machine\\X86\\MusicBee",
-    "Version": "3.5.8698"
-  },
-  {
-    "Name": "MusicBrainz Picard",
-    "Id": "MusicBrainz.Picard",
-    "Version": "2.12.3"
-  },
-  {
-    "Name": "Native Instruments Blocks Base",
-    "Id": "ARP\\Machine\\X86\\Native Instruments BlockΓÇª 1.0.1.1",
-    "Version": ""
-  },
-  {
-    "Name": "Native Instruments Controller Editor",
-    "Id": "ARP\\Machine\\X86\\Native Instruments ContrΓÇª 2.8.2.0",
-    "Version": ""
-  },
-  {
-    "Name": "Native Instruments Expansions Selection",
-    "Id": "ARP\\Machine\\X86\\Native Instruments ExpanΓÇª 1.0.0.10",
-    "Version": ""
-  },
-  {
-    "Name": "Native Instruments Guitar Rig 5",
-    "Id": "ARP\\Machine\\X86\\Native Instruments GuitaΓÇª 5.2.2.8",
-    "Version": ""
-  },
-  {
-    "Name": "Native Instruments Kinetic Treats",
-    "Id": "ARP\\Machine\\X86\\Native Instruments KinetΓÇª 1.1.0.4",
-    "Version": ""
-  },
-  {
-    "Name": "Native Instruments Komplete Kontrol",
-    "Id": "ARP\\Machine\\X86\\Native Instruments KomplΓÇª 3.3.3.0",
-    "Version": ""
-  },
-  {
-    "Name": "Native Instruments Komplete Kontrol DrivΓÇª ARP\\Machine\\X86\\Native Instruments KomplΓÇª Unknown",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "Native Instruments Komplete Kontrol MK2 ΓÇª ARP\\Machine\\X86\\Native Instruments KomplΓÇª Unknown",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "Native Instruments Kontakt",
-    "Id": "ARP\\Machine\\X86\\Native Instruments KontaΓÇª 6.8.0.0",
-    "Version": ""
-  },
-  {
-    "Name": "Native Instruments Kontakt 7",
-    "Id": "ARP\\Machine\\X86\\Native Instruments KontaΓÇª 7.10.6.0",
-    "Version": ""
-  },
-  {
-    "Name": "Native Instruments Kontakt 8",
-    "Id": "ARP\\Machine\\X86\\Native Instruments KontaΓÇª 8.0.1.0",
-    "Version": ""
-  },
-  {
-    "Name": "Native Instruments Kontakt Factory SelecΓÇª ARP\\Machine\\X86\\Native Instruments KontaΓÇª 1.4.2.1",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "Native Instruments Mikro Prism",
-    "Id": "ARP\\Machine\\X86\\Native Instruments MikroΓÇª 1.1.0.14",
-    "Version": ""
-  },
-  {
-    "Name": "Native Instruments NIHostIntegrationAgent ARP\\Machine\\X86\\Native Instruments NIHosΓÇª 1.16.0.0",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "Native Instruments NTKDaemon",
-    "Id": "ARP\\Machine\\X86\\Native Instruments NTKDaΓÇª 1.21.0.0",
-    "Version": ""
-  },
-  {
-    "Name": "Native Instruments Play Series Selection",
-    "Id": "ARP\\Machine\\X86\\Native Instruments Play ΓÇª 1.0.0.6",
-    "Version": ""
-  },
-  {
-    "Name": "Native Instruments Reaktor 6",
-    "Id": "ARP\\Machine\\X86\\Native Instruments ReaktΓÇª 6.5.0.0",
-    "Version": ""
-  },
-  {
-    "Name": "Native Instruments Reaktor Factory SelecΓÇª ARP\\Machine\\X86\\Native Instruments ReaktΓÇª 1.0.1.7",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "Native Instruments Supercharger",
-    "Id": "ARP\\Machine\\X86\\Native Instruments SuperΓÇª 1.4.7.22",
-    "Version": ""
-  },
-  {
-    "Name": "Native Instruments TRK-01 Bass",
-    "Id": "ARP\\Machine\\X86\\Native Instruments TRK-0ΓÇª 1.0.0.10",
-    "Version": ""
-  },
-  {
-    "Name": "Native Instruments Traktor Audio 10 DrivΓÇª ARP\\Machine\\X86\\Native Instruments TraktΓÇª Unknown",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "Native Instruments Traktor Audio 2 MK2 DΓÇª ARP\\Machine\\X86\\Native Instruments TraktΓÇª Unknown",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "Native Instruments Traktor Audio 6 Driver ARP\\Machine\\X86\\Native Instruments TraktΓÇª Unknown",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "Native Instruments Traktor Kontrol D2 DrΓÇª ARP\\Machine\\X86\\Native Instruments TraktΓÇª Unknown",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "Native Instruments Traktor Kontrol F1 DrΓÇª ARP\\Machine\\X86\\Native Instruments TraktΓÇª Unknown",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "Native Instruments Traktor Kontrol S2 MKΓÇª ARP\\Machine\\X86\\Native Instruments TraktΓÇª Unknown",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "Native Instruments Traktor Kontrol S4 MKΓÇª ARP\\Machine\\X86\\Native Instruments TraktΓÇª Unknown",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "Native Instruments Traktor Kontrol S5 DrΓÇª ARP\\Machine\\X86\\Native Instruments TraktΓÇª Unknown",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "Native Instruments Traktor Kontrol S8 DrΓÇª ARP\\Machine\\X86\\Native Instruments TraktΓÇª Unknown",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "Native Instruments Traktor Kontrol X1 MKΓÇª ARP\\Machine\\X86\\Native Instruments TraktΓÇª Unknown",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "Native Instruments Traktor Kontrol X1 MKΓÇª ARP\\Machine\\X86\\Native Instruments TraktΓÇª Unknown",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "Native Instruments Traktor Kontrol Z1 DrΓÇª ARP\\Machine\\X86\\Native Instruments TraktΓÇª Unknown",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "Native Instruments Traktor Kontrol Z2 DrΓÇª ARP\\Machine\\X86\\Native Instruments TraktΓÇª Unknown",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "Native Instruments Traktor Pro 3",
-    "Id": "ARP\\Machine\\X86\\Native Instruments TraktΓÇª 3.11.1.17",
-    "Version": ""
-  },
-  {
-    "Name": "OBS Studio",
-    "Id": "OBSProject.OBSStudio",
-    "Version": "30.2.3"
-  },
-  {
-    "Name": "Xiph.Org Ogg Codecs 0.83.17220 32-bit",
-    "Id": "ARP\\Machine\\X86\\Ogg Codecs",
-    "Version": "0.83.17220"
-  },
-  {
-    "Name": "Steinberg Download Assistant",
-    "Id": "ARP\\Machine\\X86\\Steinberg Download AssisΓÇª 1.36.3",
-    "Version": ""
-  },
-  {
-    "Name": "VB-Audio Matrix, Audio Router",
-    "Id": "ARP\\Machine\\X86\\VB:VBAudioMatrix {45CF77ΓÇª Unknown",
-    "Version": ""
-  },
-  {
-    "Name": "eLicenser Control",
-    "Id": "ARP\\Machine\\X86\\eLicenser Control",
-    "Version": "6.12.10.1326"
-  },
-  {
-    "Name": "BayHubTech SD Host Driver",
-    "Id": "ARP\\Machine\\X86\\{017A3482-32D5-4FF8-B8C5ΓÇª 5.0.094",
-    "Version": ""
-  },
-  {
-    "Name": "Microsoft Windows Desktop Runtime - 6.0.ΓÇª Microsoft.DotNet.DesktopRuntime.6",
-    "Id": "6.0.36",
-    "Version": "winget"
-  },
-  {
-    "Name": "Videomass version 3.5.8 (64-bit)",
-    "Id": "GianlucaPernigotto.Videomass",
-    "Version": "3.5.8"
-  },
-  {
-    "Name": "Python Launcher",
-    "Id": "Python.Launcher",
-    "Version": "< 3.12.0"
-  },
-  {
-    "Name": "Windows SDK AddOn",
-    "Id": "ARP\\Machine\\X86\\{413F37C8-BFBA-487A-835FΓÇª 10.1.0.0",
-    "Version": ""
-  },
-  {
-    "Name": "Microsoft Visual C++ 2015-2022 RedistribΓÇª Microsoft.VCRedist.2015+.x86",
-    "Id": "14.34.31938.0",
-    "Version": "14.42.34ΓÇª winget"
-  },
-  {
-    "Name": "Microsoft Visual C++ 2015-2022 RedistribΓÇª Microsoft.VCRedist.2015+.x64",
-    "Id": "14.40.33810.0",
-    "Version": "14.42.34ΓÇª winget"
-  },
-  {
-    "Name": "Microsoft Visual C++ 2013 RedistributablΓÇª Microsoft.VCRedist.2013.x64",
-    "Id": "12.0.21005.1",
-    "Version": "12.0.406ΓÇª winget"
-  },
-  {
-    "Name": "AudioRelay version 0.27.5",
-    "Id": "AsaphaHalifa.AudioRelay",
-    "Version": "0.27.5"
-  },
-  {
-    "Name": "Realtek Ethernet Controller Driver",
-    "Id": "ARP\\Machine\\X86\\{8833FFB6-5B0C-4764-81AAΓÇª 11.16.1123.2023",
-    "Version": ""
-  },
-  {
-    "Name": "Windows Software Development Kit - WindoΓÇª Microsoft.WindowsSDK.10.0.26100",
-    "Id": "10.1.26100.1742",
-    "Version": "winget"
-  },
-  {
-    "Name": "Microsoft .NET Framework 4.8.1 TargetingΓÇª ARP\\Machine\\X86\\{94DDB521-CDD4-4A83-BBE0ΓÇª 4.8.09032",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "Microsoft .NET Framework 4.8.1 SDK",
-    "Id": "ARP\\Machine\\X86\\{BD4C49AC-2A45-48B0-B3F7ΓÇª 4.8.09032",
-    "Version": ""
-  },
-  {
-    "Name": "Chocolatey (Install Only)",
-    "Id": "Chocolatey.Chocolatey",
-    "Version": "2.3.0.0"
-  },
-  {
-    "Name": "Resonic Player Beta",
-    "Id": "ARP\\Machine\\X86\\{E92483C7-34E3-49B5-BE12ΓÇª 0.9.3.1806",
-    "Version": ""
-  },
-  {
-    "Name": "PowerShell 7.4.6.0-x64",
-    "Id": "Microsoft.PowerShell",
-    "Version": "7.4.6.0"
-  },
-  {
-    "Name": "Microsoft Visual C++ 2013 RedistributablΓÇª Microsoft.VCRedist.2013.x86",
-    "Id": "12.0.21005.1",
-    "Version": "12.0.406ΓÇª winget"
-  },
-  {
-    "Name": "scrcpy+ 2.2.1",
-    "Id": "Frontesque.scrcpy+",
-    "Version": "2.2.1"
-  },
-  {
-    "Name": "Signal 7.36.1",
-    "Id": "OpenWhisperSystems.Signal",
-    "Version": "7.36.1"
-  },
-  {
-    "Name": "Beyond Compare 5.0.2",
-    "Id": "ScooterSoftware.BeyondCompare.5",
-    "Version": "5.0.2.30045"
-  },
-  {
-    "Name": "Control Dashboard Pro version 1.1",
-    "Id": "Japplis.ControlDashboard.Pro",
-    "Version": "1.1"
-  },
-  {
-    "Name": "GIMP 2.10.38-1",
-    "Id": "GIMP.GIMP",
-    "Version": "2.10.38"
-  },
-  {
-    "Name": "scrcpy",
-    "Id": "Genymobile.scrcpy",
-    "Version": "2.4"
-  },
-  {
-    "Name": "GitHub Desktop",
-    "Id": "GitHub.GitHubDesktop",
-    "Version": "3.4.12"
-  },
-  {
-    "Name": "Android SDK Platform-Tools",
-    "Id": "Google.PlatformTools",
-    "Version": "35.0.1"
-  },
-  {
-    "Name": "FFmpeg",
-    "Id": "Gyan.FFmpeg",
-    "Version": "7.1"
-  },
-  {
-    "Name": "SysInternals",
-    "Id": "Microsoft.Sysinternals",
-    "Version": "2024-07-23"
-  },
-  {
-    "Name": "Oh My Posh version 23.20.1",
-    "Id": "JanDeDobbeleer.OhMyPosh",
-    "Version": "23.20.1"
-  },
-  {
-    "Name": "Microsoft OneDrive",
-    "Id": "Microsoft.OneDrive",
-    "Version": "24.226.1110.0004"
-  },
-  {
-    "Name": "Rufus",
-    "Id": "Rufus.Rufus",
-    "Version": "4.5"
-  },
-  {
-    "Name": "Sidekick",
-    "Id": "PushPlayLabs.Sidekick",
-    "Version": "124.61.1.50294"
-  },
-  {
-    "Name": "JetBrains Toolbox",
-    "Id": "JetBrains.Toolbox",
-    "Version": "2.5.2.35332"
-  },
-  {
-    "Name": "Sony Xperia Companion",
-    "Id": "Sony.XperiaCompanion",
-    "Version": "24.10.1.202409180ΓÇª 24.12.1.ΓÇª winget"
-  },
-  {
-    "Name": "Zoom Workplace",
-    "Id": "Zoom.Zoom.EXE",
-    "Version": "6.2.11 (50939)"
-  },
-  {
-    "Name": "Native Access 3.14.0",
-    "Id": "ARP\\User\\X64\\c410b7d2-8fce-53b3-8332-e98ΓÇª 3.14.0",
-    "Version": ""
-  },
-  {
-    "Name": "Free Download Manager",
-    "Id": "SoftDeluxe.FreeDownloadManager",
-    "Version": "6.24.2.5857"
-  },
-  {
-    "Name": "Python 3.11.5 (64-bit)",
-    "Id": "Python.Python.3.11",
-    "Version": "3.11.5"
-  },
-  {
-    "Name": "Telegram Desktop",
-    "Id": "Telegram.TelegramDesktop",
-    "Version": "5.9"
-  },
-  {
-    "Name": "Microsoft Visual Studio Code (User)",
-    "Id": "Microsoft.VisualStudioCode",
-    "Version": "1.96.2"
-  },
-  {
-    "Name": "PowerToys (Preview) x64",
-    "Id": "Microsoft.PowerToys",
-    "Version": "0.86.0"
-  },
-  {
-    "Name": "WhatsApp",
-    "Id": "MSIX\\5319275A.WhatsAppDesktop_2.2450.6.0ΓÇª 2.2450.6.0",
-    "Version": ""
-  },
-  {
-    "Name": "ADB Explorer",
-    "Id": "9PPGN2WM50QB",
-    "Version": "0.8.24060.0"
-  },
-  {
-    "Name": "EzCSVed",
-    "Id": "9MW7N6J6K08R",
-    "Version": "1.0.17.0"
-  },
-  {
-    "Name": "Ubuntu 24.04.1 LTS",
-    "Id": "Canonical.Ubuntu.2404",
-    "Version": "2404.1.24.0"
-  },
-  {
-    "Name": "Microsoft Clipchamp",
-    "Id": "MSIX\\Clipchamp.Clipchamp_3.1.11920.0_neuΓÇª 3.1.11920.0",
-    "Version": ""
-  },
-  {
-    "Name": "Messenger",
-    "Id": "MSIX\\FACEBOOK.317180B0BB486_2250.0.0.0_xΓÇª 2250.0.0.0",
-    "Version": ""
-  },
-  {
-    "Name": "Microsoft Teams",
-    "Id": "Microsoft.Teams",
-    "Version": "24295.605.3225.88ΓÇª"
-  },
-  {
-    "Name": "AV1 Video Extension",
-    "Id": "MSIX\\Microsoft.AV1VideoExtension_1.3.4.0ΓÇª 1.3.4.0",
-    "Version": ""
-  },
-  {
-    "Name": "AVC Encoder Video Extension",
-    "Id": "MSIX\\Microsoft.AVCEncoderVideoExtension_ΓÇª 1.1.3.0",
-    "Version": ""
-  },
-  {
-    "Name": "Windows Application Compatibility EnhancΓÇª MSIX\\Microsoft.ApplicationCompatibilityEΓÇª 1.2411.16.0",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "News",
-    "Id": "MSIX\\Microsoft.BingNews_4.56.242.0_x64__ΓÇª 4.56.242.0",
-    "Version": ""
-  },
-  {
-    "Name": "Web Search from Microsoft Bing",
-    "Id": "MSIX\\Microsoft.BingSearch_1.1.3.0_x64__8ΓÇª 1.1.3.0",
-    "Version": ""
-  },
-  {
-    "Name": "MSN Weather",
-    "Id": "MSIX\\Microsoft.BingWeather_4.53.62621.0_ΓÇª 4.53.62621.0",
-    "Version": ""
-  },
-  {
-    "Name": "Copilot",
-    "Id": "MSIX\\Microsoft.Copilot_1.1.9.0_neutral__ΓÇª 1.1.9.0",
-    "Version": ""
-  },
-  {
-    "Name": "OpenCLTM, OpenGL┬«, and Vulkan┬« CompatibiΓÇª MSIX\\Microsoft.D3DMappingLayers_1.2409.2ΓÇª 1.2409.2.0",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "App Installer",
-    "Id": "Microsoft.AppInstaller",
-    "Version": "1.24.25200.0"
-  },
-  {
-    "Name": "Get Help",
-    "Id": "MSIX\\Microsoft.GetHelp_10.2409.22951.0_xΓÇª 10.2409.22951.0",
-    "Version": ""
-  },
-  {
-    "Name": "HEIF Image Extensions",
-    "Id": "MSIX\\Microsoft.HEIFImageExtension_1.2.3.ΓÇª 1.2.3.0",
-    "Version": ""
-  },
-  {
-    "Name": "HEVC Video Extensions from Device ManufaΓÇª MSIX\\Microsoft.HEVCVideoExtension_2.2.9.ΓÇª 2.2.9.0",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "Deutsch Local Experience Pack",
-    "Id": "MSIX\\Microsoft.LanguageExperiencePackde-ΓÇª 26100.22.42.0",
-    "Version": ""
-  },
-  {
-    "Name": "English (United Kingdom) Local ExperiencΓÇª MSIX\\Microsoft.LanguageExperiencePacken-ΓÇª 26100.24.38.0",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "MPEG-2 Video Extension",
-    "Id": "MSIX\\Microsoft.MPEG2VideoExtension_1.0.6ΓÇª 1.0.61931.0",
-    "Version": ""
-  },
-  {
-    "Name": "Microsoft Edge",
-    "Id": "MSIX\\Microsoft.MicrosoftEdge.Stable_129.ΓÇª 129.0.2792.89",
-    "Version": ""
-  },
-  {
-    "Name": "Microsoft Journal",
-    "Id": "MSIX\\Microsoft.MicrosoftJournal_1.23306.ΓÇª 1.23306.1292.0",
-    "Version": ""
-  },
-  {
-    "Name": "Microsoft 365 (Office)",
-    "Id": "MSIX\\Microsoft.MicrosoftOfficeHub_18.241ΓÇª 18.2412.1162.0",
-    "Version": ""
-  },
-  {
-    "Name": "Microsoft Sticky Notes",
-    "Id": "MSIX\\Microsoft.MicrosoftStickyNotes_4.0.ΓÇª 4.0.6104.0",
-    "Version": ""
-  },
-  {
-    "Name": "Minecraft Education",
-    "Id": "MSIX\\Microsoft.MinecraftEducationEditionΓÇª 1.21.600.0",
-    "Version": ""
-  },
-  {
-    "Name": "Mixed Reality Portal",
-    "Id": "MSIX\\Microsoft.MixedReality.Portal_2000.ΓÇª 2000.22041.1123.0",
-    "Version": ""
-  },
-  {
-    "Name": "Microsoft .Net Native Framework Package ΓÇª MSIX\\Microsoft.NET.Native.Framework.2.2_ΓÇª 2.2.29512.0",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "Microsoft .Net Native Framework Package ΓÇª MSIX\\Microsoft.NET.Native.Framework.2.2_ΓÇª 2.2.29512.0",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "Microsoft .Net Native Runtime Package 2.2 MSIX\\Microsoft.NET.Native.Runtime.2.2_2.ΓÇª 2.2.28604.0",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "Microsoft .Net Native Runtime Package 2.2 MSIX\\Microsoft.NET.Native.Runtime.2.2_2.ΓÇª 2.2.28604.0",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "OneDrive",
-    "Id": "MSIX\\Microsoft.OneDriveSync_24226.1110.4ΓÇª 24226.1110.4.0",
-    "Version": ""
-  },
-  {
-    "Name": "Outlook for Windows",
-    "Id": "MSIX\\Microsoft.OutlookForWindows_1.2024.ΓÇª 1.2024.1002.100",
-    "Version": ""
-  },
-  {
-    "Name": "Paint",
-    "Id": "MSIX\\Microsoft.Paint_11.2410.39.0_x64__8ΓÇª 11.2410.39.0",
-    "Version": ""
-  },
-  {
-    "Name": "Microsoft People",
-    "Id": "MSIX\\Microsoft.People_10.2202.100.0_x64_ΓÇª 10.2202.100.0",
-    "Version": ""
-  },
-  {
-    "Name": "Power Automate",
-    "Id": "MSIX\\Microsoft.PowerAutomateDesktop_1.0.ΓÇª 1.0.1329.0",
-    "Version": ""
-  },
-  {
-    "Name": "PowerToys FileLocksmith Context Menu",
-    "Id": "MSIX\\Microsoft.PowerToys.FileLocksmithCoΓÇª 1.0.0.0",
-    "Version": ""
-  },
-  {
-    "Name": "PowerToys ImageResizer Context Menu",
-    "Id": "MSIX\\Microsoft.PowerToys.ImageResizerConΓÇª 0.82.0.0",
-    "Version": ""
-  },
-  {
-    "Name": "PowerToys New+",
-    "Id": "MSIX\\Microsoft.PowerToys.NewPlusContextMΓÇª 0.85.1.0",
-    "Version": ""
-  },
-  {
-    "Name": "PowerToys PowerRename Context Menu",
-    "Id": "MSIX\\Microsoft.PowerToys.PowerRenameContΓÇª 0.82.0.0",
-    "Version": ""
-  },
-  {
-    "Name": "Raw Image Extension",
-    "Id": "MSIX\\Microsoft.RawImageExtension_2.5.3.0ΓÇª 2.5.3.0",
-    "Version": ""
-  },
-  {
-    "Name": "Snipping Tool",
-    "Id": "MSIX\\Microsoft.ScreenSketch_11.2409.25.0ΓÇª 11.2409.25.0",
-    "Version": ""
-  },
-  {
-    "Name": "Windows Security",
-    "Id": "MSIX\\Microsoft.SecHealthUI_1000.26100.1.ΓÇª 1000.26100.1.0",
-    "Version": ""
-  },
-  {
-    "Name": "Microsoft Engagement Framework",
-    "Id": "MSIX\\Microsoft.Services.Store.EngagementΓÇª 10.0.23012.0",
-    "Version": ""
-  },
-  {
-    "Name": "Microsoft Engagement Framework",
-    "Id": "MSIX\\Microsoft.Services.Store.EngagementΓÇª 10.0.23012.0",
-    "Version": ""
-  },
-  {
-    "Name": "Start Experiences App",
-    "Id": "MSIX\\Microsoft.StartExperiencesApp_1.1.2ΓÇª 1.1.200.0",
-    "Version": ""
-  },
-  {
-    "Name": "Store Experience Host",
-    "Id": "MSIX\\Microsoft.StorePurchaseApp_22410.14ΓÇª 22410.1401.0.0",
-    "Version": ""
-  },
-  {
-    "Name": "Microsoft To Do",
-    "Id": "MSIX\\Microsoft.Todos_0.114.7122.0_x64__8ΓÇª 0.114.7122.0",
-    "Version": ""
-  },
-  {
-    "Name": "Microsoft.UI.Xaml.2.7",
-    "Id": "Microsoft.UI.Xaml.2.7",
-    "Version": "7.2409.9001.0"
-  },
-  {
-    "Name": "Microsoft.UI.Xaml.2.7",
-    "Id": "Microsoft.UI.Xaml.2.7",
-    "Version": "7.2409.9001.0"
-  },
-  {
-    "Name": "Microsoft.UI.Xaml.2.8",
-    "Id": "Microsoft.UI.Xaml.2.8",
-    "Version": "8.2310.30001.0"
-  },
-  {
-    "Name": "Microsoft.UI.Xaml.2.8",
-    "Id": "Microsoft.UI.Xaml.2.8",
-    "Version": "8.2310.30001.0"
-  },
-  {
-    "Name": "Microsoft Visual C++ 2015 UWP Desktop RuΓÇª Microsoft.VCLibs.Desktop.14",
-    "Id": "14.0.33728.0",
-    "Version": "winget"
-  },
-  {
-    "Name": "Microsoft Visual C++ 2015 UWP Desktop RuΓÇª Microsoft.VCLibs.Desktop.14",
-    "Id": "14.0.33728.0",
-    "Version": "winget"
-  },
-  {
-    "Name": "Microsoft Visual C++ 2015 UWP Runtime PaΓÇª MSIX\\Microsoft.VCLibs.140.00_14.0.33519.ΓÇª 14.0.33519.0",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "Microsoft Visual C++ 2015 UWP Runtime PaΓÇª MSIX\\Microsoft.VCLibs.140.00_14.0.33519.ΓÇª 14.0.33519.0",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "VP9 Video Extensions",
-    "Id": "MSIX\\Microsoft.VP9VideoExtensions_1.2.2.ΓÇª 1.2.2.0",
-    "Version": ""
-  },
-  {
-    "Name": "Web Media Extensions",
-    "Id": "MSIX\\Microsoft.WebMediaExtensions_1.1.12ΓÇª 1.1.1295.0",
-    "Version": ""
-  },
-  {
-    "Name": "Webp Image Extensions",
-    "Id": "MSIX\\Microsoft.WebpImageExtension_1.1.17ΓÇª 1.1.1711.0",
-    "Version": ""
-  },
-  {
-    "Name": "Microsoft Whiteboard",
-    "Id": "MSIX\\Microsoft.Whiteboard_54.20907.567.0ΓÇª 54.20907.567.0",
-    "Version": ""
-  },
-  {
-    "Name": "Widgets Platform Runtime",
-    "Id": "MSIX\\Microsoft.WidgetsPlatformRuntime_1.ΓÇª 1.6.1.0",
-    "Version": ""
-  },
-  {
-    "Name": "Microsoft Photos",
-    "Id": "MSIX\\Microsoft.Windows.Photos_2024.11120ΓÇª 2024.11120.5010.0",
-    "Version": ""
-  },
-  {
-    "Name": "Windows Clock",
-    "Id": "MSIX\\Microsoft.WindowsAlarms_1.0.205.0_xΓÇª 1.0.205.0",
-    "Version": ""
-  },
-  {
-    "Name": "WindowsAppRuntime.1.1",
-    "Id": "MSIX\\Microsoft.WindowsAppRuntime.1.1_100ΓÇª 1005.616.1651.0",
-    "Version": ""
-  },
-  {
-    "Name": "WindowsAppRuntime.1.1",
-    "Id": "MSIX\\Microsoft.WindowsAppRuntime.1.1_100ΓÇª 1005.616.1651.0",
-    "Version": ""
-  },
-  {
-    "Name": "WindowsAppRuntime.1.2",
-    "Id": "MSIX\\Microsoft.WindowsAppRuntime.1.2_200ΓÇª 2000.802.31.0",
-    "Version": ""
-  },
-  {
-    "Name": "WindowsAppRuntime.1.2",
-    "Id": "MSIX\\Microsoft.WindowsAppRuntime.1.2_200ΓÇª 2000.802.31.0",
-    "Version": ""
-  },
-  {
-    "Name": "WindowsAppRuntime.1.3",
-    "Id": "MSIX\\Microsoft.WindowsAppRuntime.1.3_300ΓÇª 3000.934.1904.0",
-    "Version": ""
-  },
-  {
-    "Name": "WindowsAppRuntime.1.3",
-    "Id": "MSIX\\Microsoft.WindowsAppRuntime.1.3_300ΓÇª 3000.934.1904.0",
-    "Version": ""
-  },
-  {
-    "Name": "WindowsAppRuntime.1.4",
-    "Id": "MSIX\\Microsoft.WindowsAppRuntime.1.4_400ΓÇª 4000.1309.2056.0",
-    "Version": ""
-  },
-  {
-    "Name": "WindowsAppRuntime.1.4",
-    "Id": "MSIX\\Microsoft.WindowsAppRuntime.1.4_400ΓÇª 4000.1309.2056.0",
-    "Version": ""
-  },
-  {
-    "Name": "WindowsAppRuntime.1.5",
-    "Id": "MSIX\\Microsoft.WindowsAppRuntime.1.5_500ΓÇª 5001.275.500.0",
-    "Version": ""
-  },
-  {
-    "Name": "WindowsAppRuntime.1.5",
-    "Id": "MSIX\\Microsoft.WindowsAppRuntime.1.5_500ΓÇª 5001.311.2039.0",
-    "Version": ""
-  },
-  {
-    "Name": "WindowsAppRuntime.1.5",
-    "Id": "MSIX\\Microsoft.WindowsAppRuntime.1.5_500ΓÇª 5001.311.2039.0",
-    "Version": ""
-  },
-  {
-    "Name": "WindowsAppRuntime.1.6",
-    "Id": "MSIX\\Microsoft.WindowsAppRuntime.1.6_600ΓÇª 6000.318.2304.0",
-    "Version": ""
-  },
-  {
-    "Name": "WindowsAppRuntime.1.6",
-    "Id": "MSIX\\Microsoft.WindowsAppRuntime.1.6_600ΓÇª 6000.318.2304.0",
-    "Version": ""
-  },
-  {
-    "Name": "Windows Calculator",
-    "Id": "MSIX\\Microsoft.WindowsCalculator_11.2411ΓÇª 11.2411.1.0",
-    "Version": ""
-  },
-  {
-    "Name": "Windows Camera",
-    "Id": "MSIX\\Microsoft.WindowsCamera_2024.2408.1ΓÇª 2024.2408.1.0",
-    "Version": ""
-  },
-  {
-    "Name": "Feedback Hub",
-    "Id": "MSIX\\Microsoft.WindowsFeedbackHub_1.2411ΓÇª 1.2411.17101.0",
-    "Version": ""
-  },
-  {
-    "Name": "Windows Maps",
-    "Id": "MSIX\\Microsoft.WindowsMaps_1.0.64.0_x64_ΓÇª 1.0.64.0",
-    "Version": ""
-  },
-  {
-    "Name": "Windows Sound Recorder",
-    "Id": "MSIX\\Microsoft.WindowsSoundRecorder_11.2ΓÇª 11.2408.6.0",
-    "Version": ""
-  },
-  {
-    "Name": "Microsoft Store",
-    "Id": "MSIX\\Microsoft.WindowsStore_22411.1401.5ΓÇª 22411.1401.5.0",
-    "Version": ""
-  },
-  {
-    "Name": "Windows Terminal",
-    "Id": "Microsoft.WindowsTerminal",
-    "Version": "1.21.3231.0"
-  },
-  {
-    "Name": "Windows Package Manager Source (winget) ΓÇª MSIX\\Microsoft.Winget.Source_2024.1222.3ΓÇª 2024.1222.322.12",
-    "Id": "",
-    "Version": null
-  },
-  {
-    "Name": "Xbox Game Bar Plugin",
-    "Id": "MSIX\\Microsoft.XboxGameOverlay_1.54.4001ΓÇª 1.54.4001.0",
-    "Version": ""
-  },
-  {
-    "Name": "Game Bar",
-    "Id": "MSIX\\Microsoft.XboxGamingOverlay_7.224.1ΓÇª 7.224.11211.0",
-    "Version": ""
-  },
-  {
-    "Name": "Phone Link",
-    "Id": "MSIX\\Microsoft.YourPhone_1.24112.110.0_xΓÇª 1.24112.110.0",
-    "Version": ""
-  },
-  {
-    "Name": "Windows Media Player",
-    "Id": "MSIX\\Microsoft.ZuneMusic_11.2410.8.0_x64ΓÇª 11.2410.8.0",
-    "Version": ""
-  },
-  {
-    "Name": "Movies & TV",
-    "Id": "MSIX\\Microsoft.ZuneVideo_10.24111.10061.ΓÇª 10.24111.10061.0",
-    "Version": ""
-  },
-  {
-    "Name": "Microsoft Family",
-    "Id": "MSIX\\MicrosoftCorporationII.MicrosoftFamΓÇª 0.2.40.0",
-    "Version": ""
-  },
-  {
-    "Name": "Quick Assist",
-    "Id": "MSIX\\MicrosoftCorporationII.QuickAssist_ΓÇª 2.0.29.0",
-    "Version": ""
-  },
-  {
-    "Name": "Windows Subsystem for Linux",
-    "Id": "Microsoft.WSL",
-    "Version": "2.3.26.0"
-  },
-  {
-    "Name": "Microsoft Teams",
-    "Id": "Microsoft.Teams.Free",
-    "Version": "1.0.0.0"
-  },
-  {
-    "Name": "Windows Web Experience Pack",
-    "Id": "MSIX\\MicrosoftWindows.Client.WebExperienΓÇª 524.30502.30.0",
-    "Version": ""
-  },
-  {
-    "Name": "Cross Device Experience Host",
-    "Id": "MSIX\\MicrosoftWindows.CrossDevice_1.2411ΓÇª 1.24112.22.0",
-    "Version": ""
-  },
-  {
-    "Name": "Speech Pack - German (Germany)",
-    "Id": "MSIX\\MicrosoftWindows.Speech.de-DE.1_1.0ΓÇª 1.0.5.0",
-    "Version": ""
-  },
-  {
-    "Name": "Speech Pack - English (United States)",
-    "Id": "MSIX\\MicrosoftWindows.Speech.en-US.1_1.0ΓÇª 1.0.16.0",
-    "Version": ""
-  },
-  {
-    "Name": "Quick Share",
-    "Id": "MSIX\\NearbyShareLauncher_1.0.2034.4_neutΓÇª 1.0.2034.4",
-    "Version": ""
-  },
-  {
-    "Name": "Notepad++",
-    "Id": "MSIX\\NotepadPlusPlus_1.0.0.0_neutral__7nΓÇª 1.0.0.0",
-    "Version": ""
-  },
-  {
-    "Name": "Realtek Audio Control",
-    "Id": "MSIX\\RealtekSemiconductorCorp.RealtekAudΓÇª 1.48.313.0",
-    "Version": ""
-  },
-  {
-    "Name": "Beyond Compare 5 shell extension",
-    "Id": "MSIX\\ScooterSoftware.BeyondCompare.5.SheΓÇª 5.0.0.29381",
-    "Version": ""
-  },
-  {
-    "Name": "Spotify - Music and Podcasts",
-    "Id": "MSIX\\SpotifyAB.SpotifyMusic_1.252.442.0_ΓÇª 1.252.442.0",
-    "Version": ""
-  },
-  {
-    "Name": "Mail and Calendar",
-    "Id": "MSIX\\microsoft.windowscommunicationsappsΓÇª 16005.14326.22113ΓÇª",
-    "Version": ""
-  }
+  "@{Name=; Id=; Version=}",
+  "@{Name=; Id=; Version=}",
+  "@{Name=; Id=- ; Version=}",
+  "@{Name=; Id=\\ ; Version=}",
+  "@{Name=; Id=; Version=}",
+  "@{Name=Name; Id=Id; Version=Version}",
+  "@{Name=-----------------------------------------------------------------------------------------------------------------------; Id=; Version=}",
+  "@{Name=Steinberg SpectraLayers 11; Id=ARP\\Machine\\X64\\424abc11-aca9-452f-8b47-ΓÇª 11.0.40.395; Version=}",
+  "@{Name=Steinberg SpectraLayers 10; Id=ARP\\Machine\\X64\\424abc1e-aca9-452c-8b47-ΓÇª 10.0.50.343; Version=}",
+  "@{Name=7-Zip 24.08 (x64); Id=7zip.7zip; Version=24.08}",
+  "@{Name=Windows Driver Package - Sony Mobile ComΓÇª ARP\\Machine\\X64\\7AA77B236196DB9A6C042570ΓÇª 12/06/2017 3.2.0.0; Id=; Version=}",
+  "@{Name=AMD Software; Id=ARP\\Machine\\X64\\AMD Catalyst Install ManΓÇª 24.2.1; Version=}",
+  "@{Name=Android Studio; Id=Google.AndroidStudio; Version=2024.2.1.10}",
+  "@{Name=Audacity 3.6.4; Id=Audacity.Audacity; Version=3.6.4}",
+  "@{Name=Bome Virtual MIDI 2.1.0.44; Id=ARP\\Machine\\X64\\BMIDI_Driver1.0.0.11_is1; Version=Unknown}",
+  "@{Name=Beyond Compare 4.4.7; Id=ScooterSoftware.BeyondCompare.4; Version=4.4.7.28397}",
+  "@{Name=CPUID HWMonitor 1.55; Id=CPUID.HWMonitor; Version=1.55}",
+  "@{Name=CrystalDiskInfo 9.5.0; Id=CrystalDewWorld.CrystalDiskInfo; Version=9.5.0}",
+  "@{Name=Git; Id=Git.Git; Version=2.47.0}",
+  "@{Name=HWiNFO┬« 64; Id=REALiX.HWiNFO; Version=8.12}",
+  "@{Name=Link Shell Extension; Id=HermannSchinagl.LinkShellExtension; Version=3.9.3.5}",
+  "@{Name=Icaros; Id=Xanashi.Icaros; Version=3.3.3.0}",
+  "@{Name=IrfanView; Id=IrfanSkiljan.IrfanView; Version=4.70}",
+  "@{Name=IrfanView 4.67 (64-bit); Id=IrfanSkiljan.IrfanView; Version=4.67}",
+  "@{Name=Mozilla Firefox (x64 en-US); Id=Mozilla.Firefox; Version=133.0.3}",
+  "@{Name=Mozilla Thunderbird (x64 en-US); Id=Mozilla.Thunderbird; Version=128.5.2}",
+  "@{Name=Mozilla Maintenance Service; Id=ARP\\Machine\\X64\\MozillaMaintenanceService 128.3.2; Version=}",
+  "@{Name=NAPS2; Id=ARP\\Machine\\X64\\NAPS2 - Not Another PDF ΓÇª 7.5.2; Version=}",
+  "@{Name=Notepad++ (64-bit x64); Id=Notepad++.Notepad++; Version=8.7.1}",
+  "@{Name=RegCool; Id=KurtZimmermann.RegCool; Version=2.019}",
+  "@{Name=TigerVNC 1.14.1 (); Id=TigerVNC.TigerVNC; Version=1.14.1}",
+  "@{Name=TigerVNC 1.14.1 (); Id=TigerVNC.TigerVNC; Version=1.14.1}",
+  "@{Name=TreeSize Free V4.7.3 (64 bit); Id=JAMSoftware.TreeSize.Free; Version=4.7.3}",
+  "@{Name=VLC media player; Id=VideoLAN.VLC; Version=3.0.21}",
+  "@{Name=XLN Online Installer; Id=ARP\\Machine\\X64\\XLN Online Installer InnΓÇª Unknown; Version=}",
+  "@{Name=YTDownloader 3.18.5; Id=aandrew-me.ytDownloader; Version=3.18.5}",
+  "@{Name=Quick Share from Google; Id=Google.QuickShare; Version=1.0.2034.4}",
+  "@{Name=Steinberg Activation Manager; Id=ARP\\Machine\\X64\\{0224CA8C-FD43-4397-94CEΓÇª 1.5.1; Version=}",
+  "@{Name=Steinberg WaveLab Pro 12; Id=ARP\\Machine\\X64\\{1685B043-789D-4F0D-A570ΓÇª 12.0.40; Version=}",
+  "@{Name=Steinberg Generic Lower Latency ASIO DriΓÇª ARP\\Machine\\X64\\{16D5A798-10BE-4FF3-BB71ΓÇª 1.0.30; Id=; Version=}",
+  "@{Name=Sonic Visualiser; Id=SonicVisualiser.SonicVisualiser; Version=5.0.1}",
+  "@{Name=Steinberg Backbone; Id=ARP\\Machine\\X64\\{29E7BC5B-ABBC-4899-B6D1ΓÇª 1.6.0; Version=}",
+  "@{Name=LibreOffice 24.8.2.1; Id=TheDocumentFoundation.LibreOffice; Version=24.8.2.1}",
+  "@{Name=Steinberg Cubase 13; Id=ARP\\Machine\\X64\\{2B68F691-AC02-46E5-B548ΓÇª 13.0.50; Version=}",
+  "@{Name=Steinberg Install Assistant; Id=ARP\\Machine\\X64\\{2E7DF371-6034-4FC7-AE30ΓÇª 1.2.2; Version=}",
+  "@{Name=RealVNC Server 7.12.1; Id=RealVNC.VNCServer; Version=7.12.1.21}",
+  "@{Name=Steinberg Groove Agent 5; Id=ARP\\Machine\\X64\\{3A97C8A6-8CC0-4AF2-B32BΓÇª 5.2.10; Version=}",
+  "@{Name=Sony Mobile Software Update Drivers; Id=ARP\\Machine\\X64\\{4872001F-F67C-4C54-BC92ΓÇª 3.2.0.3; Version=}",
+  "@{Name=Steinberg Retrologue 64bit; Id=ARP\\Machine\\X64\\{4D65ECE6-131D-4B5F-8470ΓÇª 2.4.0; Version=}",
+  "@{Name=Google Chrome; Id=Google.Chrome; Version=131.0.6778.205}",
+  "@{Name=ChatGPT; Id=lencx.ChatGPT; Version=1.1.0}",
+  "@{Name=Steinberg HALion 7; Id=ARP\\Machine\\X64\\{68F66E62-34D9-4148-A3E9ΓÇª 7.1.0; Version=}",
+  "@{Name=Steinberg HALion Sonic 7; Id=ARP\\Machine\\X64\\{69043884-EB60-4C9A-9C41ΓÇª 7.1.0; Version=}",
+  "@{Name=Friture; Id=ARP\\Machine\\X64\\{6B05049F-7B7D-464C-8B7EΓÇª 0.51; Version=}",
+  "@{Name=Google Drive; Id=Google.GoogleDrive; Version=101.0.3.0}",
+  "@{Name=Steinberg Padshop 2; Id=ARP\\Machine\\X64\\{6FBAF5EF-816E-4D80-BFBEΓÇª 2.2.0; Version=}",
+  "@{Name=AusweisApp; Id=Governikus.AusweisApp; Version=2.2.2}",
+  "@{Name=Node.js; Id=OpenJS.NodeJS; Version=23.1.0}",
+  "@{Name=PDF24 Creator 11.20.1; Id=geeksoftwareGmbH.PDF24Creator; Version=11.20.1}",
+  "@{Name=Steinberg MediaBay; Id=ARP\\Machine\\X64\\{9529D195-8127-42F5-BA54ΓÇª 1.1.90; Version=}",
+  "@{Name=Steinberg Groove Agent SE 5; Id=ARP\\Machine\\X64\\{A5AB0D21-21BD-4DB8-F097ΓÇª 5.2.10; Version=}",
+  "@{Name=Steinberg Library Manager; Id=ARP\\Machine\\X64\\{AA78592A-F13C-4C8E-B849ΓÇª 3.2.50; Version=}",
+  "@{Name=PDF-XChange Editor; Id=TrackerSoftware.PDF-XChangeEditor; Version=10.4.4.392}",
+  "@{Name=Ableton Live 10 Suite; Id=ARP\\Machine\\X64\\{AEDE212A-D79B-4E41-947CΓÇª 10.0.0.0; Version=}",
+  "@{Name=Mailbird; Id=Mailbird.Mailbird; Version=3.0.23}",
+  "@{Name=Microsoft Update Health Tools; Id=ARP\\Machine\\X64\\{C6FD611E-7EFE-488C-A0E0ΓÇª 5.72.0.0; Version=}",
+  "@{Name=Steinberg built-in ASIO Driver 64bit; Id=ARP\\Machine\\X64\\{DE26CB00-5D4F-40B4-BEF5ΓÇª 1.0.8; Version=}",
+  "@{Name=TeraCopy; Id=CodeSector.TeraCopy; Version=3.17}",
+  "@{Name=RaiDrive; Id=OpenBoxLab.RaiDrive; Version=2023.9.256}",
+  "@{Name=Windows Subsystem for Linux Update; Id=ARP\\Machine\\X64\\{F8474A47-8B5D-4466-ACE3ΓÇª 5.10.102.1; Version=}",
+  "@{Name=Steinberg The Grand 3 64bit; Id=ARP\\Machine\\X64\\{FEDB3D64-DF6D-4478-A3DCΓÇª 3.3.0; Version=}",
+  "@{Name=AMD Chipset Software; Id=ARP\\Machine\\X86\\AMD_Chipset_IODrivers; Version=6.02.07.2300}",
+  "@{Name=Creative Sound Blaster (CT)USB Audio DriΓÇª ARP\\Machine\\X86\\CTUSBAudio_is1; Id=3.05.00.00; Version=}",
+  "@{Name=Creative App version 1.18.11.00; Id=CreativeTechnology.CreativeApp; Version=1.18.11.00}",
+  "@{Name=Dolby Digital Live Pack version 5.02.01; Id=ARP\\Machine\\X86\\DDLMaster_is1; Version=5.02.01}",
+  "@{Name=DTS Connect Pack version 3.02.01; Id=ARP\\Machine\\X86\\DTSMaster_is1; Version=3.02.01}",
+  "@{Name=DownloadHelper CoApp; Id=ACLAP.DownloadHelperCoApp; Version=2.0.19.0}",
+  "@{Name=Geekbench 6; Id=PrimateLabs.Geekbench.6; Version=Unknown}",
+  "@{Name=Microsoft Edge; Id=Microsoft.Edge; Version=131.0.2903.112}",
+  "@{Name=MusicBee 3.5.8698; Id=ARP\\Machine\\X86\\MusicBee; Version=3.5.8698}",
+  "@{Name=MusicBrainz Picard; Id=MusicBrainz.Picard; Version=2.12.3}",
+  "@{Name=Native Instruments Blocks Base; Id=ARP\\Machine\\X86\\Native Instruments BlockΓÇª 1.0.1.1; Version=}",
+  "@{Name=Native Instruments Controller Editor; Id=ARP\\Machine\\X86\\Native Instruments ContrΓÇª 2.8.2.0; Version=}",
+  "@{Name=Native Instruments Expansions Selection; Id=ARP\\Machine\\X86\\Native Instruments ExpanΓÇª 1.0.0.10; Version=}",
+  "@{Name=Native Instruments Guitar Rig 5; Id=ARP\\Machine\\X86\\Native Instruments GuitaΓÇª 5.2.2.8; Version=}",
+  "@{Name=Native Instruments Kinetic Treats; Id=ARP\\Machine\\X86\\Native Instruments KinetΓÇª 1.1.0.4; Version=}",
+  "@{Name=Native Instruments Komplete Kontrol; Id=ARP\\Machine\\X86\\Native Instruments KomplΓÇª 3.3.3.0; Version=}",
+  "@{Name=Native Instruments Komplete Kontrol DrivΓÇª ARP\\Machine\\X86\\Native Instruments KomplΓÇª Unknown; Id=; Version=}",
+  "@{Name=Native Instruments Komplete Kontrol MK2 ΓÇª ARP\\Machine\\X86\\Native Instruments KomplΓÇª Unknown; Id=; Version=}",
+  "@{Name=Native Instruments Kontakt; Id=ARP\\Machine\\X86\\Native Instruments KontaΓÇª 6.8.0.0; Version=}",
+  "@{Name=Native Instruments Kontakt 7; Id=ARP\\Machine\\X86\\Native Instruments KontaΓÇª 7.10.6.0; Version=}",
+  "@{Name=Native Instruments Kontakt 8; Id=ARP\\Machine\\X86\\Native Instruments KontaΓÇª 8.0.1.0; Version=}",
+  "@{Name=Native Instruments Kontakt Factory SelecΓÇª ARP\\Machine\\X86\\Native Instruments KontaΓÇª 1.4.2.1; Id=; Version=}",
+  "@{Name=Native Instruments Mikro Prism; Id=ARP\\Machine\\X86\\Native Instruments MikroΓÇª 1.1.0.14; Version=}",
+  "@{Name=Native Instruments NIHostIntegrationAgent ARP\\Machine\\X86\\Native Instruments NIHosΓÇª 1.16.0.0; Id=; Version=}",
+  "@{Name=Native Instruments NTKDaemon; Id=ARP\\Machine\\X86\\Native Instruments NTKDaΓÇª 1.21.0.0; Version=}",
+  "@{Name=Native Instruments Play Series Selection; Id=ARP\\Machine\\X86\\Native Instruments Play ΓÇª 1.0.0.6; Version=}",
+  "@{Name=Native Instruments Reaktor 6; Id=ARP\\Machine\\X86\\Native Instruments ReaktΓÇª 6.5.0.0; Version=}",
+  "@{Name=Native Instruments Reaktor Factory SelecΓÇª ARP\\Machine\\X86\\Native Instruments ReaktΓÇª 1.0.1.7; Id=; Version=}",
+  "@{Name=Native Instruments Supercharger; Id=ARP\\Machine\\X86\\Native Instruments SuperΓÇª 1.4.7.22; Version=}",
+  "@{Name=Native Instruments TRK-01 Bass; Id=ARP\\Machine\\X86\\Native Instruments TRK-0ΓÇª 1.0.0.10; Version=}",
+  "@{Name=Native Instruments Traktor Audio 10 DrivΓÇª ARP\\Machine\\X86\\Native Instruments TraktΓÇª Unknown; Id=; Version=}",
+  "@{Name=Native Instruments Traktor Audio 2 MK2 DΓÇª ARP\\Machine\\X86\\Native Instruments TraktΓÇª Unknown; Id=; Version=}",
+  "@{Name=Native Instruments Traktor Audio 6 Driver ARP\\Machine\\X86\\Native Instruments TraktΓÇª Unknown; Id=; Version=}",
+  "@{Name=Native Instruments Traktor Kontrol D2 DrΓÇª ARP\\Machine\\X86\\Native Instruments TraktΓÇª Unknown; Id=; Version=}",
+  "@{Name=Native Instruments Traktor Kontrol F1 DrΓÇª ARP\\Machine\\X86\\Native Instruments TraktΓÇª Unknown; Id=; Version=}",
+  "@{Name=Native Instruments Traktor Kontrol S2 MKΓÇª ARP\\Machine\\X86\\Native Instruments TraktΓÇª Unknown; Id=; Version=}",
+  "@{Name=Native Instruments Traktor Kontrol S4 MKΓÇª ARP\\Machine\\X86\\Native Instruments TraktΓÇª Unknown; Id=; Version=}",
+  "@{Name=Native Instruments Traktor Kontrol S5 DrΓÇª ARP\\Machine\\X86\\Native Instruments TraktΓÇª Unknown; Id=; Version=}",
+  "@{Name=Native Instruments Traktor Kontrol S8 DrΓÇª ARP\\Machine\\X86\\Native Instruments TraktΓÇª Unknown; Id=; Version=}",
+  "@{Name=Native Instruments Traktor Kontrol X1 MKΓÇª ARP\\Machine\\X86\\Native Instruments TraktΓÇª Unknown; Id=; Version=}",
+  "@{Name=Native Instruments Traktor Kontrol X1 MKΓÇª ARP\\Machine\\X86\\Native Instruments TraktΓÇª Unknown; Id=; Version=}",
+  "@{Name=Native Instruments Traktor Kontrol Z1 DrΓÇª ARP\\Machine\\X86\\Native Instruments TraktΓÇª Unknown; Id=; Version=}",
+  "@{Name=Native Instruments Traktor Kontrol Z2 DrΓÇª ARP\\Machine\\X86\\Native Instruments TraktΓÇª Unknown; Id=; Version=}",
+  "@{Name=Native Instruments Traktor Pro 3; Id=ARP\\Machine\\X86\\Native Instruments TraktΓÇª 3.11.1.17; Version=}",
+  "@{Name=OBS Studio; Id=OBSProject.OBSStudio; Version=30.2.3}",
+  "@{Name=Xiph.Org Ogg Codecs 0.83.17220 32-bit; Id=ARP\\Machine\\X86\\Ogg Codecs; Version=0.83.17220}",
+  "@{Name=Steinberg Download Assistant; Id=ARP\\Machine\\X86\\Steinberg Download AssisΓÇª 1.36.3; Version=}",
+  "@{Name=VB-Audio Matrix, Audio Router; Id=ARP\\Machine\\X86\\VB:VBAudioMatrix {45CF77ΓÇª Unknown; Version=}",
+  "@{Name=eLicenser Control; Id=ARP\\Machine\\X86\\eLicenser Control; Version=6.12.10.1326}",
+  "@{Name=BayHubTech SD Host Driver; Id=ARP\\Machine\\X86\\{017A3482-32D5-4FF8-B8C5ΓÇª 5.0.094; Version=}",
+  "@{Name=Microsoft Windows Desktop Runtime - 6.0.ΓÇª Microsoft.DotNet.DesktopRuntime.6; Id=6.0.36; Version=winget}",
+  "@{Name=Videomass version 3.5.8 (64-bit); Id=GianlucaPernigotto.Videomass; Version=3.5.8}",
+  "@{Name=Python Launcher; Id=Python.Launcher; Version=< 3.12.0}",
+  "@{Name=Windows SDK AddOn; Id=ARP\\Machine\\X86\\{413F37C8-BFBA-487A-835FΓÇª 10.1.0.0; Version=}",
+  "@{Name=Microsoft Visual C++ 2015-2022 RedistribΓÇª Microsoft.VCRedist.2015+.x86; Id=14.34.31938.0; Version=14.42.34ΓÇª winget}",
+  "@{Name=Microsoft Visual C++ 2015-2022 RedistribΓÇª Microsoft.VCRedist.2015+.x64; Id=14.40.33810.0; Version=14.42.34ΓÇª winget}",
+  "@{Name=Microsoft Visual C++ 2013 RedistributablΓÇª Microsoft.VCRedist.2013.x64; Id=12.0.21005.1; Version=12.0.406ΓÇª winget}",
+  "@{Name=AudioRelay version 0.27.5; Id=AsaphaHalifa.AudioRelay; Version=0.27.5}",
+  "@{Name=Realtek Ethernet Controller Driver; Id=ARP\\Machine\\X86\\{8833FFB6-5B0C-4764-81AAΓÇª 11.16.1123.2023; Version=}",
+  "@{Name=Windows Software Development Kit - WindoΓÇª Microsoft.WindowsSDK.10.0.26100; Id=10.1.26100.1742; Version=winget}",
+  "@{Name=Microsoft .NET Framework 4.8.1 TargetingΓÇª ARP\\Machine\\X86\\{94DDB521-CDD4-4A83-BBE0ΓÇª 4.8.09032; Id=; Version=}",
+  "@{Name=Microsoft .NET Framework 4.8.1 SDK; Id=ARP\\Machine\\X86\\{BD4C49AC-2A45-48B0-B3F7ΓÇª 4.8.09032; Version=}",
+  "@{Name=Chocolatey (Install Only); Id=Chocolatey.Chocolatey; Version=2.3.0.0}",
+  "@{Name=Resonic Player Beta; Id=ARP\\Machine\\X86\\{E92483C7-34E3-49B5-BE12ΓÇª 0.9.3.1806; Version=}",
+  "@{Name=PowerShell 7.4.6.0-x64; Id=Microsoft.PowerShell; Version=7.4.6.0}",
+  "@{Name=Microsoft Visual C++ 2013 RedistributablΓÇª Microsoft.VCRedist.2013.x86; Id=12.0.21005.1; Version=12.0.406ΓÇª winget}",
+  "@{Name=scrcpy+ 2.2.1; Id=Frontesque.scrcpy+; Version=2.2.1}",
+  "@{Name=Signal 7.36.1; Id=OpenWhisperSystems.Signal; Version=7.36.1}",
+  "@{Name=Beyond Compare 5.0.2; Id=ScooterSoftware.BeyondCompare.5; Version=5.0.2.30045}",
+  "@{Name=Control Dashboard Pro version 1.1; Id=Japplis.ControlDashboard.Pro; Version=1.1}",
+  "@{Name=GIMP 2.10.38-1; Id=GIMP.GIMP; Version=2.10.38}",
+  "@{Name=scrcpy; Id=Genymobile.scrcpy; Version=2.4}",
+  "@{Name=GitHub Desktop; Id=GitHub.GitHubDesktop; Version=3.4.12}",
+  "@{Name=Android SDK Platform-Tools; Id=Google.PlatformTools; Version=35.0.1}",
+  "@{Name=FFmpeg; Id=Gyan.FFmpeg; Version=7.1}",
+  "@{Name=SysInternals; Id=Microsoft.Sysinternals; Version=2024-07-23}",
+  "@{Name=Oh My Posh version 23.20.1; Id=JanDeDobbeleer.OhMyPosh; Version=23.20.1}",
+  "@{Name=Microsoft OneDrive; Id=Microsoft.OneDrive; Version=24.226.1110.0004}",
+  "@{Name=Rufus; Id=Rufus.Rufus; Version=4.5}",
+  "@{Name=Sidekick; Id=PushPlayLabs.Sidekick; Version=124.61.1.50294}",
+  "@{Name=JetBrains Toolbox; Id=JetBrains.Toolbox; Version=2.5.2.35332}",
+  "@{Name=Sony Xperia Companion; Id=Sony.XperiaCompanion; Version=24.10.1.202409180ΓÇª 24.12.1.ΓÇª winget}",
+  "@{Name=Zoom Workplace; Id=Zoom.Zoom.EXE; Version=6.2.11 (50939)}",
+  "@{Name=Native Access 3.14.0; Id=ARP\\User\\X64\\c410b7d2-8fce-53b3-8332-e98ΓÇª 3.14.0; Version=}",
+  "@{Name=Free Download Manager; Id=SoftDeluxe.FreeDownloadManager; Version=6.24.2.5857}",
+  "@{Name=Python 3.11.5 (64-bit); Id=Python.Python.3.11; Version=3.11.5}",
+  "@{Name=Telegram Desktop; Id=Telegram.TelegramDesktop; Version=5.9}",
+  "@{Name=Microsoft Visual Studio Code (User); Id=Microsoft.VisualStudioCode; Version=1.96.2}",
+  "@{Name=PowerToys (Preview) x64; Id=Microsoft.PowerToys; Version=0.86.0}",
+  "@{Name=WhatsApp; Id=MSIX\\5319275A.WhatsAppDesktop_2.2450.6.0ΓÇª 2.2450.6.0; Version=}",
+  "@{Name=ADB Explorer; Id=9PPGN2WM50QB; Version=0.8.24060.0}",
+  "@{Name=EzCSVed; Id=9MW7N6J6K08R; Version=1.0.17.0}",
+  "@{Name=Ubuntu 24.04.1 LTS; Id=Canonical.Ubuntu.2404; Version=2404.1.24.0}",
+  "@{Name=Microsoft Clipchamp; Id=MSIX\\Clipchamp.Clipchamp_3.1.11920.0_neuΓÇª 3.1.11920.0; Version=}",
+  "@{Name=Messenger; Id=MSIX\\FACEBOOK.317180B0BB486_2250.0.0.0_xΓÇª 2250.0.0.0; Version=}",
+  "@{Name=Microsoft Teams; Id=Microsoft.Teams; Version=24295.605.3225.88ΓÇª}",
+  "@{Name=AV1 Video Extension; Id=MSIX\\Microsoft.AV1VideoExtension_1.3.4.0ΓÇª 1.3.4.0; Version=}",
+  "@{Name=AVC Encoder Video Extension; Id=MSIX\\Microsoft.AVCEncoderVideoExtension_ΓÇª 1.1.3.0; Version=}",
+  "@{Name=Windows Application Compatibility EnhancΓÇª MSIX\\Microsoft.ApplicationCompatibilityEΓÇª 1.2411.16.0; Id=; Version=}",
+  "@{Name=News; Id=MSIX\\Microsoft.BingNews_4.56.242.0_x64__ΓÇª 4.56.242.0; Version=}",
+  "@{Name=Web Search from Microsoft Bing; Id=MSIX\\Microsoft.BingSearch_1.1.3.0_x64__8ΓÇª 1.1.3.0; Version=}",
+  "@{Name=MSN Weather; Id=MSIX\\Microsoft.BingWeather_4.53.62621.0_ΓÇª 4.53.62621.0; Version=}",
+  "@{Name=Copilot; Id=MSIX\\Microsoft.Copilot_1.1.9.0_neutral__ΓÇª 1.1.9.0; Version=}",
+  "@{Name=OpenCLTM, OpenGL┬«, and Vulkan┬« CompatibiΓÇª MSIX\\Microsoft.D3DMappingLayers_1.2409.2ΓÇª 1.2409.2.0; Id=; Version=}",
+  "@{Name=App Installer; Id=Microsoft.AppInstaller; Version=1.24.25200.0}",
+  "@{Name=Get Help; Id=MSIX\\Microsoft.GetHelp_10.2409.22951.0_xΓÇª 10.2409.22951.0; Version=}",
+  "@{Name=HEIF Image Extensions; Id=MSIX\\Microsoft.HEIFImageExtension_1.2.3.ΓÇª 1.2.3.0; Version=}",
+  "@{Name=HEVC Video Extensions from Device ManufaΓÇª MSIX\\Microsoft.HEVCVideoExtension_2.2.9.ΓÇª 2.2.9.0; Id=; Version=}",
+  "@{Name=Deutsch Local Experience Pack; Id=MSIX\\Microsoft.LanguageExperiencePackde-ΓÇª 26100.22.42.0; Version=}",
+  "@{Name=English (United Kingdom) Local ExperiencΓÇª MSIX\\Microsoft.LanguageExperiencePacken-ΓÇª 26100.24.38.0; Id=; Version=}",
+  "@{Name=MPEG-2 Video Extension; Id=MSIX\\Microsoft.MPEG2VideoExtension_1.0.6ΓÇª 1.0.61931.0; Version=}",
+  "@{Name=Microsoft Edge; Id=MSIX\\Microsoft.MicrosoftEdge.Stable_129.ΓÇª 129.0.2792.89; Version=}",
+  "@{Name=Microsoft Journal; Id=MSIX\\Microsoft.MicrosoftJournal_1.23306.ΓÇª 1.23306.1292.0; Version=}",
+  "@{Name=Microsoft 365 (Office); Id=MSIX\\Microsoft.MicrosoftOfficeHub_18.241ΓÇª 18.2412.1162.0; Version=}",
+  "@{Name=Microsoft Sticky Notes; Id=MSIX\\Microsoft.MicrosoftStickyNotes_4.0.ΓÇª 4.0.6104.0; Version=}",
+  "@{Name=Minecraft Education; Id=MSIX\\Microsoft.MinecraftEducationEditionΓÇª 1.21.600.0; Version=}",
+  "@{Name=Mixed Reality Portal; Id=MSIX\\Microsoft.MixedReality.Portal_2000.ΓÇª 2000.22041.1123.0; Version=}",
+  "@{Name=Microsoft .Net Native Framework Package ΓÇª MSIX\\Microsoft.NET.Native.Framework.2.2_ΓÇª 2.2.29512.0; Id=; Version=}",
+  "@{Name=Microsoft .Net Native Framework Package ΓÇª MSIX\\Microsoft.NET.Native.Framework.2.2_ΓÇª 2.2.29512.0; Id=; Version=}",
+  "@{Name=Microsoft .Net Native Runtime Package 2.2 MSIX\\Microsoft.NET.Native.Runtime.2.2_2.ΓÇª 2.2.28604.0; Id=; Version=}",
+  "@{Name=Microsoft .Net Native Runtime Package 2.2 MSIX\\Microsoft.NET.Native.Runtime.2.2_2.ΓÇª 2.2.28604.0; Id=; Version=}",
+  "@{Name=OneDrive; Id=MSIX\\Microsoft.OneDriveSync_24226.1110.4ΓÇª 24226.1110.4.0; Version=}",
+  "@{Name=Outlook for Windows; Id=MSIX\\Microsoft.OutlookForWindows_1.2024.ΓÇª 1.2024.1002.100; Version=}",
+  "@{Name=Paint; Id=MSIX\\Microsoft.Paint_11.2410.39.0_x64__8ΓÇª 11.2410.39.0; Version=}",
+  "@{Name=Microsoft People; Id=MSIX\\Microsoft.People_10.2202.100.0_x64_ΓÇª 10.2202.100.0; Version=}",
+  "@{Name=Power Automate; Id=MSIX\\Microsoft.PowerAutomateDesktop_1.0.ΓÇª 1.0.1329.0; Version=}",
+  "@{Name=PowerToys FileLocksmith Context Menu; Id=MSIX\\Microsoft.PowerToys.FileLocksmithCoΓÇª 1.0.0.0; Version=}",
+  "@{Name=PowerToys ImageResizer Context Menu; Id=MSIX\\Microsoft.PowerToys.ImageResizerConΓÇª 0.82.0.0; Version=}",
+  "@{Name=PowerToys New+; Id=MSIX\\Microsoft.PowerToys.NewPlusContextMΓÇª 0.85.1.0; Version=}",
+  "@{Name=PowerToys PowerRename Context Menu; Id=MSIX\\Microsoft.PowerToys.PowerRenameContΓÇª 0.82.0.0; Version=}",
+  "@{Name=Raw Image Extension; Id=MSIX\\Microsoft.RawImageExtension_2.5.3.0ΓÇª 2.5.3.0; Version=}",
+  "@{Name=Snipping Tool; Id=MSIX\\Microsoft.ScreenSketch_11.2409.25.0ΓÇª 11.2409.25.0; Version=}",
+  "@{Name=Windows Security; Id=MSIX\\Microsoft.SecHealthUI_1000.26100.1.ΓÇª 1000.26100.1.0; Version=}",
+  "@{Name=Microsoft Engagement Framework; Id=MSIX\\Microsoft.Services.Store.EngagementΓÇª 10.0.23012.0; Version=}",
+  "@{Name=Microsoft Engagement Framework; Id=MSIX\\Microsoft.Services.Store.EngagementΓÇª 10.0.23012.0; Version=}",
+  "@{Name=Start Experiences App; Id=MSIX\\Microsoft.StartExperiencesApp_1.1.2ΓÇª 1.1.200.0; Version=}",
+  "@{Name=Store Experience Host; Id=MSIX\\Microsoft.StorePurchaseApp_22410.14ΓÇª 22410.1401.0.0; Version=}",
+  "@{Name=Microsoft To Do; Id=MSIX\\Microsoft.Todos_0.114.7122.0_x64__8ΓÇª 0.114.7122.0; Version=}",
+  "@{Name=Microsoft.UI.Xaml.2.7; Id=Microsoft.UI.Xaml.2.7; Version=7.2409.9001.0}",
+  "@{Name=Microsoft.UI.Xaml.2.7; Id=Microsoft.UI.Xaml.2.7; Version=7.2409.9001.0}",
+  "@{Name=Microsoft.UI.Xaml.2.8; Id=Microsoft.UI.Xaml.2.8; Version=8.2310.30001.0}",
+  "@{Name=Microsoft.UI.Xaml.2.8; Id=Microsoft.UI.Xaml.2.8; Version=8.2310.30001.0}",
+  "@{Name=Microsoft Visual C++ 2015 UWP Desktop RuΓÇª Microsoft.VCLibs.Desktop.14; Id=14.0.33728.0; Version=winget}",
+  "@{Name=Microsoft Visual C++ 2015 UWP Desktop RuΓÇª Microsoft.VCLibs.Desktop.14; Id=14.0.33728.0; Version=winget}",
+  "@{Name=Microsoft Visual C++ 2015 UWP Runtime PaΓÇª MSIX\\Microsoft.VCLibs.140.00_14.0.33519.ΓÇª 14.0.33519.0; Id=; Version=}",
+  "@{Name=Microsoft Visual C++ 2015 UWP Runtime PaΓÇª MSIX\\Microsoft.VCLibs.140.00_14.0.33519.ΓÇª 14.0.33519.0; Id=; Version=}",
+  "@{Name=VP9 Video Extensions; Id=MSIX\\Microsoft.VP9VideoExtensions_1.2.2.ΓÇª 1.2.2.0; Version=}",
+  "@{Name=Web Media Extensions; Id=MSIX\\Microsoft.WebMediaExtensions_1.1.12ΓÇª 1.1.1295.0; Version=}",
+  "@{Name=Webp Image Extensions; Id=MSIX\\Microsoft.WebpImageExtension_1.1.17ΓÇª 1.1.1711.0; Version=}",
+  "@{Name=Microsoft Whiteboard; Id=MSIX\\Microsoft.Whiteboard_54.20907.567.0ΓÇª 54.20907.567.0; Version=}",
+  "@{Name=Widgets Platform Runtime; Id=MSIX\\Microsoft.WidgetsPlatformRuntime_1.ΓÇª 1.6.1.0; Version=}",
+  "@{Name=Microsoft Photos; Id=MSIX\\Microsoft.Windows.Photos_2024.11120ΓÇª 2024.11120.5010.0; Version=}",
+  "@{Name=Windows Clock; Id=MSIX\\Microsoft.WindowsAlarms_1.0.205.0_xΓÇª 1.0.205.0; Version=}",
+  "@{Name=WindowsAppRuntime.1.1; Id=MSIX\\Microsoft.WindowsAppRuntime.1.1_100ΓÇª 1005.616.1651.0; Version=}",
+  "@{Name=WindowsAppRuntime.1.1; Id=MSIX\\Microsoft.WindowsAppRuntime.1.1_100ΓÇª 1005.616.1651.0; Version=}",
+  "@{Name=WindowsAppRuntime.1.2; Id=MSIX\\Microsoft.WindowsAppRuntime.1.2_200ΓÇª 2000.802.31.0; Version=}",
+  "@{Name=WindowsAppRuntime.1.2; Id=MSIX\\Microsoft.WindowsAppRuntime.1.2_200ΓÇª 2000.802.31.0; Version=}",
+  "@{Name=WindowsAppRuntime.1.3; Id=MSIX\\Microsoft.WindowsAppRuntime.1.3_300ΓÇª 3000.934.1904.0; Version=}",
+  "@{Name=WindowsAppRuntime.1.3; Id=MSIX\\Microsoft.WindowsAppRuntime.1.3_300ΓÇª 3000.934.1904.0; Version=}",
+  "@{Name=WindowsAppRuntime.1.4; Id=MSIX\\Microsoft.WindowsAppRuntime.1.4_400ΓÇª 4000.1309.2056.0; Version=}",
+  "@{Name=WindowsAppRuntime.1.4; Id=MSIX\\Microsoft.WindowsAppRuntime.1.4_400ΓÇª 4000.1309.2056.0; Version=}",
+  "@{Name=WindowsAppRuntime.1.5; Id=MSIX\\Microsoft.WindowsAppRuntime.1.5_500ΓÇª 5001.275.500.0; Version=}",
+  "@{Name=WindowsAppRuntime.1.5; Id=MSIX\\Microsoft.WindowsAppRuntime.1.5_500ΓÇª 5001.311.2039.0; Version=}",
+  "@{Name=WindowsAppRuntime.1.5; Id=MSIX\\Microsoft.WindowsAppRuntime.1.5_500ΓÇª 5001.311.2039.0; Version=}",
+  "@{Name=WindowsAppRuntime.1.6; Id=MSIX\\Microsoft.WindowsAppRuntime.1.6_600ΓÇª 6000.318.2304.0; Version=}",
+  "@{Name=WindowsAppRuntime.1.6; Id=MSIX\\Microsoft.WindowsAppRuntime.1.6_600ΓÇª 6000.318.2304.0; Version=}",
+  "@{Name=Windows Calculator; Id=MSIX\\Microsoft.WindowsCalculator_11.2411ΓÇª 11.2411.1.0; Version=}",
+  "@{Name=Windows Camera; Id=MSIX\\Microsoft.WindowsCamera_2024.2408.1ΓÇª 2024.2408.1.0; Version=}",
+  "@{Name=Feedback Hub; Id=MSIX\\Microsoft.WindowsFeedbackHub_1.2411ΓÇª 1.2411.17101.0; Version=}",
+  "@{Name=Windows Maps; Id=MSIX\\Microsoft.WindowsMaps_1.0.64.0_x64_ΓÇª 1.0.64.0; Version=}",
+  "@{Name=Windows Sound Recorder; Id=MSIX\\Microsoft.WindowsSoundRecorder_11.2ΓÇª 11.2408.6.0; Version=}",
+  "@{Name=Microsoft Store; Id=MSIX\\Microsoft.WindowsStore_22411.1401.5ΓÇª 22411.1401.5.0; Version=}",
+  "@{Name=Windows Terminal; Id=Microsoft.WindowsTerminal; Version=1.21.3231.0}",
+  "@{Name=Windows Package Manager Source (winget) ΓÇª MSIX\\Microsoft.Winget.Source_2024.1222.3ΓÇª 2024.1222.322.12; Id=; Version=}",
+  "@{Name=Xbox Game Bar Plugin; Id=MSIX\\Microsoft.XboxGameOverlay_1.54.4001ΓÇª 1.54.4001.0; Version=}",
+  "@{Name=Game Bar; Id=MSIX\\Microsoft.XboxGamingOverlay_7.224.1ΓÇª 7.224.11211.0; Version=}",
+  "@{Name=Phone Link; Id=MSIX\\Microsoft.YourPhone_1.24112.110.0_xΓÇª 1.24112.110.0; Version=}",
+  "@{Name=Windows Media Player; Id=MSIX\\Microsoft.ZuneMusic_11.2410.8.0_x64ΓÇª 11.2410.8.0; Version=}",
+  "@{Name=Movies & TV; Id=MSIX\\Microsoft.ZuneVideo_10.24111.10061.ΓÇª 10.24111.10061.0; Version=}",
+  "@{Name=Microsoft Family; Id=MSIX\\MicrosoftCorporationII.MicrosoftFamΓÇª 0.2.40.0; Version=}",
+  "@{Name=Quick Assist; Id=MSIX\\MicrosoftCorporationII.QuickAssist_ΓÇª 2.0.29.0; Version=}",
+  "@{Name=Windows Subsystem for Linux; Id=Microsoft.WSL; Version=2.3.26.0}",
+  "@{Name=Microsoft Teams; Id=Microsoft.Teams.Free; Version=1.0.0.0}",
+  "@{Name=Windows Web Experience Pack; Id=MSIX\\MicrosoftWindows.Client.WebExperienΓÇª 524.30502.30.0; Version=}",
+  "@{Name=Cross Device Experience Host; Id=MSIX\\MicrosoftWindows.CrossDevice_1.2411ΓÇª 1.24112.22.0; Version=}",
+  "@{Name=Speech Pack - German (Germany); Id=MSIX\\MicrosoftWindows.Speech.de-DE.1_1.0ΓÇª 1.0.5.0; Version=}",
+  "@{Name=Speech Pack - English (United States); Id=MSIX\\MicrosoftWindows.Speech.en-US.1_1.0ΓÇª 1.0.16.0; Version=}",
+  "@{Name=Quick Share; Id=MSIX\\NearbyShareLauncher_1.0.2034.4_neutΓÇª 1.0.2034.4; Version=}",
+  "@{Name=Notepad++; Id=MSIX\\NotepadPlusPlus_1.0.0.0_neutral__7nΓÇª 1.0.0.0; Version=}",
+  "@{Name=Realtek Audio Control; Id=MSIX\\RealtekSemiconductorCorp.RealtekAudΓÇª 1.48.313.0; Version=}",
+  "@{Name=Beyond Compare 5 shell extension; Id=MSIX\\ScooterSoftware.BeyondCompare.5.SheΓÇª 5.0.0.29381; Version=}",
+  "@{Name=Spotify - Music and Podcasts; Id=MSIX\\SpotifyAB.SpotifyMusic_1.252.442.0_ΓÇª 1.252.442.0; Version=}",
+  "@{Name=Mail and Calendar; Id=MSIX\\microsoft.windowscommunicationsappsΓÇª 16005.14326.22113ΓÇª; Version=}"
 ]

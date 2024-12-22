@@ -1,42 +1,12 @@
 [
-  {
-    "Name": "Chocolatey v2.3.0",
-    "Version": null
-  },
-  {
-    "Name": "chocolatey 2.3.0",
-    "Version": null
-  },
-  {
-    "Name": "eartrumpet 2.3.0",
-    "Version": null
-  },
-  {
-    "Name": "tigervnc 1.14.1",
-    "Version": null
-  },
-  {
-    "Name": "yt-dlp 2024.12.13",
-    "Version": null
-  },
-  {
-    "Name": "4 packages installed.",
-    "Version": null
-  },
-  {
-    "Name": "",
-    "Version": null
-  },
-  {
-    "Name": "Did you know Pro / Business automatically syncs with Programs and",
-    "Version": null
-  },
-  {
-    "Name": " Features? Learn more about Package Synchronizer at",
-    "Version": null
-  },
-  {
-    "Name": " https://chocolatey.org/compare",
-    "Version": null
-  }
+  "@{Name=Chocolatey v2.3.0; Version=}",
+  "@{Name=chocolatey 2.3.0; Version=}",
+  "@{Name=eartrumpet 2.3.0; Version=}",
+  "@{Name=tigervnc 1.14.1; Version=}",
+  "@{Name=yt-dlp 2024.12.13; Version=}",
+  "@{Name=4 packages installed.; Version=}",
+  "@{Name=; Version=}",
+  "@{Name=Did you know Pro / Business automatically syncs with Programs and; Version=}",
+  "@{Name= Features? Learn more about Package Synchronizer at; Version=}",
+  "@{Name= https://chocolatey.org/compare; Version=}"
 ]

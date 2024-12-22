@@ -46,15 +46,6 @@
     - Ensure you have the necessary permissions to modify system configuration files.
     - Customize the script as needed for additional exclusions or functionality.
 #>
-param (
-    [switch]$NoGit,       # Exclude Git configuration updates
-    [switch]$NoHW,        # Exclude hardware configuration updates
-    [switch]$NoCD,        # Exclude connected device updates
-    [switch]$NoSW,        # Exclude software configuration updates
-    [switch]$NoWinget,    # Exclude winget configuration updates
-    [switch]$NoChoco,     # Exclude Chocolatey configuration updates
-    [int]$JsonDepth = 8   # Specify JSON serialization depth (default: 8)
-)
 
 param (
     [switch]$NoGit,
@@ -226,7 +217,7 @@ function Get-ConnectedDevices {
     $configs = @{}
     if (-Not $NoSW) {
         $configs.registrySoftware = Get-RegistrySoftwareConfig
-        $configs.registrySoftware | ConvertTo-Json -Depth $JsonDepth | Set-Content -Path (Join-Path -Path $GitRepositoryPathca -ChildPath "$configFolder\registrySoftware.json")
+        $configs.registrySoftware | ConvertTo-Json -Depth $JsonDepth | Set-Content -Path (Join-Path -Path $GitRepositoryPath -ChildPath "$configFolder\registrySoftware.json")
     }
     if (-Not $NoWinget) {
         $configs.wingetPackages = Get-WingetPackagesConfig
