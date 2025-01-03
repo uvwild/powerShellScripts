@@ -109,6 +109,7 @@ if (Test-Path Alias:ll) {
 
 # Set the alias
 Set-Alias -Name ll -Value ListAsJson
+Write-Host "New alias 'll' ListAsJson" -ForegroundColor Green
 
 # Import the Chocolatey Profile that contains the necessary code to enable
 # tab-completions to function for `choco`.
