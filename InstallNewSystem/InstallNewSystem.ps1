@@ -1,6 +1,6 @@
 #InstallNewSystem
-# Define the list of packages to install
-$packages = @(
+# Define the list of packageIds to install
+$packageIds = @(
 	# windows
     "Microsoft.PowerShell",
     "Microsoft.PowerToys",
@@ -26,6 +26,7 @@ $packages = @(
     "CPUID.HWMonitor",
     "Sony.XperiaCompanion",
     "Canonical.Ubuntu.2404",
+    "WiresharkFoundation.Wireshark",
     "Genymobile.scrcpy",        # TODO seems to be old
     "Frontesque.scrcpy+",       # TODO does not seem to work?
 #    "GlavSoft.TightVNC 2.8.85",   # use realvnc find the really hidden 
@@ -65,6 +66,8 @@ $packages = @(
     "IrfanSkiljan.IrfanView",
     "IrfanSkiljan.IrfanView.PlugIns",
     "CodeSector.TeraCopy",
+    "jqlang.jq",
+    "MikeFarah.yq",
 
     # office
     "geeksoftwareGmbH.PDF24Creator",
@@ -99,6 +102,7 @@ $remove = @(
     "Bostrot.WSLManager",
 	"" # to keep the last comma
 )
+#########################################################################################################################
 # ensure admin level
 if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
     $1
@@ -107,7 +111,7 @@ Start-Sleep -Seconds 3
     exit
 }
 Write-Host "Script is running with administrative privileges." -ForegroundColor Green
-
+#########################################################################################################################
 # to disable install steps
 function Test-CommandLineOption {
     param (
@@ -205,19 +209,28 @@ function Test-WingetInstalled {
 }
 
 function Get-WingetInstalledPackages {
-    # Get the complete list of installed packages
-    $installedPackages = winget list
+    # Export all installed packages using winget
+    $exportPath = "C:\Users\uv\OneDrive\PowerShell\.myconfig\WingetPackages.json"
+    winget export --output $exportPath
 
-    # Convert the output to an array of strings and remove empty lines
-    $packageList = $installedPackages | Out-String -Stream | Where-Object { $_.Trim() -ne "" }
+    # Parse the JSON file
+    $packages = Get-Content -Path $exportPath -Raw | ConvertFrom-Json
 
-    # Remove the header lines (usually the first 2 lines)
-    $packageList = $packageList | Select-Object -Skip 2
+    # Count total number of packages
+    $totalPackages = $packages.Count
 
-    return $packageList
+    # Count packages without installation source
+    $packagesWithoutSource = $packages | Where-Object { -not $_.Source } | Measure-Object
+    $missingSourceCount = $packagesWithoutSource.Count
+
+    # Output results
+    Write-Output "Total Packages Installed: $totalPackages"
+    Write-Output "Packages Without Installation Source: $missingSourceCount"
+
+    return $packages
 }
 
-# Get the list of installed packages
+# Get the list of installed packageIds
 $installedPackages = Get-WingetInstalledPackages
 
 function Test-WingetPackageInstalled($PackageId,$InstalledPackages) {
@@ -248,7 +261,7 @@ function Test-ExecutablePath {
     return $executableFiles.Count -gt 0
 }
 
-$silentInstall = $true
+#$silentInstall = $true
 # Function to install a package using winget
 function Install-Package($packageName) {
     $installCommand = "winget install $packageName"
@@ -277,7 +290,7 @@ function Install-Package($packageName) {
 }
 function Remove-Package($packageName) {
     if (-not ($packageName)) { return }
-    $uninstallCommand = "winget uninstall `"$packageName`""
+    $uninstallCommand = "winget uninstall --name `"$packageName`""
 
     $uninstallCommand += " --nowarn"
     Write-Host "Removing $packageName..." -ForegroundColor Red
@@ -329,9 +342,10 @@ Disable-CapsLock
 #########################################################################################
 # skip with -s
 if (-not (Test-CommandLineOption "s")) {
-    foreach ($package in $packages) {
-        if ((-not (Test-WingetPackageInstalled -PackageId "$package"  -InstalledPackages $installedPackages)) -or (Test-CommandLineOption "f")) 
-        {
+    foreach ($package in $packageIds
+    ) {
+        if ((-not (Test-WingetPackageInstalled -PackageId "$package"  -InstalledPackages  $installedPackages
+                )) -or (Test-CommandLineOption "f")) {
             Install-Package $package
             Write-Host "$package is installed"
         } 

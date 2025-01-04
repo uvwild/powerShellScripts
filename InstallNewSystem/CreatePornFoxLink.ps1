@@ -1,4 +1,4 @@
-# CreateAppVolumeLink
+# CreatePornFoxLink
 
 function Write-ColorOutput {
     param(
@@ -11,15 +11,14 @@ function Write-ColorOutput {
     $host.UI.RawUI.ForegroundColor = $originalColor
 }
 
-$Desktop = [Environment]::GetFolderPath("Desktop")
-$shortcutPath = "$Desktop\AppVolumes.lnk"
-$targetPath = "ms-settings:apps-volume"
-$arguments = ""
+$ShortcutPath = Join-Path ([Environment]::GetFolderPath('Desktop')) "PornFox.lnk"
 
 $WshShell = New-Object -ComObject WScript.Shell
 $shortcut = $WshShell.CreateShortcut($shortcutPath)
-$shortcut.TargetPath = $targetPath
-$shortcut.Arguments = $arguments
+$shortcut.TargetPath = "C:\Program Files\Mozilla Firefox\firefox.exe"
+$shortcut.Arguments = ' -P "porn" -no-remote'
+$Shortcut.IconLocation = "C:\Users\uv\OneDrive\Pictures\pornfox.ico"
 $Shortcut.Save()
 
 Write-ColorOutput "Shortcut created on desktop: $shortcutPath"  -Color Green
+
