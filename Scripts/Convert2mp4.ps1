@@ -1,6 +1,9 @@
 # Convert2mp4
+# create shortcut like this
+# C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -File "C:\Users\uv\OneDrive\PowerShell\Scripts\Convert2mp4.ps1"
 # script to convert
 # Get the path to FFmpeg using Get-Command
+$deleteOriginal = $true
 $ffmpegPath = (Get-Command ffmpeg -ErrorAction SilentlyContinue).Source
 
 if (-not $ffmpegPath) {
@@ -9,13 +12,11 @@ if (-not $ffmpegPath) {
 }
 
 # Function to convert video
-function Convert-Video {
+function Check-Files {
     param (
-        [string]$inputFile
+        [string]$inputFile,
+        [string]$outputFile
     )
-
-    # Output file path
-    $outputFile = [System.IO.Path]::ChangeExtension($inputFile, ".mp4")
 
     # Check if the output file was created successfully
     if (Test-Path $outputFile) {
@@ -36,6 +37,7 @@ function Convert-Video {
             }
         }
     }
+
 }
 # Function to convert video with crop detection    
 $limit = 1MB
@@ -46,59 +48,47 @@ function Convert-VideosWithCropDetection {
 
     # Output file path
     $outputFile = [System.IO.Path]::ChangeExtension($inputFile, ".mp4")
-
-    # Check if the output file was created successfully
-    if (Test-Path $outputFile) {
-        if ($fileSize -eq 0) {
-            Remove-Item $outputFile
-            Write-Host "the output file is empty and will be replaced: $outputFile"
-        }
-        elseif ($fileSize -lt $limit) {
-            # Ask if the user wants to delete the original file
-            $deletePrevious = Read-Host "There is an outputfile smaller than  $limit already do you want to replace it? (y/n): $outputFile"
-            if ($deletePrevious -eq 'y') {
-                Remove-Item $inputFile
-                Write-Host "Previous file deleted."
-            }
-            else {
-                Write-Host "Previous file found : $outputFile   -  SKIPPING"
-                return
-            }
-        }
-    }
+    Check-Files ($inputFile, $outputFile)
 
     # Step 1: Detect crop values
-    Write-Output "Detecting crop values for $inputFile"
+    Write-Output "looking for crop values in $inputFile"  -foregroundcolor "yellow"
     $cropDetectCommand = "ffmpeg -i `"$inputFile`" -vf cropdetect -t 10 -f null NUL 2>&1"
     $cropOutput = Invoke-Expression $cropDetectCommand
 
     # Extract the crop values from the cropdetect output
-    if ($cropOutput -match "crop=\d+:\d+:\d+:\d+") {
+    $cropOption = ""
+    if (($cropOutput -match "crop=\d+:\d+:\d+:\d+") -and ($matches))  {
         $cropValues = $matches[0]
         Write-Output "Detected crop values: $cropValues"
         
         # Step 2: Apply cropping and convert video
-        $ffmpegCommand = "ffmpeg -i `"$inputFile`" -vf `"$cropValues`" -c:v libx264 -preset slow -crf 22 `"$outputFile`""
+        $cropOption = "-vf `"$cropValues`" "
         Write-Host "Converting and cropping video..."
-        Invoke-Expression $ffmpegCommand
     }
     else {
-        Write-Output "Could not detect crop values for $inputFile. Skipping."
-        return
+        Write-Output "Could not detect crop values for $inputFile. No Cropping."        
     }
+    $ffmpegCommand = "ffmpeg -i `"$inputFile`" $cropOption -c:v libx264 -preset fast -crf 23  -c:a aac `"$outputFile`""
+    Invoke-Expression $ffmpegCommand
 
     # Check if the output file was created successfully
     if (Test-Path $outputFile) {
         Write-Host "Conversion complete. Output file: $outputFile"
         
-        # Ask if the user wants to delete the original file
-        $deleteOriginal = Read-Host "Do you want to delete the original file? (y/n)"
-        if ($deleteOriginal -eq 'y') {
-            Remove-Item $inputFile
+        if ($deleteOriginal) {
             Write-Host "Original file deleted."
         }
         else {
-            Write-Host "Original file kept."
+            # Ask if the user wants to delete the original file
+            $deleteOriginal = Read-Host "Do you want to delete the original file? (y/n)"
+            if ($deleteOriginal -eq 'y') {
+                Remove-Item $inputFile
+                Write-Host "Original file deleted."
+            }
+            else {
+                Write-Host "Original file kept."
+            }
+
         }
     }
     else {
@@ -122,10 +112,12 @@ function Start-ConversionOnLowLoad {
                     Convert-VideosWithCropDetection -inputFile $_.FullName
                 }
                 break
-            } else {
+            }
+            else {
                 Write-Output "CPU load increased above 10% after waiting. Restarting monitoring."
             }
-        } else {
+        }
+        else {
             Write-Output "CPU load is above 10%. Monitoring continues."
         }
 
@@ -144,17 +136,23 @@ if ($args.Count -eq 0) {
     Write-Host "Please drag and drop a .m2ts file onto this script."
 }
 else {
-    foreach ($extension in $videoExtensions) { 
-        foreach ($file in $args) {
-            if ([System.IO.Path]::GetExtension($file) -eq "$extension") {
-                Convert-Video -inputFile $file
+    foreach ($file in $args) {
+
+        if (Test-Path $file) {
+            foreach ($extension in $videoExtensions) { 
+                if ([System.IO.Path]::GetExtension($file) -eq "$extension") {
+                    Write-Output "Found ${file} with  extension ${extension}. Converting..."
+                    #Convert-Video -inputFile $file
+                    Convert-VideosWithCropDetection -inputFile "$file"
+                }
             }
-            else {
-                Write-Host "Skipping non-video file with extension ${extension}: ${file}"
-            }
-        }    
+        }
+        else {
+            Write-Output "File does not exist."
+        }
     }
-}
+}    
+
 
 #Write-Host "Press any key to exit..."
 #$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
