@@ -1,11 +1,68 @@
 # C:\Users\uv\OneDrive\PowerShell\Microsoft.PowerShell_profile.ps1
 #echo "we have been used"
 
+function Write-TimedOutput {
+    param (
+        [string]$Message,
+        [string]$ForegroundColor
+    )
+    # Build the command dynamically  (stupid windows)
+    $parameters = @{}
+    if ($ForegroundColor) { $parameters["ForegroundColor"] = $ForegroundColor }
+    
+    Write-Host "$(Get-Date): $Message" @parameters
+}
+
+# Get only the directory of the script
+$currentScriptDirectory = Split-Path -Path $MyInvocation.MyCommand.Path
+Write-TimedOutput "The current script's directory is: $currentScriptDirectory"
+
 $modules = @(
   "PSReadLine",
   "posh-git",
   "oh-my-posh"
 )
+
+function IsAdmin {
+    # Check if the current user has administrative rights
+    $isAdmin=([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")
+    # Record the end time
+    return $isAdmin
+}
+# used in InstallNewSystem.ps1
+$fallBackScope = "User"
+function Add-ToPathIfNotExist {
+    param (
+        [Parameter(Mandatory = $true)]
+        [string]$NewPath,
+
+        [Parameter()]
+        [string]$scope = "Machine"      # Machine or User
+    )
+    # Get the current PATH
+    $currentPath = [System.Environment]::GetEnvironmentVariable('PATH', $scope)
+    # Split the PATH into an array
+    $pathArray = $currentPath -split ';'
+    # Check if the new path already exists in the PATH
+    if ($pathArray -notcontains $NewPath) {
+        # Add the new path
+        $newPathValue = $currentPath + ';' + $NewPath
+        try {
+            # Set the new PATH value
+            if (-not (IsAdmin)) {
+                $scope=$fallBackScope
+            }
+            [System.Environment]::SetEnvironmentVariable('PATH', $newPathValue, $scope)
+            Write-TimedOutput "Added '$NewPath' to the $scope PATH" -ForegroundColor Green
+        }
+        catch {
+            Write-Host "Failed to add '$NewPath' to the system PATH. Error: $_\r\nTrying for User" -ForegroundColor Red
+        }
+    }
+    else {
+        Write-TimedOutput "'$NewPath' already exists in the system PATH." -ForegroundColor Yellow
+    }
+}
 
 function lnk {
     param ([string]$MyPath)
@@ -56,7 +113,7 @@ function raa {
 }
 function show-aliases {
     $al=$(Get-Alias).Count
-    Write-Host "Profile reloaded. $al Aliases"
+    Write-TimedOutput "Profile reloaded. $al Aliases"
 }
 function reload {
     . $PROFILE
@@ -131,12 +188,18 @@ foreach ($module in $modules) {
           $installCommand = "Install-Module -Name $module $DefaultInstallModuleOptions"
           Write-Output "Installing $module..."
           Invoke-Expression $installCommand
-          Write-Output "$module installed successfully."
+          Write-TimedOutput "$module installed successfully."
       } catch {
-          Write-Output "Failed to install ${module}: $_"
+          Write-TimedOutput "Failed to install ${module}: $_" -ForegroundColor Red
       }
   } else {
-      Write-Output "$module is already installed."
+    Write-TimedOutput "$module is already installed."
   }
 }
+
+# path management
+#$time = Measure-Command {
+    Add-ToPathIfNotExist -NewPath "$currentScriptDirectory\Scripts"
+#}
+#Write-Output "Add-ToPathIfNotExist took $time." -ForegroundColor Yellow
 show-aliases
