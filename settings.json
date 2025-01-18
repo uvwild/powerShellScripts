@@ -6,5 +6,6 @@
     "workbench.preferredLightColorTheme": "Default Dark+",
     "window.autoDetectColorScheme": true,
     "workbench.preferredDarkColorTheme": "Visual Studio Dark",
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "diffEditor.ignoreTrimWhitespace": false
 }

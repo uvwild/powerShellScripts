@@ -1,5 +1,12 @@
 {
-    "terminal.integrated.cwd": "C:\\Users\\uv\\OneDrive\\PowerShell",
-    "powershell.profile.path": "C:\\Users\\uv\\OneDrive\\PowerShell\\Microsoft.PowerShell_profile.ps1",
-    "explorer.fileNesting.enabled": false
+  "chat.editing.alwaysSaveWithGeneratedChanges": "true",
+  "diffEditor.ignoreTrimWhitespace": true,
+  "explorer.confirmDelete": false,
+  "powershell.profile.path": "C:\\Users\\uv\\OneDrive\\PowerShell\\Microsoft.PowerShell_profile.ps1",  # does this work?
+  "terminal.integrated.cwd": "C:\\Users\\uv\\OneDrive\\PowerShell",
+  "terminal.integrated.enablePersistentSessions": false,
+  "window.autoDetectColorScheme": true,
+  "workbench.colorTheme": "Visual Studio Dark",
+  "workbench.preferredDarkColorTheme": "Visual Studio Dark",
+  "workbench.preferredLightColorTheme": "Default Dark+"
 }
