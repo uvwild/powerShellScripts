@@ -254,7 +254,7 @@ function Update-SystemConfiguration {
         ConnectedDevicesConfig = Get-ConnectedDevices
     }
 
-    function Canonical-Json {
+    function ConvertTo-CanonicalJson {
         param (
             [Parameter(Mandatory = $true)]
             [PSObject]$InputObject,

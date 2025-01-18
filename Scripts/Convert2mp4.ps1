@@ -12,7 +12,7 @@ if (-not $ffmpegPath) {
 }
 
 # Function to convert video
-function Check-Files {
+function Test-Files {
     param (
         [string]$inputFile,
         [string]$outputFile
@@ -41,14 +41,32 @@ function Check-Files {
 }
 # Function to convert video with crop detection    
 $limit = 1MB
-function Convert-VideosWithCropDetection {
+
+# Function to get video duration using ffprobe
+function Get-VideoDuration {
     param (
         [string]$inputFile
+    )
+    $ffprobeCommand = "ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 `"$inputFile`""
+    $duration = Invoke-Expression $ffprobeCommand
+    return [math]::Round([double]$duration)
+}
+
+# Function to convert video with crop detection and trimming
+function Convert-VideosWithCropDetection {
+    param (
+        [string]$inputFile,
+        [int]$startSeconds = 0,
+        [int]$endSeconds = 0
     )
 
     # Output file path
     $outputFile = [System.IO.Path]::ChangeExtension($inputFile, ".mp4")
-    Check-Files ($inputFile, $outputFile)
+    Test-Files ($inputFile, $outputFile)
+
+    # Get video duration
+    $duration = Get-VideoDuration -inputFile $inputFile
+    $trimDuration = $duration - $startSeconds - $endSeconds
 
     # Step 1: Detect crop values
     Write-Output "looking for crop values in $inputFile"  -foregroundcolor "yellow"
@@ -68,7 +86,16 @@ function Convert-VideosWithCropDetection {
     else {
         Write-Output "Could not detect crop values for $inputFile. No Cropping."        
     }
-    $ffmpegCommand = "ffmpeg -i `"$inputFile`" $cropOption -c:v libx264 -preset fast -crf 23  -c:a aac `"$outputFile`""
+
+    # Determine if re-encoding is needed
+    $codecCopy = ""
+    if ([System.IO.Path]::GetExtension($inputFile) -eq ".mp4" -and $cropOption -eq "") {
+        $codecCopy = "-c copy"
+    } else {
+        $codecCopy = "-c:v libx264 -preset fast -crf 23 -c:a aac"
+    }
+
+    $ffmpegCommand = "ffmpeg -i `"$inputFile`" -ss $startSeconds -t $trimDuration $cropOption $codecCopy `"$outputFile`""
     Invoke-Expression $ffmpegCommand
 
     # Check if the output file was created successfully
@@ -143,7 +170,7 @@ else {
                 if ([System.IO.Path]::GetExtension($file) -eq "$extension") {
                     Write-Output "Found ${file} with  extension ${extension}. Converting..."
                     #Convert-Video -inputFile $file
-                    Convert-VideosWithCropDetection -inputFile "$file"
+                    Convert-VideosWithCropDetection -inputFile "$file" -startSeconds 10 -endSeconds 10
                 }
             }
         }

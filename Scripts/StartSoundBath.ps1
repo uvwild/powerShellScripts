@@ -20,7 +20,7 @@ if (!(Get-Command $ffmpegPath -ErrorAction SilentlyContinue)) {
 # Get a list of audio devices
 $devices = & $ffmpegPath -list_devices true -f dshow -i dummy 2>&1 |
 Select-String -Pattern "dshow"  |
-  ForEach-Object {
+  ForEach-Object {1
       if ($_ -like "*$audioDevice*") {
           $_
       }

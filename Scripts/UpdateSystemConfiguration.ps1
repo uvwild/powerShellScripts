@@ -215,7 +215,7 @@ function Get-HardwareConfig {
     }
 }
 
-    # Function to retrieve connected hardware devices
+# Function to retrieve connected hardware devices
 function Get-ConnectedDevices {
     $usbDevices = Get-CimInstance -ClassName Win32_USBControllerDevice | 
     ForEach-Object {
@@ -235,84 +235,85 @@ function Get-ConnectedDevices {
     $audioDevices = Get-CimInstance -ClassName Win32_SoundDevice | 
     Select-Object Name, Status
 
+    # duplication here
     $storageDevices = Get-CimInstance -ClassName Win32_DiskDrive | 
     Select-Object Model, Size, MediaType, InterfaceType
 
     return [PSCustomObject]@{
         USBDevices       = $usbDevices
         Monitors         = $monitors
-  #      NetworkAdapters  = $networkAdapters
+        NetworkAdapters  = $networkAdapters
         AudioDevices     = $audioDevices
         StorageDevices   = $storageDevices
         connectedDevices = $connectedDevices        
     }
 }
- #####################################################################################################################
-    # Convert to JSON (full object)
-    $systemConfiguration = [PSCustomObject]@{
-        Timestamp           = (Get-Date).ToString("yyyy-MM-ddTHH:mm:ss")
-        InstalledSoftware   = $installedSoftware
-        HardwareInformation = $hardwareInfo
-        PSModules           = $psModules
-        PythonPackages      = $pythonPackages
-        WingetList          = $wingetOutput
-    }
+#####################################################################################################################
+# Convert to JSON (full object)
+$systemConfiguration = [PSCustomObject]@{
+    Timestamp           = (Get-Date).ToString("yyyy-MM-ddTHH:mm:ss")
+    InstalledSoftware   = $installedSoftware
+    HardwareInformation = $hardwareInfo
+    PSModules           = $psModules
+    PythonPackages      = $pythonPackages
+    WingetList          = $wingetOutput
+}
     
 
-    # Place each configuration part in a separate file at depth 5
-    $configItems = @{
-        installedsoftware = $installedSoftware
-        connectedDevices  = $connectedDevices
-        hardwareinfo      = $hardwareInfo
-        psmodules         = $psModules
-        pythonpackages    = $pythonPackages
-        winget            = $wingetOutput
-    }
-    $maxDepth = 5
-    foreach ($item in $configItems.GetEnumerator()) {
-        $jsonChunk = $item.Value | ConvertTo-Json -Depth $maxDepth -Compress
-        if ($jsonChunk -like "*...*") {
-            Write-Warning "Data for '$($item.Key)' might be truncated at depth $maxDepth. Use a higher depth if needed."
-        }
-        $filePath = Join-Path -Path $myConfigFolder -ChildPath ("config.{0}.json" -f $item.Key)
-        Set-Content -Path $filePath -Value $jsonChunk -Encoding UTF8
-    }
-
-    # Combine all members into one YAML file (requires a module like powershell-yaml)
-    $allConfig = [ordered]@{}
-    foreach ($cItem in $configItems.GetEnumerator()) {
-        $allConfig[$cItem.Key] = $cItem.Value
-    }
-
-    # If in Git repo, commit changes
-    if (Test-Path (Join-Path -Path $GitRepositoryPath -ChildPath ".git")) {
-        Push-Location $GitRepositoryPath
-        git add $OutputFile
-        git commit -m "Updated system configuration: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
-
-        # Check Git status and commit changes if any
-        git status
-        $statusOutput = git status --porcelain
-        if ($statusOutput) {
-            $changedMembers = $statusOutput | ForEach-Object {
-                if ($_ -match '^.[ARM] \s+\.myconfig\\config\.(\w+)\.json') {
-                    $matches[1]
-                }
-                elseif ($_ -match '^.[ARM] \s+\.myconfig\\config\.combined\.yaml') {
-                    "combined"
-                }
-            } | Sort-Object -Unique
-
-            if ($changedMembers) {
-                git add ".myconfig"
-                git commit -m "new system configuration with changes in $($changedMembers -join ', ')"
-            }
-        }
-        Pop-Location
-    }
-    else {
-        Write-Warning "The specified path is not a Git repository. Skipping commit step."
-    }
-
-    Write-Output "System configuration updated and saved to $OutputFile and .myconfig."
+# Place each configuration part in a separate file at depth 5
+$configItems = @{
+    installedsoftware = $installedSoftware
+    connectedDevices  = $connectedDevices
+    hardwareinfo      = $hardwareInfo
+    psmodules         = $psModules
+    pythonpackages    = $pythonPackages
+    winget            = $wingetOutput
 }
+$maxDepth = 5
+foreach ($item in $configItems.GetEnumerator()) {
+    $jsonChunk = $item.Value | ConvertTo-Json -Depth $maxDepth -Compress
+    if ($jsonChunk -like "*...*") {
+        Write-Warning "Data for '$($item.Key)' might be truncated at depth $maxDepth. Use a higher depth if needed."
+    }
+    $filePath = Join-Path -Path $myConfigFolder -ChildPath ("config.{0}.json" -f $item.Key)
+    Set-Content -Path $filePath -Value $jsonChunk -Encoding UTF8
+}
+
+# Combine all members into one YAML file (requires a module like powershell-yaml)
+$allConfig = [ordered]@{}
+foreach ($cItem in $configItems.GetEnumerator()) {
+    $allConfig[$cItem.Key] = $cItem.Value
+}
+
+# If in Git repo, commit changes
+if (Test-Path (Join-Path -Path $GitRepositoryPath -ChildPath ".git")) {
+    Push-Location $GitRepositoryPath
+    git add $OutputFile
+    git commit -m "Updated system configuration: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
+
+    # Check Git status and commit changes if any
+    git status
+    $statusOutput = git status --porcelain
+    if ($statusOutput) {
+        $changedMembers = $statusOutput | ForEach-Object {
+            if ($_ -match '^.[ARM] \s+\.myconfig\\config\.(\w+)\.json') {
+                $matches[1]
+            }
+            elseif ($_ -match '^.[ARM] \s+\.myconfig\\config\.combined\.yaml') {
+                "combined"
+            }
+        } | Sort-Object -Unique
+
+        if ($changedMembers) {
+            git add ".myconfig"
+            git commit -m "new system configuration with changes in $($changedMembers -join ', ')"
+        }
+    }
+    Pop-Location
+}
+else {
+    Write-Warning "The specified path is not a Git repository. Skipping commit step."
+}
+
+Write-Output "System configuration updated and saved to $OutputFile and .myconfig."
+
