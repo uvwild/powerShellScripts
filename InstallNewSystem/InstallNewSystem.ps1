@@ -169,37 +169,6 @@ function Get-WingetPackagePath {
     return $null
 }
 
-function Add-PathIfNotExist {
-    param (
-        [Parameter(Mandatory = $true)]
-        [string]$NewPath,
-
-        [Parameter()]
-        [string]$scope = "Machine"
-    )
-    # Get the current PATH
-    $currentPath = [System.Environment]::GetEnvironmentVariable('PATH', $scope)
-    # Split the PATH into an array
-    $pathArray = $currentPath -split ';'
-    # Check if the new path already exists in the PATH
-    if ($pathArray -notcontains $NewPath) {
-        # Add the new path
-        $newPathValue = $currentPath + ';' + $NewPath
-        try {
-            # Set the new PATH value
-            [System.Environment]::SetEnvironmentVariable('PATH', $newPathValue, $scope)
-            Write-Host "Added '$NewPath' to the system PATH." -ForegroundColor Green
-        }
-        catch {
-            Write-Host "Failed to add '$NewPath' to the system PATH. Error: $_" -ForegroundColor Red
-        }
-    }
-    else {
-        Write-Host "'$NewPath' already exists in the system PATH." -ForegroundColor Yellow
-    }
-}
-
-
 
 # Function to check if winget is installed
 function Test-WingetInstalled {
@@ -279,12 +248,12 @@ function Install-Package($packageName) {
         
     if ($packagePath -and (Test-ExecutablePath -Path $packagePath)) {
         Write-Host "Adding $packagePath to PATH..." -ForegroundColor Green
-        Add-PathIfNotExist -NewPath $packagePath -scope "Machine"
+        Add-ToPathIfNotExist -NewPath $packagePath -scope "Machine"
         
         # Check for additional bin directories
         $binPath = Join-Path $packagePath "bin"
         if (Test-Path $binPath) {
-            Add-PathIfNotExist -NewPath $binPath -scope "Machine"
+            Add-ToPathIfNotExist -NewPath $binPath -scope "Machine"
         }
     }    
 }
@@ -356,8 +325,8 @@ if (-not (Test-CommandLineOption "s")) {
 
 #$scriptPath = "C:\Users\uv\OneDrive\PowerShell"
 $scriptPath = Split-Path -Path $PSCommandPath
-Add-PathIfNotExist $scriptPath
-Add-PathIfNotExist .
+Add-ToPathIfNotExist $scriptPath
+Add-ToPathIfNotExist .
 # Call the function after modifying PATH
 Update-SessionEnvironment
 # showPath
