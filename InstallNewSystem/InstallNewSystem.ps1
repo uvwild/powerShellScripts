@@ -36,6 +36,7 @@ $packageIds = @(
     "MusicBee.MusicBee",
     "SonicVisualiser.SonicVisualiser",
     "AsaphaHalifa.AudioRelay",
+    "Syncthing.Syncthing",
 		
 	# the chats
     "WhatsApp",

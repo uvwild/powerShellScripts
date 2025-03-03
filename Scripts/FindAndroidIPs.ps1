@@ -5,22 +5,29 @@ $SshKey = "mynetwork"
 # Check if the file exists
 $SshKeyPath = "$HOME/.ssh/$SshKey"
 if (Test-Path -Path $SshKeyPath) {
-    Write-Output "Using: $filePath"
+    Write-Host "Using: $filePath"
 } else {
-    Write-Output "No SShKey found in $SshKeyPath"
+    Write-Host "No SShKey found in $SshKeyPath"
 }
 
+function myssh {
+    param (
+        [string]$Command
+    )
+    Write-Host "Sending $Command to $RouterIP" -ForegroundColor Cyan
+    $sshCommand = "ssh -i $SshKeyPath -o StrictHostKeyChecking=no $Username@$RouterIP $Command"
+    Write-Host "Executing: $sshCommand"
+    Invoke-Expression $sshCommand
+}
 # SSH command to retrieve DHCP leases and ARP table
-$Command = @"
-cat /tmp/dhcp.leases
-arp -n
-"@
+$DhcpCommand = "cat /tmp/dhcp.leases"
+$ArpCommand = "cat /proc/net/arp"
 
 # Execute SSH command
-$SSHResult =  ssh -i $SshKeyPath -o StrictHostKeyChecking=no $Username@$RouterIP $Command
+$SSHResult =  myssh $DhcpCommand
 
 # Process and output results
-Write-Host "Connected Devices:" -ForegroundColor Cyan
+Write-Host "Connected Devices: $SSHResult" -ForegroundColor Cyan
 $SSHResult -split "`n" | ForEach-Object { $_ }
 
 exit

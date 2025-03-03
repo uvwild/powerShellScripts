@@ -112,22 +112,29 @@ function raa {
     RunAsAdmin -ScriptToRun $ScriptToRun -ScriptArgs $ScriptArgs
 }
 function show-aliases {
-    $al=$(Get-Alias).Count
-    Write-TimedOutput "Profile reloaded. $al Aliases"
+    $alc=$(Get-Alias).Count
+    Write-TimedOutput "Profile reloaded. $alc Aliases"
 }
+# the reload does not replace functions already loaded in the context, dunnow how to fix that except to restart the shell
 function reload {
     . $PROFILE
 }
+# try to emulate linux which
 function which {
     param (
+        [Parameter(Mandatory = $true)]
         [string]$Command
     )
-    # Check if the command exists in the current session
-    $result = Get-Command -Name $Command -ErrorAction SilentlyContinue
-    if ($result) {
-        $result.Source # Returns the path or source of the command
+    if (-not $Command -or $Command -eq "") {
+        Write-Output "Usage: which -Command <command_name>  # linux style"
+        return
+    }
+    # Call the Get-CommandType script
+    $scriptPath = "$currentScriptDirectory\Scripts\Get-CommandType.ps1"
+    if (Test-Path $scriptPath) {
+        . $scriptPath -Command $Command
     } else {
-        Write-Output "Command '$Command' not found"
+        Write-Output "Get-CommandType script not found at $scriptPath"
     }
 }
 function gd { git diff }

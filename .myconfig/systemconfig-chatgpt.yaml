@@ -1,0 +1,131 @@
+--- # uv config for chatgpt in yaml
+Operating System: Windows 11 version 24H2
+    devices:
+        - Geekom AX8 Pro with an AMD Radeon 780M GPU
+        - ASUS ZenBook Duo UX8406MA
+        - Dell XPS 15 7590
+
+Operating System: Android
+    mobilehones: 
+        - Sony Xperia 10 IV (Android)
+        - 
+
+    Software:
+        winget-packageIds:
+            # windows
+            - "Microsoft.PowerShell"
+            - "Microsoft.PowerToys"
+            - "Microsoft.Sysinternals"
+            - "CodeSector.TeraCopy"
+            - "HermannSchinagl.LinkShellExtension"
+            - "Microsoft.WindowsSDK.10.0.26100"
+            
+            # dev
+            - "Git.Git"
+            - "Microsoft.VisualStudioCode"
+            - "GitHub.GitHubDesktop"
+            - "OpenJS.NodeJS"
+            - "SoftDeluxe.FreeDownloadManager"
+            
+            # google
+            - "Google.PlatformTools"
+            - "Google.AndroidStudio"
+            - "Google.QuickShare"
+            
+            # system util
+            - "REALiX.HWiNFO"
+            - "CPUID.HWMonitor"
+            - "Sony.XperiaCompanion"
+            - "Canonical.Ubuntu.2404"
+            - "WiresharkFoundation.Wireshark"
+            - "Genymobile.scrcpy"        # TODO seems to be old
+            - "Frontesque.scrcpy+"       # TODO does not seem to work?
+            # - "GlavSoft.TightVNC 2.8.85"   # use realvnc find the really hidden
+            
+            # audio
+            - "Audacity.Audacity"
+            - "MusicBee.MusicBee"
+            - "SonicVisualiser.SonicVisualiser"
+            - "AsaphaHalifa.AudioRelay"
+            
+            # the chats
+            - "WhatsApp"
+            - "Telegram.TelegramDesktop"
+            - "OpenWhisperSystems.Signal"
+            
+            # cloud storage
+            - "Microsoft.OneDrive"
+            - "Google.GoogleDrive"
+            
+            # video
+            - "OBSProject.OBSStudio"
+            - "Gyan.FFmpeg"
+            - "Videolan.vlc"
+            - "GianlucaPernigotto.Videomass"
+            
+            # browser mail
+            - "Google.Chrome"
+            - "Mozilla.Firefox" # Version 134
+            - "Mozilla.Thunderbird"  # Version 128
+            # - "Mailbird.Mailbird"
+            
+            # util
+            - "Governikus.AusweisApp"
+            - "7zip.7zip"
+            - "JAMSoftware.TreeSize.Free"
+            - "Notepad++.Notepad++"
+            - "IrfanSkiljan.IrfanView"
+            - "IrfanSkiljan.IrfanView.PlugIns"
+            - "CodeSector.TeraCopy"
+            - "jqlang.jq"
+            - "MikeFarah.yq"
+            
+            # office
+            - "geeksoftwareGmbH.PDF24Creator"
+            - "TrackerSoftware.PDF-XChangeEditor"
+            - "TheDocumentFoundation.LibreOffice"
+            
+            # system
+            - "ScooterSoftware.BeyondCompare.5"
+            - "CrystalDewWorld.CrystalDiskInfo"
+            - "UweSieber.UsbTreeView"
+
+Hardware:
+Audio-Technica ATH-M50xBT2 headphones.
+Canon PIXMA MG5700 printer scanner.
+
+Peripherals:
+Verbatim Store 'n' Go 16GB memory stick.
+Fujitsu monitor (stand base plate missing).
+Customization/Preferences:
+Uses TeraCopy for file transfers.
+Disables German keyboard on Windows 11 while sometimes using the German input language.
+Synchronizes music folders across Windows 11 systems and Android phones.
+Configures touchpad auto-disable when a mouse is connected.
+Disables the Caps Lock key permanently.
+Avoids changing the default audio device when configuring an audio player.
+Networking:
+Uses Telekom 4G network.
+Configures mobile hotspot solutions.
+Excludes .git folders from OneDrive.
+Development Tools:
+PowerShell (scripts stored in C:\Users\uv\OneDrive\PowerShell).
+Modules located in C:\Users\uv\OneDrive\PowerShell\Modules.
+Custom aliases in PowerShell for grep-like functionality.
+Backup/Sync:
+Uses Beyond Compare for data sync between systems.
+Plans to clone NUC system to a portable laptop.
+Miscellaneous:
+Configures rtpMIDI session name as UVZEN.
+Uses scrcpy+ version 2.2.1 for Android screen mirroring.
+Prefers Sonic Visualizer for audio analysis.
+
+Networking: 
+    DSL Model: Fritzbox 4790
+    LAN:
+ubnet is 192.168.66.0
+    WIFI router TP-LINK AC1750 Archer C7 v5.0  
+Powered by LuCI openwrt-23.05 
+
+
+use best pracise programming like functions when applicable
